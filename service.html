@@ -1,0 +1,2084 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+<title>Services - BETA AS/HEZ</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+<script id="tailwind-config">
+tailwind.config = {
+    darkMode: "class",
+
+    theme: {
+        extend: {
+
+            colors: {
+                "on-error": "#ffffff",
+                "off-white": "#f8fafc",
+                "secondary-fixed-dim": "#b9c7df",
+                "error-container": "#ffdad6",
+                "surface-bright": "#f7f9fb",
+                "on-primary-fixed": "#131b2e",
+                "on-tertiary-container": "#d95f00",
+                "on-background": "#191c1e",
+                "primary-fixed-dim": "#bec6e0",
+                "on-tertiary-fixed-variant": "#783200",
+                "surface-container": "#eceef0",
+                "surface-container-high": "#e6e8ea",
+                "error": "#ba1a1a",
+                "on-secondary-fixed": "#0d1c2e",
+                "surface": "#f7f9fb",
+                "tertiary-fixed-dim": "#ffb690",
+                "on-error-container": "#93000a",
+                "steel": "#475569",
+                "inverse-primary": "#bec6e0",
+                "midnight": "#0f172a",
+                "inverse-surface": "#2d3133",
+                "outline": "#76777d",
+                "on-secondary-fixed-variant": "#3a485b",
+                "inverse-on-surface": "#eff1f3",
+                "on-tertiary-fixed": "#341100",
+                "primary-fixed": "#dae2fd",
+                "tertiary-fixed": "#ffdbca",
+                "on-secondary-container": "#57657a",
+                "secondary": "#515f74",
+                "surface-dim": "#d8dadc",
+                "surface-container-highest": "#e0e3e5",
+                "tertiary": "#000000",
+                "on-surface-variant": "#45464d",
+                "on-tertiary": "#ffffff",
+                "tertiary-container": "#341100",
+                "surface-variant": "#e0e3e5",
+                "construction-orange": "#f97316",
+                "on-primary-container": "#7c839b",
+                "surface-tint": "#565e74",
+                "background": "#f7f9fb",
+                "primary": "#000000",
+                "on-surface": "#191c1e",
+                "on-primary-fixed-variant": "#3f465c",
+                "primary-container": "#131b2e",
+                "on-primary": "#ffffff",
+                "surface-container-low": "#f2f4f6",
+                "outline-variant": "#c6c6cd",
+                "on-secondary": "#ffffff",
+                "secondary-fixed": "#d5e3fc",
+                "surface-container-lowest": "#ffffff",
+                "secondary-container": "#d5e3fc"
+            },
+
+            borderRadius: {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+
+            spacing: {
+                "lg": "48px",
+                "margin-desktop": "64px",
+                "margin-mobile": "16px",
+                "xl": "80px",
+                "sm": "12px",
+                "unit": "8px",
+                "md": "24px",
+                "gutter": "24px",
+                "xs": "4px"
+            },
+
+            fontFamily: {
+                "label-sm": ["Inter"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "display-lg-mobile": ["Inter"],
+                "label-md": ["Inter"],
+                "headline-sm": ["Inter"],
+                "display-lg": ["Inter"],
+                "headline-md": ["Inter"]
+            },
+
+            fontSize: {
+                "label-sm": [
+                    "12px",
+                    {
+                        "lineHeight": "16px",
+                        "letterSpacing": "0.05em",
+                        "fontWeight": "700"
+                    }
+                ],
+
+                "body-md": [
+                    "16px",
+                    {
+                        "lineHeight": "24px",
+                        "letterSpacing": "0em",
+                        "fontWeight": "400"
+                    }
+                ],
+
+                "body-lg": [
+                    "18px",
+                    {
+                        "lineHeight": "28px",
+                        "letterSpacing": "0em",
+                        "fontWeight": "400"
+                    }
+                ],
+
+                "display-lg-mobile": [
+                    "32px",
+                    {
+                        "lineHeight": "40px",
+                        "letterSpacing": "-0.02em",
+                        "fontWeight": "700"
+                    }
+                ],
+
+                "label-md": [
+                    "14px",
+                    {
+                        "lineHeight": "20px",
+                        "letterSpacing": "0.02em",
+                        "fontWeight": "600"
+                    }
+                ],
+
+                "headline-sm": [
+                    "24px",
+                    {
+                        "lineHeight": "32px",
+                        "letterSpacing": "-0.01em",
+                        "fontWeight": "600"
+                    }
+                ],
+
+                "display-lg": [
+                    "48px",
+                    {
+                        "lineHeight": "56px",
+                        "letterSpacing": "-0.02em",
+                        "fontWeight": "700"
+                    }
+                ],
+
+                "headline-md": [
+                    "30px",
+                    {
+                        "lineHeight": "38px",
+                        "letterSpacing": "-0.01em",
+                        "fontWeight": "600"
+                    }
+                ]
+            }
+        }
+    }
+}
+</script>
+
+<style type="text/tailwindcss">
+@layer utilities {
+
+    .technical-shadow {
+        box-shadow: 0px 2px 8px rgba(15, 23, 42, 0.12);
+    }
+
+}
+</style>
+
+</head>
+
+<body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col">
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<nav class="bg-surface-container-lowest dark:bg-midnight w-full sticky top-0 z-50 border-b border-steel/10">
+
+    <div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+
+        <div class="flex items-center gap-md">
+ <!-- IDENTITÉ : LOGO + NOM + DEUXIÈME LOGO -->
+        <a href="home.html" class="flex items-center shrink-0 gap-3">
+
+            <!-- Premier logo : TAS -->
+            <img src="./img/IMG-20260818-WA0112.jpg"
+                 alt="Logo TAS"
+                 class="h-12 w-12 md:h-14 md:w-14 object-contain"/>
+
+            <!-- Nom de l'entreprise -->
+            <span class="text-lg md:text-xl font-bold tracking-tight text-primary whitespace-nowrap">
+                BETAS AS/HEZ
+            </span>
+
+            <!-- Deuxième logo : HEZ -->
+            <img src="./img/Capture d'écran 2026-09-02 113340.png"
+                 alt="Logo HEZ"
+                 class="h-12 w-auto md:h-14 object-contain"/>
+        </a>
+        </div>
+
+
+        <div class="hidden md:flex items-center gap-gutter">
+
+            <a
+                class="font-label-md text-label-md text-steel dark:text-secondary-fixed-dim hover:text-midnight transition-colors"
+                href="home.html">
+                Accueil
+            </a>
+
+            <a
+                class="font-label-md text-label-md text-construction-orange font-bold border-b-2 border-construction-orange pb-1"
+                href="service.html">
+                Services
+            </a>
+  <a
+                class="font-label-md text-label-md text-steel dark:text-secondary-fixed-dim hover:text-midnight transition-colors"
+                href="actualité.html">
+                Actualité
+            </a>
+              <a
+                class="font-label-md text-label-md text-steel dark:text-secondary-fixed-dim hover:text-midnight transition-colors"
+                href="administration.html">
+                Notre équipe
+            </a>
+
+
+            <a
+                class="font-label-md text-label-md text-steel dark:text-secondary-fixed-dim hover:text-midnight transition-colors"
+                href="projets.html">
+                Projets
+            </a>
+
+            <a
+                class="font-label-md text-label-md text-steel dark:text-secondary-fixed-dim hover:text-midnight transition-colors"
+                href="why.html">
+                À propos 
+            </a>
+
+            <a
+                class="font-label-md text-label-md text-steel dark:text-secondary-fixed-dim hover:text-midnight transition-colors"
+                href="Contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <a
+            href="bookappointment1.html"
+            class="hidden md:flex items-center justify-center bg-construction-orange text-on-tertiary font-label-md text-label-md rounded h-lg px-md hover:bg-on-tertiary-container transition-colors">
+
+            Prendre rendez-vous
+
+        </a>
+
+
+        <button class="md:hidden flex items-center justify-center p-sm text-midnight">
+
+            <span
+                class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 0;">
+                menu
+            </span>
+
+        </button>
+
+    </div>
+
+</nav>
+<!-- =========================================================
+     MAIN
+========================================================= -->
+<main class="flex-grow flex flex-col">
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section
+    class="relative w-full bg-midnight py-xl px-margin-mobile md:px-margin-desktop overflow-hidden border-b border-steel/20">
+
+    <div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter relative z-10">
+
+        <div class="col-span-1 md:col-span-8 flex flex-col justify-center">
+
+            <span class="font-label-sm text-label-sm text-construction-orange uppercase tracking-wider mb-sm">
+                Compétences clés
+            </span>
+
+            <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-off-white mb-md">
+                Des solutions d’ingénierie pour des environnements complexes
+            </h1>
+
+            <p class="font-body-lg text-body-lg text-secondary-fixed-dim max-w-2xl mb-lg">
+                Nous fournissons des services techniques et énergétiques de précision,
+                une gestion rigoureuse des projets et une mise en œuvre irréprochable
+                pour les secteurs industriel et tertiaire.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="absolute right-0 top-0 w-1/2 h-full opacity-10 pointer-events-none"
+        style="background-image: radial-gradient(circle at 100% 0%, #f97316 0%, transparent 50%);">
+    </div>
+</section>
+<!-- =========================================================
+     SERVICES
+========================================================= -->
+
+<section class="py-xl px-margin-mobile md:px-margin-desktop bg-surface">
+
+    <div class="max-w-[1440px] mx-auto">
+
+
+        <!-- TITRE DE LA SECTION -->
+
+        <div class="mb-lg">
+
+            <span class="font-label-sm text-label-sm text-construction-orange uppercase tracking-wider">
+                Nos domaines d'expertise
+            </span>
+
+            <h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-midnight mt-sm">
+                Services énergétiques
+            </h2>
+
+            <p class="font-body-lg text-body-lg text-steel max-w-3xl mt-sm">
+                Des solutions conçues pour améliorer la performance,
+                la fiabilité et l'efficacité énergétique de vos installations ou pour assurer l'autonomie des dispositifs d'éclairages.
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             GRID DES SERVICES
+        ================================================= -->
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+
+
+            <!-- =================================================
+                 SERVICE ÉNERGÉTIQUE
+            ================================================= -->
+
+            <article
+                class="col-span-1 md:col-span-8 bg-surface-container-lowest border border-steel/20 rounded-lg overflow-hidden flex flex-col md:flex-row group hover:border-construction-orange/50 transition-colors duration-300">
+
+
+                <!-- IMAGE -->
+
+                <div class="md:w-1/2 h-64 md:h-auto relative">
+
+                    <img
+                        src="./img/Capture d'écran 2026-08-25 195058.png"
+                        alt="Installation technique présentant des réseaux de tuyauterie et une infrastructure énergétique"
+                        class="absolute inset-0 w-full h-full object-cover"
+                    >
+
+                    <div class="absolute inset-0 bg-midnight/20 group-hover:bg-transparent transition-colors duration-300"></div>
+
+                </div>
+
+
+
+                <!-- CONTENU -->
+
+                <div class="p-md md:w-1/2 flex flex-col justify-between">
+
+                    <div>
+
+                        <div class="flex items-center gap-sm mb-sm">
+
+                            <span
+                                class="material-symbols-outlined text-construction-orange"
+                                style="font-variation-settings: 'FILL' 1;">
+                                bolt
+                            </span>
+
+                        </div>
+
+
+                        <h3 class="font-headline-sm text-headline-sm text-midnight mb-sm">
+                            Services énergétiques
+                        </h3>
+
+
+                        <p class="font-body-md text-body-md text-steel mb-md">
+
+                            installation complète et éfficasses 
+                            des systèmes d'éclairage hurbain dans le cas suivant il s'agit de  LAMPADAIRES SOLAIRES ALL IN THREE /ALL IN TWO / ALL IN ONE  .
+                            
+        
+
+                        </p>
+
+
+                        <ul class="space-y-sm mb-lg">
+
+                            <li class="flex items-start gap-sm">
+
+                                <span
+                                    class="material-symbols-outlined text-steel text-[16px] mt-1">
+                                    check_circle
+                                </span>
+
+                                <span class="font-body-md text-body-md text-midnight">
+                                    Audits énergétiques et conformité
+                                </span>
+
+                            </li>
+
+
+                            <li class="flex items-start gap-sm">
+
+                                <span
+                                    class="material-symbols-outlined text-steel text-[16px] mt-1">
+                                    check_circle
+                                </span>
+
+                                <span class="font-body-md text-body-md text-midnight">
+                                    Optimisation des systèmes
+                                </span>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </article><br>
+
+
+
+            <!-- =================================================
+                 GESTION DE PROJET
+            ================================================= -->
+<article 
+    class="col-span-1 md:col-span-8
+           bg-surface-container-lowest
+           border border-steel/20
+           rounded-lg
+           overflow-hidden
+           flex flex-col md:flex-row
+           hover:border-midnight/30
+           transition-colors duration-300">
+
+    <!-- IMAGE -->
+    <div class="md:w-1/2 h-64 md:h-auto relative">
+
+        <img 
+            src="./img/Capture d'écran 2026-08-25 195258.png"
+            alt="installation de panneaux solaires pour l'indépendanse électrique des domiciles  "
+            class="absolute inset-0 w-full h-full object-cover"
+        >
+
+        <div 
+            class="absolute inset-0 bg-midnight/20 
+                   hover:bg-transparent transition-colors duration-300">
+        </div>
+
+    </div>
+
+
+    <!-- CONTENU TEXTE -->
+    <div class="p-md md:w-1/2 flex flex-col justify-between">
+
+        <div>
+
+            <!-- ICÔNE -->
+            <div 
+                class="w-12 h-12 rounded
+                       bg-surface-container-high
+                       flex items-center justify-center
+                       mb-md
+                       border border-steel/10">
+
+                <span 
+                    class="material-symbols-outlined text-midnight"
+                    style="font-variation-settings: 'FILL' 0;">
+
+                    architecture
+
+                </span>
+
+            </div>
+
+
+            <!-- TITRE -->
+            <h3 
+                class="font-headline-sm text-headline-sm
+                       text-midnight mb-sm">
+
+                panneaux solaires
+
+            </h3>
+
+
+            <!-- DESCRIPTION -->
+            <p 
+                class="font-body-md text-body-md
+                       text-steel mb-md">
+
+               installationn rigoureusede pannaux photovoltaique dans l'optique d'aprovisionner continuellement les installations domestiques
+
+            </p>
+
+        </div>
+    </div>
+
+</article><br>
+           
+            <!-- =================================================
+                 MISE EN ŒUVRE
+            ================================================= -->
+<article
+    class="col-span-1 md:col-span-8
+           bg-surface-container-lowest
+           border border-steel/20
+           rounded-lg
+           overflow-hidden
+           flex flex-col md:flex-row
+           group
+           hover:border-construction-orange/50
+           transition-colors duration-300">
+
+    <!-- IMAGE -->
+    <div class="md:w-1/2 h-64 md:h-auto relative">
+
+        <img
+            src="./img/Capture d'écran 2026-08-25 195341.png"
+            alt="Équipe technique lors de la mise en œuvre d'une installation"
+            class="absolute inset-0 w-full h-full object-cover"
+        >
+
+        <div
+            class="absolute inset-0 bg-midnight/20
+                   group-hover:bg-transparent
+                   transition-colors duration-300">
+        </div>
+
+    </div>
+
+
+    <!-- CONTENU -->
+    <div class="p-md md:w-1/2 flex flex-col justify-between">
+
+        <div>
+
+            <!-- ICÔNE -->
+            <div class="flex items-center gap-sm mb-sm">
+
+                <span
+                    class="material-symbols-outlined text-construction-orange"
+                    style="font-variation-settings: 'FILL' 1;">
+                    construction
+                </span>
+
+            </div>
+
+
+            <!-- TITRE -->
+            <h3
+                class="font-headline-sm text-headline-sm
+                       text-midnight mb-sm">
+
+                pannaux solaires et accumulateurs
+
+            </h3>
+
+
+            <!-- DESCRIPTION -->
+            <p
+                class="font-body-md text-body-md
+                       text-steel mb-md">
+                installation rigoureuse de panneaux et accumulateurs adaptés 
+                pour maintenir une disponibilité énergétique régulière et longue durée 
+                en plus d'une maintenance des appareils .  
+            </p>
+
+
+            <!-- POINTS CLÉS -->
+            <ul class="space-y-sm mb-lg">
+
+                <li class="flex items-start gap-sm">
+
+                    <span
+                        class="material-symbols-outlined
+                               text-steel text-[16px] mt-1">
+                        check_circle
+                    </span>
+
+                    <span
+                        class="font-body-md text-body-md text-midnight">
+
+                        Installation et déploiement
+
+                    </span>
+
+                </li>
+
+
+                <li class="flex items-start gap-sm">
+
+                    <span
+                        class="material-symbols-outlined
+                               text-steel text-[16px] mt-1">
+                        check_circle
+                    </span>
+
+                    <span
+                        class="font-body-md text-body-md text-midnight">
+
+                        Mise en service et contrôle
+
+                    </span>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</article>
+<br>
+<!-- =================================================
+     GÉNIE CIVIL
+================================================= -->
+<div class="col-span-1 md:col-span-12 mt-xl mb-lg">
+
+    <span class="font-label-sm text-label-sm text-construction-orange uppercase tracking-wider">
+        Domaine d'expertise
+    </span>
+
+    <h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-midnight mt-sm">
+        Génie civil
+    </h2>
+
+    <p class="font-body-lg text-body-lg text-steel max-w-3xl mt-sm">
+        Des solutions de construction et d'infrastructure adaptées
+        aux exigences techniques de chaque projet.
+    </p>
+</div>
+<article
+    class="col-span-1 md:col-span-8
+           bg-surface-container-lowest
+           border border-steel/20
+           rounded-lg
+           overflow-hidden
+           flex flex-col md:flex-row
+           group
+           hover:border-construction-orange/50
+           transition-colors duration-300">
+
+    <!-- IMAGE -->
+    <div class="md:w-1/2 h-64 md:h-auto relative">
+
+        <img
+            src="./img/IMG-20260819-WA0029.jpg"
+            alt="TRAVAUX DE CONSTRUCTION D´OUVRAGES D´ASSAINISSEMENT :  
+CANIVEAUX PERRÉ MACONNÉS EN U"
+            class="absolute inset-0 w-full h-full object-cover"
+        >
+
+        <!-- Overlay -->
+        <div
+            class="absolute inset-0 bg-midnight/20
+                   group-hover:bg-transparent
+                   transition-colors duration-300">
+        </div>
+
+    </div>
+    <!-- CONTENU -->
+    <div class="p-md md:w-1/2 flex flex-col justify-between">
+
+        <div>
+
+            <!-- ICÔNE -->
+            <div class="flex items-center gap-sm mb-sm">
+
+                <span
+                    class="material-symbols-outlined text-construction-orange"
+                    style="font-variation-settings: 'FILL' 1;">
+                    engineering
+                </span>
+
+            </div>
+            <!-- TITRE -->
+            <h3
+                class="font-headline-sm text-headline-sm
+                       text-midnight mb-sm">
+
+                Génie civil
+
+            </h3>
+
+
+            <!-- DESCRIPTION -->
+            <p
+                class="font-body-md text-body-md
+                       text-steel mb-md">
+
+                <!-- REMPLACE CE TEXTE PAR TA DESCRIPTION -->
+
+                Nous réalisons des travaux de génie civil adaptés
+                aux exigences techniques de chaque projet, depuis
+                la conception jusqu'à la réalisation des ouvrages.
+            </p>
+            <!-- POINTS CLÉS -->
+            <ul class="space-y-sm mb-lg">
+
+                <!-- POINT 1 -->
+                <li class="flex items-start gap-sm">
+
+                    <span
+                        class="material-symbols-outlined
+                               text-steel text-[16px] mt-1">
+                        check_circle
+                    </span>
+
+                    <span
+                        class="font-body-md text-body-md text-midnight">
+
+                        <!-- Information 1 -->
+
+                        Travaux de construction et d'aménagement
+
+                    </span>
+
+                </li>
+                <!-- POINT 2 -->
+                <li class="flex items-start gap-sm">
+
+                    <span
+                        class="material-symbols-outlined
+                               text-steel text-[16px] mt-1">
+                        check_circle
+                    </span>
+
+                    <span
+                        class="font-body-md text-body-md text-midnight">
+
+                        <!-- Information 2 -->
+
+                        Réalisation et suivi des ouvrages
+
+                    </span>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+</article>
+<!-- =================================================
+     GÉNIE CIVIL — CONSTRUCTION
+================================================= -->
+
+<article
+    class="col-span-1 md:col-span-8
+           bg-surface-container-lowest
+           border border-steel/20
+           rounded-lg
+           overflow-hidden
+           flex flex-col md:flex-row
+           group
+           hover:border-construction-orange/50
+           transition-colors duration-300">
+
+    <!-- IMAGE -->
+    <div class="md:w-1/2 h-64 md:h-auto relative">
+
+        <img
+            src="./img/Capture d'écran 2026-08-27 192503.png"
+            alt="Travaux de construction et réalisation de bâtiments"
+            class="absolute inset-0 w-full h-full object-cover"
+        >
+
+        <div
+            class="absolute inset-0 bg-midnight/20
+                   group-hover:bg-transparent
+                   transition-colors duration-300">
+        </div>
+
+    </div>
+
+    <!-- CONTENU -->
+    <div class="p-md md:w-1/2 flex flex-col justify-between">
+
+        <div>
+
+            <div class="flex items-center gap-sm mb-sm">
+
+                <span
+                    class="material-symbols-outlined text-construction-orange"
+                    style="font-variation-settings: 'FILL' 1;">
+                    domain
+                </span>
+
+            </div>
+
+            <h3 class="font-headline-sm text-headline-sm text-midnight mb-sm">
+                Construction et bâtiments
+            </h3>
+
+            <p class="font-body-md text-body-md text-steel mb-md">
+                Nous intervenons dans la réalisation et l'aménagement
+                de bâtiments en veillant au respect des exigences
+                techniques, de la qualité des matériaux et des délais
+                d'exécution.
+            </p>
+
+            <ul class="space-y-sm mb-lg">
+
+                <li class="flex items-start gap-sm">
+                    <span class="material-symbols-outlined text-steel text-[16px] mt-1">
+                        check_circle
+                    </span>
+                    <span class="font-body-md text-body-md text-midnight">
+                        Construction et rénovation
+                    </span>
+                </li>
+
+                <li class="flex items-start gap-sm">
+                    <span class="material-symbols-outlined text-steel text-[16px] mt-1">
+                        check_circle
+                    </span>
+                    <span class="font-body-md text-body-md text-midnight">
+                        Aménagement des infrastructures
+                    </span>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+</article>
+<!-- =================================================
+     GÉNIE CIVIL — ROUTES ET VOIRIES
+================================================= -->
+<article
+    class="col-span-1 md:col-span-8
+           bg-surface-container-lowest
+           border border-steel/20
+           rounded-lg
+           overflow-hidden
+           flex flex-col md:flex-row
+           group
+           hover:border-construction-orange/50
+           transition-colors duration-300">
+
+    <!-- IMAGE -->
+    <div class="md:w-1/2 h-64 md:h-auto relative">
+
+        <img
+            src="./img/IMG-20260902-WA0049.jpg"
+            alt="Travaux de voirie et d'aménagement routier"
+            class="absolute inset-0 w-full h-full object-cover"
+        >
+
+        <div
+            class="absolute inset-0 bg-midnight/20
+                   group-hover:bg-transparent
+                   transition-colors duration-300">
+        </div>
+
+    </div>
+
+    <!-- CONTENU -->
+    <div class="p-md md:w-1/2 flex flex-col justify-between">
+
+        <div>
+
+            <div class="flex items-center gap-sm mb-sm">
+
+                <span
+                    class="material-symbols-outlined text-construction-orange"
+                    style="font-variation-settings: 'FILL' 1;">
+                    road
+                </span>
+
+            </div>
+
+            <h3 class="font-headline-sm text-headline-sm text-midnight mb-sm">
+                Routes et voiries
+            </h3>
+
+            <p class="font-body-md text-body-md text-steel mb-md">
+                Nous réalisons des travaux d'aménagement et de
+                réhabilitation des voiries afin d'améliorer la
+                circulation, l'accessibilité et la durabilité
+                des infrastructures.
+            </p>
+
+            <ul class="space-y-sm mb-lg">
+
+                <li class="flex items-start gap-sm">
+                    <span class="material-symbols-outlined text-steel text-[16px] mt-1">
+                        check_circle
+                    </span>
+                    <span class="font-body-md text-body-md text-midnight">
+                        Aménagement des voiries
+                    </span>
+                </li>
+
+                <li class="flex items-start gap-sm">
+                    <span class="material-symbols-outlined text-steel text-[16px] mt-1">
+                        check_circle
+                    </span>
+                    <span class="font-body-md text-body-md text-midnight">
+                        Réhabilitation et entretien
+                    </span>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+</article>
+<!-- =================================================
+     GÉNIE CIVIL — INFRASTRUCTURES
+================================================= -->
+ 
+<article
+    class="col-span-1 md:col-span-8
+           bg-surface-container-lowest
+           border border-steel/20
+           rounded-lg
+           overflow-hidden
+           flex flex-col md:flex-row
+           group
+           hover:border-construction-orange/50
+           transition-colors duration-300">
+
+    <!-- IMAGE -->
+    <div class="md:w-1/2 h-64 md:h-auto relative">
+
+        <img
+            src="./img/IMG-20260819-WA0041.jpg"
+            alt="Réalisation d'une infrastructure de génie civil"
+            class="absolute inset-0 w-full h-full object-cover"
+        >
+
+        <div
+            class="absolute inset-0 bg-midnight/20
+                   group-hover:bg-transparent
+                   transition-colors duration-300">
+        </div>
+
+    </div>
+
+    <!-- CONTENU -->
+    <div class="p-md md:w-1/2 flex flex-col justify-between">
+
+        <div>
+
+            <div class="flex items-center gap-sm mb-sm">
+
+            <span
+                    class="material-symbols-outlined text-construction-orange"
+                    style="font-variation-settings: 'FILL' 1;">
+                    water_drop
+                </span>
+
+            </div>
+
+            <h3 class="font-headline-sm text-headline-sm text-midnight mb-sm">
+                réseaux hydrauliques
+            </h3>
+
+            <p class="font-body-md text-body-md text-steel mb-md">
+                Nous concevons et réalisons différents ouvrages pour le transport et l'auto purification de l'eau contre les bactérie anaherobiques. 
+            </p>
+
+            <ul class="space-y-sm mb-lg">
+
+                <li class="flex items-start gap-sm">
+                    <span class="material-symbols-outlined text-steel text-[16px] mt-1">
+                        check_circle
+                    </span>
+                    <span class="font-body-md text-body-md text-midnight">
+                        Réalisation d'ouvrages
+                    </span>
+                </li>
+
+                <li class="flex items-start gap-sm">
+                    <span class="material-symbols-outlined text-steel text-[16px] mt-1">
+                        check_circle
+                    </span>
+                    <span class="font-body-md text-body-md text-midnight">
+                        Travaux de fondation et structure de transport
+                    </span>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</article>
+<!-- =================================================
+     GÉNIE CIVIL — RÉSEAUX HYDRAULIQUES
+================================================= -->
+
+<article
+    class="col-span-1 md:col-span-8
+           bg-surface-container-lowest
+           border border-steel/20
+           rounded-lg
+           overflow-hidden
+           flex flex-col md:flex-row
+           group
+           hover:border-construction-orange/50
+           transition-colors duration-300">
+
+    <!-- IMAGE -->
+    <div class="md:w-1/2 h-64 md:h-auto relative">
+
+        <img
+            src="./img/IMG-20260819-WA0038.jpg"
+            alt="Installation d'un réseau hydraulique"
+            class="absolute inset-0 w-full h-full object-cover"
+        >
+
+        <div
+            class="absolute inset-0 bg-midnight/20
+                   group-hover:bg-transparent
+                   transition-colors duration-300">
+        </div>
+
+    </div>
+
+    <!-- CONTENU -->
+    <div class="p-md md:w-1/2 flex flex-col justify-between">
+
+        <div>
+
+            <div class="flex items-center gap-sm mb-sm">
+
+                <span
+                    class="material-symbols-outlined text-construction-orange"
+                    style="font-variation-settings: 'FILL' 1;">
+                    water_drop
+                </span>
+
+            </div>
+
+            <h3 class="font-headline-sm text-headline-sm text-midnight mb-sm">
+                Infrastructures hydrauliques
+            </h3>
+
+            <p class="font-body-md text-body-md text-steel mb-md">
+                Nous intervenons dans la réalisation et l'installation
+                de réseaux hydrauliques destinés à assurer une
+                distribution fiable et durable des ressources en eau.
+            </p>
+
+            <ul class="space-y-sm mb-lg">
+
+                <li class="flex items-start gap-sm">
+                    <span class="material-symbols-outlined text-steel text-[16px] mt-1">
+                        check_circle
+                    </span>
+                    <span class="font-body-md text-body-md text-midnight">
+                        Installation des réseaux hydrauliques
+                    </span>
+                </li>
+
+                <li class="flex items-start gap-sm">
+                    <span class="material-symbols-outlined text-steel text-[16px] mt-1">
+                        check_circle
+                    </span>
+                    <span class="font-body-md text-body-md text-midnight">
+                        Maintenance et optimisation des installations
+                    </span>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</article>
+
+<div class="col-span-1 md:col-span-12 mt-xl mb-lg">
+
+    <span class="font-label-sm text-label-sm text-construction-orange uppercase tracking-wider">
+        Domaine d'expertise
+    </span>
+
+    <h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-midnight mt-sm">
+        Génie Télécommunication
+    </h2>
+
+    <p class="font-body-lg text-body-lg text-steel max-w-3xl mt-sm">
+        Des solutions de construction et d'infrastructure adaptées
+        aux exigences techniques de chaque projet.
+    </p>
+    <!-- =================================================
+     TÉLÉCOMMUNICATION — CAMÉRAS DE SURVEILLANCE
+================================================= -->
+
+<article
+    class="col-span-1 md:col-span-8
+           bg-surface-container-lowest
+           border border-steel/20
+           rounded-lg
+           overflow-hidden
+           flex flex-col md:flex-row
+           group
+           hover:border-construction-orange/50
+           transition-colors duration-300">
+
+    <!-- IMAGE -->
+    <div class="md:w-1/2 h-64 md:h-auto relative">
+
+        <img
+            src="./img/Capture d'écran 2026-08-27 183737.png"
+            alt="Installation de caméras de surveillance dans une agglomération"
+            class="absolute inset-0 w-full h-full object-cover"
+        >
+
+        <div
+            class="absolute inset-0 bg-midnight/20
+                   group-hover:bg-transparent
+                   transition-colors duration-300">
+        </div>
+
+    </div>
+    <!-- CONTENU -->
+    <div class="p-md md:w-1/2 flex flex-col justify-between">
+
+        <div>
+
+            <!-- ICÔNE -->
+            <div class="flex items-center gap-sm mb-sm">
+
+                <span
+                    class="material-symbols-outlined text-construction-orange"
+                    style="font-variation-settings: 'FILL' 1;">
+                    videocam
+                </span>
+
+            </div>
+
+
+            <!-- TITRE -->
+            <h3
+                class="font-headline-sm text-headline-sm
+                       text-midnight mb-sm">
+
+                Installation des caméras de surveillance des agglomérations
+
+            </h3>
+
+
+            <!-- DESCRIPTION -->
+            <p
+                class="font-body-md text-body-md
+                       text-steel mb-md">
+
+                Nous assurons l'installation et le déploiement de
+                systèmes de vidéosurveillance destinés à renforcer
+                la sécurité des espaces urbains et des infrastructures.
+                Nos solutions permettent une surveillance efficace
+                des zones stratégiques et une meilleure gestion
+                des situations à risque.
+
+            </p>
+
+
+            <!-- POINTS CLÉS -->
+            <ul class="space-y-sm mb-lg">
+
+                <li class="flex items-start gap-sm">
+
+                    <span
+                        class="material-symbols-outlined
+                               text-steel text-[16px] mt-1">
+                        check_circle
+                    </span>
+
+                    <span
+                        class="font-body-md text-body-md text-midnight">
+
+                        Installation et configuration des caméras
+
+                    </span>
+
+                </li>
+
+
+                <li class="flex items-start gap-sm">
+
+                    <span
+                        class="material-symbols-outlined
+                               text-steel text-[16px] mt-1">
+                        check_circle
+                    </span>
+
+                    <span
+                        class="font-body-md text-body-md text-midnight">
+
+                        Déploiement des systèmes de surveillance
+
+                    </span>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</article>
+<br>
+<!-- =================================================
+     TÉLÉCOMMUNICATION — SITES RADIO MOBILE
+================================================= -->
+
+<article
+    class="col-span-1 md:col-span-8
+           bg-surface-container-lowest
+           border border-steel/20
+           rounded-lg
+           overflow-hidden
+           flex flex-col md:flex-row
+           group
+           hover:border-construction-orange/50
+           transition-colors duration-300">
+
+    <!-- IMAGE -->
+    <div class="md:w-1/2 h-64 md:h-auto relative">
+
+        <img
+            src="./img/Capture d'écran 2026-08-27 183528.png"
+            alt="Installation d'un site radio mobile"
+            class="absolute inset-0 w-full h-full object-cover"
+        >
+
+        <div
+            class="absolute inset-0 bg-midnight/20
+                   group-hover:bg-transparent
+                   transition-colors duration-300">
+        </div>
+
+    </div>
+
+
+    <!-- CONTENU -->
+    <div class="p-md md:w-1/2 flex flex-col justify-between">
+
+        <div>
+
+            <!-- ICÔNE -->
+            <div class="flex items-center gap-sm mb-sm">
+
+                <span
+                    class="material-symbols-outlined text-construction-orange"
+                    style="font-variation-settings: 'FILL' 1;">
+                    cell_tower
+                </span>
+
+            </div>
+
+
+            <!-- TITRE -->
+            <h3
+                class="font-headline-sm text-headline-sm
+                       text-midnight mb-sm">
+
+                Installation des sites radio mobile 2G, 3G, 4G, LTE, 5G
+
+            </h3>
+
+
+            <!-- DESCRIPTION -->
+            <p
+                class="font-body-md text-body-md
+                       text-steel mb-md">
+
+                Nous réalisons l'installation et le déploiement
+                d'infrastructures radio mobiles destinées à assurer
+                la couverture et la disponibilité des réseaux de
+                télécommunication. Nos interventions couvrent les
+                différentes technologies mobiles, de la 2G à la 5G.
+
+            </p>
+
+
+            <!-- POINTS CLÉS -->
+            <ul class="space-y-sm mb-lg">
+
+                <li class="flex items-start gap-sm">
+
+                    <span
+                        class="material-symbols-outlined
+                               text-steel text-[16px] mt-1">
+                        check_circle
+                    </span>
+
+                    <span
+                        class="font-body-md text-body-md text-midnight">
+
+                        Installation des équipements radio
+
+                    </span>
+
+                </li>
+
+
+                <li class="flex items-start gap-sm">
+
+                    <span
+                        class="material-symbols-outlined
+                               text-steel text-[16px] mt-1">
+                        check_circle
+                    </span>
+
+                    <span
+                        class="font-body-md text-body-md text-midnight">
+
+                        Déploiement des réseaux 2G, 3G, 4G, LTE et 5G
+
+                    </span>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</article>
+<br>
+<!-- =================================================
+     TÉLÉCOMMUNICATION — FAISCEAUX HERTZIENS
+================================================= -->
+
+<article
+    class="col-span-1 md:col-span-8
+           bg-surface-container-lowest
+           border border-steel/20
+           rounded-lg
+           overflow-hidden
+           flex flex-col md:flex-row
+           group
+           hover:border-construction-orange/50
+           transition-colors duration-300">
+
+    <!-- IMAGE -->
+    <div class="md:w-1/2 h-64 md:h-auto relative">
+
+        <img
+            src="./img/Capture d'écran 2026-08-27 183639.png"
+            alt="Installation d'une liaison de transmission par faisceaux hertziens"
+            class="absolute inset-0 w-full h-full object-cover"
+        >
+
+        <div
+            class="absolute inset-0 bg-midnight/20
+                   group-hover:bg-transparent
+                   transition-colors duration-300">
+        </div>
+
+    </div>
+
+
+    <!-- CONTENU -->
+    <div class="p-md md:w-1/2 flex flex-col justify-between">
+
+        <div>
+
+            <!-- ICÔNE -->
+            <div class="flex items-center gap-sm mb-sm">
+
+                <span
+                    class="material-symbols-outlined text-construction-orange"
+                    style="font-variation-settings: 'FILL' 1;">
+                    settings_input_antenna
+                </span>
+
+            </div>
+
+
+            <!-- TITRE -->
+            <h3
+                class="font-headline-sm text-headline-sm
+                       text-midnight mb-sm">
+
+                Installation des liaisons de transmission par faisceaux hertziens
+
+            </h3>
+
+
+            <!-- DESCRIPTION -->
+            <p
+                class="font-body-md text-body-md
+                       text-steel mb-md">
+
+                Nous réalisons l'installation de liaisons de transmission
+                par faisceaux hertziens permettant d'assurer la
+                communication entre différents sites. Ces solutions
+                permettent de transmettre efficacement les données
+                sur des distances importantes sans liaison filaire directe.
+
+            </p>
+
+
+            <!-- POINTS CLÉS -->
+            <ul class="space-y-sm mb-lg">
+
+                <li class="flex items-start gap-sm">
+
+                    <span
+                        class="material-symbols-outlined
+                               text-steel text-[16px] mt-1">
+                        check_circle
+                    </span>
+
+                    <span
+                        class="font-body-md text-body-md text-midnight">
+
+                        Installation et alignement des antennes
+
+                    </span>
+
+                </li>
+
+
+                <li class="flex items-start gap-sm">
+
+                    <span
+                        class="material-symbols-outlined
+                               text-steel text-[16px] mt-1">
+                        check_circle
+                    </span>
+
+                    <span
+                        class="font-body-md text-body-md text-midnight">
+
+                        Mise en place des liaisons de transmission
+
+                    </span>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</article>
+</div>
+           <!-- =================================================
+     LOGISTIQUE — OUTILS ET ÉQUIPEMENTS
+================================================= -->
+
+<section class="col-span-1 md:col-span-12 mt-xl">
+
+    <!-- EN-TÊTE DE LA SECTION -->
+    <div class="mb-lg">
+
+        <span class="font-label-sm text-label-sm text-construction-orange uppercase tracking-wider">
+            Nos moyens techniques
+        </span>
+
+        <h2
+            class="font-display-lg-mobile md:font-display-lg
+                   text-display-lg-mobile md:text-display-lg
+                   text-midnight mt-sm">
+            Logistique
+        </h2>
+
+        <p
+            class="font-body-lg text-body-lg
+                   text-steel max-w-3xl mt-sm">
+            Des équipements et outils adaptés à nos différentes
+            interventions pour garantir la précision, la sécurité
+            et l'efficacité de nos opérations sur le terrain.
+        </p>
+
+    </div>
+
+
+    <!-- =================================================
+         GRILLE DES OUTILS
+    ================================================= -->
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-gutter">
+
+
+        <!-- =================================================
+             OUTIL 01
+        ================================================= -->
+
+        <article
+            class="bg-surface-container-lowest
+                   border border-steel/20
+                   rounded-lg
+                   overflow-hidden
+                   group
+                   hover:border-construction-orange/60
+                   hover:shadow-lg
+                   transition-all duration-300">
+
+            <!-- IMAGE : 220 x 180 px -->
+            <div
+                class="w-full h-[180px]
+                       bg-surface-container-high
+                       overflow-hidden
+                       flex items-center justify-center">
+
+                <img
+                    src="./img/outil-1.jpg"
+                    alt="Nom de l'outil 1"
+                    class="w-full h-full object-cover
+                           group-hover:scale-105
+                           transition-transform duration-500"
+                >
+
+            </div>
+
+
+            <!-- CONTENU -->
+            <div class="p-md">
+
+                <div class="flex items-center gap-sm mb-sm">
+
+                    <span
+                        class="material-symbols-outlined
+                               text-construction-orange">
+                        construction
+                    </span>
+
+                </div>
+
+                <h3
+                    class="font-headline-sm text-headline-sm
+                           text-midnight mb-sm">
+
+                    Nom de l'outil 1
+
+                </h3>
+
+                <p
+                    class="font-body-md text-body-md
+                           text-steel">
+
+                    Description courte de l'outil, de son utilisation
+                    et de son rôle dans nos différentes interventions
+                    techniques.
+
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             OUTIL 02
+        ================================================= -->
+
+        <article
+            class="bg-surface-container-lowest
+                   border border-steel/20
+                   rounded-lg
+                   overflow-hidden
+                   group
+                   hover:border-construction-orange/60
+                   hover:shadow-lg
+                   transition-all duration-300">
+
+            <!-- IMAGE : 220 x 180 px -->
+            <div
+                class="w-full h-[180px]
+                       bg-surface-container-high
+                       overflow-hidden
+                       flex items-center justify-center">
+
+                <img
+                    src="./img/outil-2.jpg"
+                    alt="Nom de l'outil 2"
+                    class="w-full h-full object-cover
+                           group-hover:scale-105
+                           transition-transform duration-500"
+                >
+
+            </div>
+
+
+            <!-- CONTENU -->
+            <div class="p-md">
+
+                <div class="flex items-center gap-sm mb-sm">
+
+                    <span
+                        class="material-symbols-outlined
+                               text-construction-orange">
+                        handyman
+                    </span>
+
+                </div>
+
+                <h3
+                    class="font-headline-sm text-headline-sm
+                           text-midnight mb-sm">
+
+                    Nom de l'outil 2
+
+                </h3>
+
+                <p
+                    class="font-body-md text-body-md
+                           text-steel">
+
+                    Description courte de l'outil et de son utilisation
+                    dans les opérations de construction, d'installation
+                    ou de maintenance.
+
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             OUTIL 03
+        ================================================= -->
+
+        <article
+            class="bg-surface-container-lowest
+                   border border-steel/20
+                   rounded-lg
+                   overflow-hidden
+                   group
+                   hover:border-construction-orange/60
+                   hover:shadow-lg
+                   transition-all duration-300">
+
+            <!-- IMAGE : 220 x 180 px -->
+            <div
+                class="w-full h-[180px]
+                       bg-surface-container-high
+                       overflow-hidden
+                       flex items-center justify-center">
+
+                <img
+                    src="./img/IMG-20260902-WA0046.jpg"
+                    alt="Nom de l'outil 3"
+                    class="w-full h-full object-cover
+                           group-hover:scale-105
+                           transition-transform duration-500"
+                >
+
+            </div>
+
+
+            <!-- CONTENU -->
+            <div class="p-md">
+
+                <div class="flex items-center gap-sm mb-sm">
+
+                    <span
+                        class="material-symbols-outlined
+                               text-construction-orange">
+                        engineering
+                    </span>
+
+                </div>
+
+                <h3
+                    class="font-headline-sm text-headline-sm
+                           text-midnight mb-sm">
+
+                    Nom de l'outil 3
+
+                </h3>
+
+                <p
+                    class="font-body-md text-body-md
+                           text-steel">
+
+                    Description courte permettant de présenter
+                    clairement la fonction et l'intérêt de cet
+                    équipement pour nos équipes techniques.
+
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             OUTIL 04
+        ================================================= -->
+
+        <article
+            class="bg-surface-container-lowest
+                   border border-steel/20
+                   rounded-lg
+                   overflow-hidden
+                   group
+                   hover:border-construction-orange/60
+                   hover:shadow-lg
+                   transition-all duration-300">
+
+            <!-- IMAGE : 220 x 180 px -->
+            <div
+                class="w-full h-[180px]
+                       bg-surface-container-high
+                       overflow-hidden
+                       flex items-center justify-center">
+
+                <img
+                    src="./img/IMG-20260825-WA0034.jpg"
+                    alt="Nom de l'outil 4"
+                    class="w-full h-full object-cover
+                           group-hover:scale-105
+                           transition-transform duration-500"
+                >
+
+            </div>
+
+
+            <!-- CONTENU -->
+            <div class="p-md">
+
+                <div class="flex items-center gap-sm mb-sm">
+
+                    <span
+                        class="material-symbols-outlined
+                               text-construction-orange">
+                        precision_manufacturing
+                    </span>
+
+                </div>
+
+                <h3
+                    class="font-headline-sm text-headline-sm
+                           text-midnight mb-sm">
+
+                    Nom de l'outil 4
+
+                </h3>
+
+                <p
+                    class="font-body-md text-body-md
+                           text-steel">
+
+                    Description de l'équipement et de son utilisation
+                    pour assurer la qualité et la précision de nos
+                    travaux sur le terrain.
+
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             OUTIL 05
+        ================================================= -->
+
+        <article
+            class="bg-surface-container-lowest
+                   border border-steel/20
+                   rounded-lg
+                   overflow-hidden
+                   group
+                   hover:border-construction-orange/60
+                   hover:shadow-lg
+                   transition-all duration-300">
+
+            <!-- IMAGE : 220 x 180 px -->
+            <div
+                class="w-full h-[180px]
+                       bg-surface-container-high
+                       overflow-hidden
+                       flex items-center justify-center">
+
+                <img
+                    src="./img/IMG-20260902-WA0046.jpg"
+                    alt="Nom de l'outil 5"
+                    class="w-full h-full object-cover
+                           group-hover:scale-105
+                           transition-transform duration-500"
+                >
+
+            </div>
+
+
+            <!-- CONTENU -->
+            <div class="p-md">
+
+                <div class="flex items-center gap-sm mb-sm">
+
+                    <span
+                        class="material-symbols-outlined
+                               text-construction-orange">
+                        build
+                    </span>
+
+                </div>
+
+                <h3
+                    class="font-headline-sm text-headline-sm
+                           text-midnight mb-sm">
+
+                    Nom de l'outil 5
+
+                </h3>
+
+                <p
+                    class="font-body-md text-body-md
+                           text-steel">
+
+                    Description de l'outil, de ses principales
+                    caractéristiques et de son rôle dans nos
+                    opérations techniques.
+
+                </p>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+  <!-- =================================================
+     PROJET À LA UNE
+================================================= -->
+
+<article
+    class="col-span-1 md:col-span-8
+           bg-surface-container-lowest
+           border border-steel/20
+           rounded-lg
+           overflow-hidden
+           relative
+           h-[320px] md:h-[450px]
+           group">
+
+    <!-- IMAGE -->
+    <div class="absolute inset-0 overflow-hidden">
+
+       <img 
+            src="./img/IMG-20260819-WA0032.jpg"
+            alt="Projet à la une"
+            class="w-full h-full object-cover
+                   transition-transform duration-700 ease-out
+                   group-hover:scale-110"
+        >
+
+    </div>
+
+    <!-- VOILE SOMBRE -->
+    <div
+        class="absolute inset-0
+               bg-gradient-to-t
+               from-midnight/90
+               via-midnight/40
+               to-transparent">
+    </div>
+
+    <!-- CONTENU -->
+    <div
+        class="absolute inset-0
+               flex flex-col
+               justify-end
+               p-md md:p-lg">
+
+         <a href="projets.html"><span
+            class="inline-flex
+                   bg-construction-orange
+                   text-on-tertiary
+                   font-label-sm
+                   text-label-sm
+                   px-sm py-xs
+                   rounded
+                   mb-sm
+                   w-max
+                   uppercase">
+
+            Projet à la une
+
+        </span></a>
+
+        <h3
+            class="font-headline-md
+                   text-headline-md
+                   text-off-white
+                   mb-xs">
+
+            Modernisation d’une installation industrielle
+
+        </h3>
+
+        <p
+            class="font-body-md
+                   text-body-md
+                   text-secondary-fixed-dim
+                   max-w-xl">
+
+            Une refonte complète combinant audits énergétiques,
+            gestion rigoureuse de projet et mise en œuvre de précision,
+            permettant de réduire les coûts opérationnels de 34 %.
+
+        </p>
+
+    </div>
+    <!-- =================================================
+     LOGISTIQUE — OUTILS ET ÉQUIPEMENTS
+================================================= -->
+
+<section class="col-span-1 md:col-span-12 mt-xl">
+
+    <!-- EN-TÊTE DE LA SECTION -->
+    <div class="mb-lg">
+
+        <span class="font-label-sm text-label-sm text-construction-orange uppercase tracking-wider">
+            Nos moyens techniques
+        </span>
+
+        <h2
+            class="font-display-lg-mobile md:font-display-lg
+                   text-display-lg-mobile md:text-display-lg
+                   text-midnight mt-sm">
+            Logistique
+        </h2>
+
+        <p
+            class="font-body-lg text-body-lg
+                   text-steel max-w-3xl mt-sm">
+            Des équipements et outils adaptés à nos différentes
+            interventions pour garantir la précision, la sécurité
+            et l'efficacité de nos opérations sur le terrain.
+        </p>
+
+    </div>
+</article>
+
+</section>
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer
+    class="bg-midnight dark:bg-surface-container-lowest w-full py-xl border-t border-steel/20">
+
+    <div
+        class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+
+
+        <div class="col-span-1 md:col-span-4 flex flex-col gap-md">
+
+            <span class="font-headline-sm text-headline-sm font-bold text-off-white dark:text-midnight">
+                BETAS AS/HEZ
+            </span>
+
+            <p class="font-body-md text-body-md text-secondary-fixed-dim dark:text-steel opacity-80">
+
+                © 2024 BETAS AS/HEZ. Tous droits réservés.
+
+            </p>
+
+        </div>
+
+
+        <div
+            class="col-span-1 md:col-span-8 flex flex-wrap gap-gutter justify-start md:justify-end">
+
+            <a
+                class="font-body-md text-body-md text-secondary-fixed-dim hover:text-off-white underline opacity-80 hover:opacity-100 transition-opacity"
+                href="#">
+
+                Politique de confidentialité
+
+            </a>
+
+
+            <a
+                class="font-body-md text-body-md text-secondary-fixed-dim hover:text-off-white underline opacity-80 hover:opacity-100 transition-opacity"
+                href="#">
+
+                Conditions d’utilisation
+
+            </a>
+
+
+            <a
+                class="font-body-md text-body-md text-secondary-fixed-dim hover:text-off-white underline opacity-80 hover:opacity-100 transition-opacity"
+                href="#">
+
+                Politique relative aux cookies
+
+            </a>
+
+
+            <a
+                class="font-body-md text-body-md text-secondary-fixed-dim hover:text-off-white underline opacity-80 hover:opacity-100 transition-opacity"
+                href="#">
+
+                Nos bureaux
+
+            </a>
+
+
+            <a
+                class="font-body-md text-body-md text-secondary-fixed-dim hover:text-off-white underline opacity-80 hover:opacity-100 transition-opacity"
+                href="#">
+
+                Assistance internationale
+
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
