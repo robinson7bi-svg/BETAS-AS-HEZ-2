@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Confirmation du rendez-vous - BETA AS HEZ</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&amp;FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&amp;FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "off-white": "#f8fafc",
+                        "secondary-fixed-dim": "#b9c7df",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f7f9fb",
+                        "on-primary-fixed": "#131b2e",
+                        "on-tertiary-container": "#d95f00",
+                        "on-background": "#191c1e",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-tertiary-fixed-variant": "#783200",
+                        "surface-container": "#eceef0",
+                        "surface-container-high": "#e6e8ea",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#0d1c2e",
+                        "surface": "#f7f9fb",
+                        "tertiary-fixed-dim": "#ffb690",
+                        "on-error-container": "#93000a",
+                        "steel": "#475569",
+                        "inverse-primary": "#bec6e0",
+                        "midnight": "#0f172a",
+                        "inverse-surface": "#2d3133",
+                        "outline": "#76777d",
+                        "on-secondary-fixed-variant": "#3a485b",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-tertiary-fixed": "#341100",
+                        "primary-fixed": "#dae2fd",
+                        "tertiary-fixed": "#ffdbca",
+                        "on-secondary-container": "#57657a",
+                        "secondary": "#515f74",
+                        "surface-dim": "#d8dadc",
+                        "surface-container-highest": "#e0e3e5",
+                        "tertiary": "#000000",
+                        "on-surface-variant": "#45464d",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#341100",
+                        "surface-variant": "#e0e3e5",
+                        "construction-orange": "#f97316",
+                        "on-primary-container": "#7c839b",
+                        "surface-tint": "#565e74",
+                        "background": "#f7f9fb",
+                        "primary": "#000000",
+                        "on-surface": "#191c1e",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "primary-container": "#131b2e",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f2f4f6",
+                        "outline-variant": "#c6c6cd",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#d5e3fc",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#d5e3fc"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "48px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px",
+                        "xl": "80px",
+                        "sm": "12px",
+                        "unit": "8px",
+                        "md": "24px",
+                        "gutter": "24px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-sm": [
+                            "12px",
+                            {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "body-md": [
+                            "16px",
+                            {
+                                "lineHeight": "24px",
+                                "letterSpacing": "0em",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "body-lg": [
+                            "18px",
+                            {
+                                "lineHeight": "28px",
+                                "letterSpacing": "0em",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "display-lg-mobile": [
+                            "32px",
+                            {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "label-md": [
+                            "14px",
+                            {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.02em",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "headline-sm": [
+                            "24px",
+                            {
+                                "lineHeight": "32px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "display-lg": [
+                            "48px",
+                            {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "headline-md": [
+                            "30px",
+                            {
+                                "lineHeight": "38px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    </script>
+
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+
+<!-- En-tête/pied de page masqués car il s'agit d'une page de confirmation -->
+
+<main class="flex-grow flex items-center justify-center p-margin-mobile md:p-margin-desktop">
+
+<div class="max-w-2xl w-full">
+
+<div class="bg-surface-container-lowest border border-steel/10 rounded-lg p-md md:p-lg text-center flex flex-col items-center gap-md">
+
+<!-- Icône de confirmation -->
+<div class="w-16 h-16 rounded-full bg-construction-orange flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">
+check_circle
+</span>
+</div>
+
+<!-- Message de confirmation -->
+<div class="space-y-unit">
+
+<h1 class="font-headline-md text-headline-md text-midnight">
+Rendez-vous confirmé
+</h1>
+
+<p class="font-body-md text-body-md text-steel">
+Votre demande a été traitée avec succès. Un ingénieur vous contactera prochainement.
+</p>
+
+</div>
+
+<!-- Informations du rendez-vous -->
+<div class="w-full bg-surface border border-steel/10 rounded p-md mt-sm text-left grid grid-cols-1 md:grid-cols-2 gap-md">
+
+<div>
+<span class="font-label-sm text-label-sm text-steel block mb-xs uppercase tracking-wider">
+Date et heure
+</span>
+
+<span class="font-body-md text-body-md text-midnight font-semibold">
+24 octobre 2024 à 10h00
+</span>
+</div>
+
+<div>
+<span class="font-label-sm text-label-sm text-steel block mb-xs uppercase tracking-wider">
+Identifiant de référence
+</span>
+
+<span class="font-body-md text-body-md text-midnight font-semibold">
+#BAH-8924-XT
+</span>
+</div>
+
+<div class="md:col-span-2 border-t border-steel/10 pt-sm mt-xs">
+
+<span class="font-label-sm text-label-sm text-steel block mb-xs uppercase tracking-wider">
+Type de service
+</span>
+
+<span class="font-body-md text-body-md text-midnight font-semibold">
+Consultation initiale du site et étude structurelle
+</span>
+
+</div>
+
+</div>
+
+<!-- Boutons d'action -->
+<div class="flex flex-col sm:flex-row gap-sm w-full mt-md">
+
+<a
+class="flex-1 bg-construction-orange text-white h-lg rounded flex items-center justify-center font-label-md text-label-md hover:bg-opacity-90 transition-opacity"
+href="#">
+
+Retour au tableau de bord
+
+</a>
+
+<a
+class="flex-1 bg-midnight text-white h-lg rounded flex items-center justify-center font-label-md text-label-md hover:bg-opacity-90 transition-opacity"
+href="#">
+
+Gérer le rendez-vous
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+</body>
+</html>

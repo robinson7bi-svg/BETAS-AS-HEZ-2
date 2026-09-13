@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projets &amp; Réalisations - BETA AS / HEZ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "midnight": "#0f172a",
+                        "construction-orange": "#f97316",
+                        "steel": "#475569",
+                        "surface": "#f7f9fb",
+                        "off-white": "#f8fafc",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f7f9fb; color: #0f172a; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-[#f7f9fb] text-[#0f172a] antialiased min-h-screen flex flex-col">
+<!-- 1. HEADER CORPORATE -->
+<header class="bg-white sticky top-0 z-50 border-b border-slate-200/80 shadow-sm transition-all duration-200">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<a class="flex items-center gap-3 group" href="home.html">
+
+    <!-- Logo TAS -->
+    <img
+        alt="Logo BETAS AS"
+        class="h-12 w-12 object-contain"
+        src="./img/IMG-20260818-WA0112.jpg"
+    >
+
+    <!-- Nom -->
+    <div class="flex flex-col leading-tight">
+        <span class="font-extrabold text-xl tracking-tight text-midnight">
+            BETAS AS/HEZ
+        </span>
+
+        <span class="text-[10px] font-semibold text-steel uppercase tracking-wider">
+            Bureau d'Études &amp; Contrôles
+        </span>
+    </div>
+
+    <!-- Logo HEZ -->
+    <img
+        alt="Logo HEZ"
+        class="h-12 w-12 object-contain ml-1"
+        src="./img/Capture d'écran 2026-09-02 113340.png"
+    >
+
+</a> 
+<!-- Navigation Links -->
+<nav class="hidden lg:flex items-center gap-6 xl:gap-8">
+<a class="text-sm font-semibold text-steel hover:text-midnight transition-colors" href="home.html">Accueil</a>
+<a class="text-sm font-semibold text-steel hover:text-midnight transition-colors" href="administration.html">Notre équipe</a>
+<a class="text-sm font-semibold text-steel hover:text-midnight transition-colors" href="actualité.html">Actualité</a>
+<a class="text-sm font-semibold text-steel hover:text-midnight transition-colors" href="postuler.html">Postuler</a>
+<a class="text-sm font-semibold text-steel hover:text-midnight transition-colors" href="service.html">Services</a>
+<a class="text-sm font-bold text-construction-orange border-b-2 border-construction-orange pb-1 transition-colors" href="projets.html">Projets</a>
+<a class="text-sm font-semibold text-steel hover:text-midnight transition-colors" href="why.html">À propos</a>
+<a class="text-sm font-semibold text-steel hover:text-midnight transition-colors" href="Contact.html">Contact</a>
+</nav>
+<!-- CTA Button -->
+<div class="hidden sm:flex items-center gap-4">
+<a class="bg-construction-orange hover:bg-orange-600 text-white text-sm font-bold px-5 py-2.5 rounded-lg shadow-sm hover:shadow transition-all duration-200 inline-flex items-center gap-2" href="bookappointment1.html">
+<span>Prendre rendez-vous</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+<!-- Mobile Menu Toggle -->
+<button aria-label="Menu Mobile" class="lg:hidden text-midnight p-2 rounded-lg hover:bg-slate-100 focus:outline-none">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</header>
+<!-- MAIN CONTENT -->
+<main class="flex-grow">
+<!-- 3. SECTION HÉRO / PROJET À LA UNE -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16">
+<div class="text-center md:text-left max-w-3xl mb-10">
+<span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-orange-100 text-construction-orange tracking-wide uppercase mb-3">
+<span class="w-2 h-2 rounded-full bg-construction-orange"></span>
+                Réalisations &amp; Savoir-faire
+            </span>
+<h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-midnight tracking-tight leading-tight">
+                Ingénierie &amp; Réalisations d'Envergure
+            </h1>
+<p class="mt-4 text-base sm:text-lg text-steel leading-relaxed">
+                Des projets concrets, une rigueur méthodologique et une présence active sur le terrain pour bâtir des infrastructures durables.
+            </p>
+</div>
+<!-- Carte Immersive Pleine Largeur -->
+<div class="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 group cursor-pointer bg-midnight">
+<div class="absolute top-5 left-5 z-20">
+<span class="bg-construction-orange text-white text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-md shadow-md flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">verified</span>
+                    PROJET STRATÉGIQUE RÉALISÉ
+                </span>
+</div>
+<img alt="Application d'enrobés et logistique lourde" class="w-full h-[480px] object-cover rounded-2xl group-hover:scale-[1.02] transition-transform duration-700 brightness-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTITt6EpigcNKMfn5rig8R_BgHe_XszCmIUJwup9vTnTfaGnkAIWHFRMapxSZjeGWl7mTZGxQSWStHGAWgqvEsxWUEWeGQNXVYOrjhq9zz7emcHlh0Y1bgPANoxJtMwUQtVkmVdMCHEhRS9xWe02hNACCvWldCkpdIzwy7Fk6vp6B48YBmm_hZFvLS4xTpFDmftS70TOi83nHc5BhInJESXpOsxfyN-y7qFbR5PB_iYq9A1lKqWsXbNmCU1WHaLUdSDA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-midnight/95 via-midnight/40 to-transparent z-10 flex flex-col justify-end p-6 sm:p-8 lg:p-10">
+<div class="bg-midnight/80 backdrop-blur-md border border-slate-700/60 rounded-xl p-5 sm:p-6 max-w-3xl">
+<div class="flex flex-wrap items-center gap-2 mb-2 text-xs font-semibold text-orange-400 uppercase tracking-wider">
+<span>Génie Civil</span> • <span>Travaux Publics</span> • <span>Cameroun</span>
+</div>
+<h2 class="text-xl sm:text-2xl font-bold text-white mb-2">Modernisation Routière &amp; Épandage Haute Précision</h2>
+<p class="text-sm sm:text-base text-slate-300 mb-4 leading-relaxed">
+                        Équipements de pointe, enrobé haute densité, réhabilitation routière au Cameroun avec contrôle rigoureux de compactage et d'imperméabilisation.
+                    </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 border-t border-slate-700/80 pt-3 text-xs text-slate-300 font-medium">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-construction-orange text-base">precision_manufacturing</span>
+<span>Citerne d'émulsion pressurisée</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-construction-orange text-base">straighten</span>
+<span>Contrôle thermique continu</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-construction-orange text-base">security</span>
+<span>Normes d'adhérence validées</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. SECTION NOS RÉALISATIONS EN BENTO GRID (12 Colonnes) -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-4 border-b border-slate-200">
+<div>
+<span class="text-xs font-bold text-construction-orange uppercase tracking-wider">Portfolio Technique</span>
+<h2 class="text-2xl sm:text-3xl font-extrabold text-midnight mt-1">Nos Réalisations</h2>
+</div>
+<p class="text-sm text-steel mt-2 md:mt-0 max-w-md">
+                Chaque structure témoigne de notre exigence opérationnelle et du respect rigoureux des spécifications techniques.
+            </p>
+</div>
+<div class="grid grid-cols-12 gap-6">
+<!-- Bloc 1 (8 Colonnes) : Château d'Eau Régional -->
+<div class="col-span-12 lg:col-span-8 bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col group">
+<div class="relative overflow-hidden">
+<img alt="Construction de château d'eau" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtBpvG9MIHmBRXshyBTPgUGM8BQUxLpty_7gId3JFyiTNnE0aqb92Iqy9eVJpMtXpTNKbq3aapv-IIG4-MTV-DJmJfNuk87ouppGIBPaGR0apNBVJSCxGz2eMdQVNxkwm3pFbRrmS8VR9RCPZPWzTrBkjXbW4hMWYhNSHUQpTKcjEnXTu3qKA0wIavvs6vtqXp_6CEKwmE8obgiRwUW_YM7n1Z5EAPG8PnvENV0ZngWocQ_oHyl-kIrAoLe7brxNl5Ng"/>
+<span class="absolute top-4 left-4 bg-construction-orange text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded shadow-sm">
+                        HYDRAULIQUE &amp; STRUCTURE
+                    </span>
+</div>
+<div class="p-6 flex flex-col justify-between flex-grow">
+<div>
+<h3 class="text-xl font-bold text-midnight mb-2">Construction d'un Château d'Eau Régional</h3>
+<p class="text-sm text-steel leading-relaxed mb-4">
+                            Structure mixte bois de coffrage et béton armé de haute résistance pour garantir l'adduction pérenne en eau potable des localités environnantes.
+                        </p>
+</div>
+<div class="grid grid-cols-3 gap-2 border-t border-slate-100 pt-4 text-center">
+<div class="bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+<span class="block text-xs text-steel uppercase font-semibold">Capacité</span>
+<span class="font-bold text-midnight text-sm">500 m³</span>
+</div>
+<div class="bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+<span class="block text-xs text-steel uppercase font-semibold">Assise</span>
+<span class="font-bold text-midnight text-sm">Sol meuble stabilisé</span>
+</div>
+<div class="bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+<span class="block text-xs text-steel uppercase font-semibold">Sécurité</span>
+<span class="font-bold text-midnight text-sm">Contrôle parasismique</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bloc 2 (4 Colonnes) : Ouvrage hydraulique de captage -->
+<div class="col-span-12 lg:col-span-4 bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col group">
+<div class="relative overflow-hidden">
+<img alt="Canal hydraulique" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCEAAZHX9D4c6XB8Q6Nmna5czkbtWQDxtZES5n6HpIzqNcHVMg9hfv4rFk_ChGHxFYVa0oS_eVM3ESZI4IglX4poQKU56wPWZ7B92oGDerQR3eZWmtbELyy3IHfvBGBI53AGKuOhitpeFhM9hmlCEEP9R1HgjRv8-6wKDFGKJbWb31bBNgqzNAIVBM9DNfx4ZQVUNZb5bEDoQ2SwsGftb7Hf5Z9X_VFWghfPYSkqgZ6DybgBqMPLP-v7etl36dXQpXOg"/>
+<span class="absolute top-4 left-4 bg-midnight text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded shadow-sm border border-slate-600">
+                        GÉNIE CIVIL FORESTIÉ
+                    </span>
+</div>
+<div class="p-6 flex flex-col justify-between flex-grow">
+<div>
+<h3 class="text-lg font-bold text-midnight mb-1">Ouvrage de Captage Hydraulique</h3>
+<p class="text-sm text-steel leading-relaxed">
+                            Chambre de rétention et radier maçonné en zone d'accès complexe avec blindage et gabions de soutènement.
+                        </p>
+</div>
+<div class="mt-4 flex items-center justify-between text-xs font-semibold text-steel border-t border-slate-100 pt-3">
+<span>Topographie complexe</span>
+<span class="text-construction-orange font-bold">100% Conforme</span>
+</div>
+</div>
+</div>
+<!-- Bloc 3 (4 Colonnes) : Caniveaux de drainage -->
+<div class="col-span-12 md:col-span-4 bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col group">
+<div class="relative overflow-hidden">
+<img alt="Canal de drainage" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIL2m6Pxnr_RvfbMPsu-jhfQwMojQ_ZLIxnYLX_NsDHz0MzlTeyGeD5zg9Pm-AZ7QKm4dKzdgNZcyBHJM4kex-PQNi2j1WT3qLCAAIx-G8Isa1haB3J79JezO1cOOoQ_bKMcDc1zG5xW8879BdKb3UJdny0c_g0IPkODxuELxegfQK7mMwNb9h4O4d6xnYtx0Ap6GnJojiuf__Ofoi9n2SeOCPjCT_Oomzrx3PgXDhrn8SSZCDxftDXU-PXjLELCqe3w"/>
+<span class="absolute top-3 left-3 bg-construction-orange text-white text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded shadow-sm">
+                        DRAINAGE ET TOPOGRAPHIE
+                    </span>
+</div>
+<div class="p-5 flex flex-col justify-between flex-grow">
+<h3 class="text-base font-bold text-midnight mb-1">Caniveaux de Drainage Maçonné</h3>
+<p class="text-xs text-steel leading-relaxed mb-3">
+                        Ouvrages longitudinaux d'évacuation des eaux pluviales avec pose de moellons et joints étanches anti-ravinement.
+                    </p>
+<span class="text-xs font-semibold text-midnight inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-construction-orange text-sm">check_circle</span> Protection contre l'érosion
+                    </span>
+</div>
+</div>
+<!-- Bloc 4 (4 Colonnes) : Éclairage public solaire -->
+<div class="col-span-12 md:col-span-4 bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col group">
+<div class="relative overflow-hidden">
+<img alt="Éclairage public solaire" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMPz3Z9CSo3uiCIZ0x5-0WG2-Lqf2pxXERMW0g_naAwcC_bKNiSRBcmy5YXfUvukmNR2JftDVM7oxSne-w8XRqjqa_OYZius1sfiTd-cHXnATW7RImTj4cTqz0X3trNKZ-r8zu0_wq6wyHjIQXT7tioSJyAbgsggunBEdgSqyCkkEv7t3ss7382h2JBUge5RynsLk5CTDtdm1zKkrwrF6TxMaOlN630NorS0EFrvvE6hAVWF2-jAZ0-e8vNsMkvNWdfw"/>
+<span class="absolute top-3 left-3 bg-midnight text-white text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded shadow-sm border border-slate-600">
+                        ÉNERGIE RENOUVELABLE
+                    </span>
+</div>
+<div class="p-5 flex flex-col justify-between flex-grow">
+<h3 class="text-base font-bold text-midnight mb-1">Éclairage Public Solaire Autonome</h3>
+<p class="text-xs text-steel leading-relaxed mb-3">
+                        Déploiement de candélabres LED photovoltaïques autonomes pour la sécurisation nocturne des axes périurbains.
+                    </p>
+<span class="text-xs font-semibold text-midnight inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-construction-orange text-sm">solar_power</span> Autonomie nocturne totale
+                    </span>
+</div>
+</div>
+<!-- Bloc 5 (4 Colonnes) : Épandage et préparation de chaussée -->
+<div class="col-span-12 md:col-span-4 bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col group">
+<div class="relative overflow-hidden">
+<img alt="Chaussée et liant" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxrKsaeId6fC-TswEqHk-5cxkH0Q9yj3HhQTL2QY5fhIZzSna7OtPgmqAI5G2bb-P7bdgu0oT9fQ5UMe3zRp-Mk2or2YXRbEaqLhqDi9D7Fmq4TvHRWfRhItoVyCoDor4bLfmjHfwHjY9nser1ZkUJoXcSHlsBfPUMJsbfia3mUsq72fCviqYGr3WWN-rT80WGTEDcezC_e5uBpVElfA26fpuuUxazygQGfz2mVDwS7l365W4gjodjupEhLt35YllkvA"/>
+<span class="absolute top-3 left-3 bg-construction-orange text-white text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded shadow-sm">
+                        VOIRIE &amp; ENROBÉS
+                    </span>
+</div>
+<div class="p-5 flex flex-col justify-between flex-grow">
+<h3 class="text-base font-bold text-midnight mb-1">Épandage &amp; Liant Bitumineux</h3>
+<p class="text-xs text-steel leading-relaxed mb-3">
+                        Couche d'accrochage et sablage préliminaire avant pose du tapis d'enrobé, garantissant l'étanchéité de l'assise.
+                    </p>
+<span class="text-xs font-semibold text-midnight inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-construction-orange text-sm">road</span> Résistance au trafic lourd
+                    </span>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. SECTION BETAS AS/HEZ EN ACTION (VIDÉO & INTERVENTIONS) -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/80 shadow-sm">
+<div class="max-w-2xl mb-8">
+<span class="text-xs font-bold text-construction-orange uppercase tracking-wider">Immersion Opérationnelle</span>
+<h2 class="text-2xl sm:text-3xl font-extrabold text-midnight mt-1">BETA AS/HEZ en Action</h2>
+<p class="mt-2 text-steel text-sm sm:text-base">
+                    Suivi millimétré, inspections de conformité et coordination opérationnelle sur site.
+                </p>
+</div>
+<div class="grid grid-cols-12 gap-8 items-center">
+<!-- Bloc 8 colonnes : Lecteur Vidéo Responsive -->
+<div class="col-span-12 lg:col-span-8">
+<div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-slate-900 shadow-lg border border-slate-200">
+<video class="w-full h-full object-cover" controls="" playsinline="">
+<source src="./img/VID-20260902-WA0053.mp4" type="video/mp4"/>
+                            Votre navigateur ne prend pas en charge la lecture de vidéos HTML5.
+                        </video>
+</div>
+</div>
+<!-- Bloc 4 colonnes latéral : Carte d'information technique -->
+<div class="col-span-12 lg:col-span-4 bg-slate-50 border border-slate-200/90 rounded-2xl p-6 flex flex-col justify-between h-full">
+<div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-orange-100 text-construction-orange font-bold text-xs uppercase tracking-wider mb-4">
+<span class="material-symbols-outlined text-sm">rule</span>
+                            CONTRÔLE QUALITÉ SUR SITE
+                        </span>
+<h3 class="text-xl font-bold text-midnight mb-3">Normes &amp; Traçabilité Intégrale</h3>
+<p class="text-xs sm:text-sm text-steel mb-4 leading-relaxed">
+                            Chaque étape fait l'objet de procès-verbaux de réception contradictoires, garantissant la pérennité et la sécurité des ouvrages livrés aux maîtres d'ouvrage.
+                        </p>
+<ul class="space-y-3 mb-6 text-xs sm:text-sm text-steel">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-construction-orange text-base mt-0.5">verified_user</span>
+<span>Application stricte des référentiels ISO 9001 et normes BTP.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-construction-orange text-base mt-0.5">assignment_turned_in</span>
+<span>Traçabilité complète des granulats, liants et armatures.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-construction-orange text-base mt-0.5">analytics</span>
+<span>Essais de portance et carottages d'éprouvettes béton.</span>
+</li>
+</ul>
+</div>
+<a class="inline-flex items-center justify-center gap-2 w-full bg-midnight hover:bg-slate-800 text-white text-xs sm:text-sm font-bold py-3 px-4 rounded-xl transition-colors" href="service.html">
+<span>Découvrir nos méthodologies</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. SECTIONS ÉDITORIALES EN ALTERNANCE -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+<!-- Alternance 1 (Image gauche 6 col | Texte droite 6 col) -->
+<div class="grid grid-cols-12 gap-8 items-center bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
+<div class="col-span-12 md:col-span-6 overflow-hidden rounded-xl">
+<img alt="Travaux routiers" class="w-full h-80 object-cover rounded-xl hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW5goST3t-KBfeAQJfBd641gH-9Zd_hvk-uLXGPuoUviCaL-PWmIlINN7cpxjYg_D-bePulMWEYWoG7etTtCaIWMzB1qnNpB3HkY5PrQMzBMsl4HsdQNRtmHnfAmhmKqTs9xG5r39xu0zgabCJhllwV7pXz5LmcWfdGFlUwWVK2H-tdafXItqp3939OxcsN4yLZ7XReZurwSAwYZr0va9TeKGRgCRAlFnqdJBg1Ey9jemUOqE4SqEA1LMk2Q1haoowoA"/>
+</div>
+<div class="col-span-12 md:col-span-6">
+<span class="text-xs font-bold text-construction-orange uppercase tracking-wider">INFRASTRUCTURES &amp; VOIRIES</span>
+<h3 class="text-2xl font-bold text-midnight mt-1 mb-3">Maîtrise Complète des Chantiers Routiers</h3>
+<p class="text-sm text-steel leading-relaxed mb-4">
+                    De la couche d'imprégnation manuelle au compactage mécanique de précision, nos techniciens veillent à l'homogénéité du dosage bitumineux et au profilage régulier de la chaussée, empêchant l'orniérage et maximisant la longévité du tracé routier.
+                </p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1 rounded-full">Émulsion de bitume</span>
+<span class="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1 rounded-full">Profilage au millimètre</span>
+<span class="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1 rounded-full">Contrôle de densité</span>
+</div>
+</div>
+</div>
+<!-- Alternance 2 (Texte gauche 6 col | Image droite 6 col) -->
+<div class="grid grid-cols-12 gap-8 items-center bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
+<div class="col-span-12 md:col-span-6 order-2 md:order-1">
+<span class="text-xs font-bold text-construction-orange uppercase tracking-wider">ÉNERGIE SOLAIRE &amp; TÉLÉCOMS</span>
+<h3 class="text-2xl font-bold text-midnight mt-1 mb-3">Solutions Énergétiques et Pylônes Haut Débit</h3>
+<p class="text-sm text-steel leading-relaxed mb-4">
+                    Intégration d'infrastructures photovoltaïques de forte puissance avec bancs d'accumulateurs stationnaires pour alimenter sans interruption les stations relais télécoms et les installations critiques isolées du réseau national.
+                </p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1 rounded-full">Parcs Solaires Hybrides</span>
+<span class="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1 rounded-full">Racks Batteries Sécurisés</span>
+<span class="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1 rounded-full">Continuité Opérationnelle</span>
+</div>
+</div>
+<div class="col-span-12 md:col-span-6 order-1 md:order-2 overflow-hidden rounded-xl">
+<img alt="Panneaux solaires et batteries" class="w-full h-80 object-cover rounded-xl hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiDVcuZC8DEAEz1P6U0J183hp79rdt3Sq1Hq45LK9vk2j6-vk7vqX9-aNG5pP-t78b9ZwEB9evy2x8-kNqUg0CLn97ZY0HgAV2auSIjMv5zrxEPmFITPugI-KA3HdmdZguUi3HEhhfdv97WX4xb76lfAd7VzeDTsNLCXyraUwnJTxRvF9oUmb-WZm9fXShVWcqgVXzvZI6hZBLwwkXUiIBT4nCHyLovxeH751kRZRG-WbrTBub72_IA5I8NkjeP7A75Q"/>
+</div>
+</div>
+<!-- Alternance 3 (Image gauche 6 col | Texte droite 6 col) -->
+<div class="grid grid-cols-12 gap-8 items-center bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
+<div class="col-span-12 md:col-span-6 overflow-hidden rounded-xl">
+<img alt="Équipements spécialisés" class="w-full h-80 object-cover rounded-xl hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGRJmdmXoSLYDZVnTuRgdvft9_nfBUb8ykFUypRaG5muMrCJiyt-ZTVUxTZHtNGCWWb8O_slaK9IZvkHyzh6hLTAdzplmQr3PcjGvGS3Tgfe6SuZLH4qQJ_rR1of-6UDlHC0Mff083wJDGSZzdRv85u-I4cYB8cMjTVE-uOSt5L3iJ7ql2R8Qy0bdEevzs_zEBA9Ei-juy98radnMGY8af19nuLkB9AbCiJ8IL7riY5hEYmH-xK4Cclfla3SQS0TYUng"/>
+</div>
+<div class="col-span-12 md:col-span-6">
+<span class="text-xs font-bold text-construction-orange uppercase tracking-wider">É &amp; INSTALLATIONS SPÉCIALISÉES</span>
+<h3 class="text-2xl font-bold text-midnight mt-1 mb-3">Fourniture &amp; Installation d'Équipements de Haute Précision</h3>
+<p class="text-sm text-steel leading-relaxed mb-4">
+                    Au-delà des grands ouvrages de génie civil, le groupe BETAS AS/HEZ gère l'approvisionnement, l'étalonnage et le déploiement sécurisé d'équipements techniques, médicaux et de systèmes d'onduleurs de secours pour les institutions exigeantes.
+                </p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1 rounded-full">Onduleurs UPS Industriels</span>
+<span class="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1 rounded-full">Instrumentation Médicale</span>
+<span class="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1 rounded-full">Contrôle Métrologique</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. SECTION L'INGÉNIERIE SUR LE TERRAIN (ÉQUIPES & EXPERTISE HUMAINE) -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<div class="text-center max-w-2xl mx-auto mb-12">
+<span class="text-xs font-bold text-construction-orange uppercase tracking-wider">Le Capital Humain</span>
+<h2 class="text-2xl sm:text-3xl font-extrabold text-midnight mt-1">L'Ingénierie sur le Terrain</h2>
+<p class="text-sm sm:text-base text-steel mt-2">
+                Une présence active et des équipes dédiées sur les chantiers comme en bureau d'études.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Carte 1 : Terrain -->
+<div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col group">
+<div class="overflow-hidden">
+<img alt="Équipe sur le terrain" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfOuXG1WcO1xc7NDWaC5hNF8_3uFvAU45nVl9O9qM2fK3qSD0QyOwvREXyVfCStav5Yjas49fj9oNaPaZjhU5V0mk3892WTf2YkHHTYoj61d8CbF0NrnVQOnWndeUfAH4MJ9MuQ0dV4KgIAxt1-OxxE018qE6lwElWCIIC47HgN4lCrOJg_lCrYwdeNOZRGSOOExdNeVb3Cc8a8r64EMHqzT91XnSoecniZB_w86EZvfSyMWk1ZqH1YCyHy4-WkpC-KQ"/>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 mb-2">
+<span class="w-2.5 h-2.5 rounded-full bg-construction-orange"></span>
+<h3 class="text-lg font-bold text-midnight">Équipe de Terrain &amp; Contrôle HEZ</h3>
+</div>
+<p class="text-sm text-steel">
+                        Supervision de chantier et validation des étapes critiques en présence directe des ingénieurs et conducteurs de travaux.
+                    </p>
+</div>
+</div>
+<!-- Carte 2 : Bureau d'études -->
+<div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col group">
+<div class="overflow-hidden">
+<img alt="Réunion technique" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUqConWHtjOydpB8wltHPj0mHpob-wEkiiQOQ4EGWvsZT0nuVxUESRmUsdRkSGLqhvkqNhW-rZuUQyHuUoHkdwd09P37CUU_14P1PsbLGj_3u9TqqGNU8VC5__JANfZbA2g_uQh8gYaCd1C6BoM8l50npOseSERhHeTsQthkRI74-tisVsKmvEiHTnwjUIkACDXO_8TlhcDIVwrg3bVQj-zLzItxOjG1E45_6stvCjdjZN8jcK0wRp37reogBMJeiZ6g"/>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 mb-2">
+<span class="w-2.5 h-2.5 rounded-full bg-midnight"></span>
+<h3 class="text-lg font-bold text-midnight">Bureau d'Études &amp; Cadrage Technique</h3>
+</div>
+<p class="text-sm text-steel">
+                        Études préalables, calculs de structures et modélisations avant toute implantation sur site.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. BANNIÈRE DE CONVERSION -->
+<section class="bg-midnight py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+                Vous avez un projet d'infrastructure ou de génie civil ?
+            </h2>
+<p class="mt-4 text-base text-slate-300 max-w-2xl mx-auto">
+                BETAS AS/HEZ vous accompagne dès la phase d'étude préliminaire jusqu'au contrôle final de conformité.
+            </p>
+<div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="w-full sm:w-auto bg-construction-orange hover:bg-orange-600 text-white text-sm font-bold px-6 py-3 rounded-lg shadow-md transition-colors flex items-center justify-center gap-2" href="bookappointment1.html">
+<span>Prendre rendez-vous</span>
+<span class="material-symbols-outlined text-sm">event</span>
+</a>
+<a class="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 text-white text-sm font-semibold px-6 py-3 rounded-lg border border-slate-600 transition-colors flex items-center justify-center gap-2" href="Contact.html">
+<span>Nous contacter</span>
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER COMPLET -->
+<footer class="bg-midnight text-slate-400 text-sm border-t border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+<!-- Logo & Présentation -->
+<div class="lg:col-span-2">
+<a class="flex items-center gap-3 mb-4" href="home.html">
+<img alt="BETA AS HEZ" class="h-10 w-10 object-contain rounded-full bg-white p-0.5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZbwCl13LH7LjcYGvM5R0k6KX6yoj8JYY5b5Yyswkq28JgIfKFERx91rVK7INVoSK66SMXGMzGRVE-Fw9kiK6UD5_UVnuQq11-sSDoUvSplrX4GfUc8b--xZw4AXtIsAbxp9lqu8KnePJJgLCHkl2WcBiZx3dWbAd3Kv3aCt-35OFLoAPXJkbaKdG4Z7fuHbxggXCjLY47hkIKrRLwhmcmze-q5NijX5fo_3Q0Ude41ww-wtlM349kLYbGhy7kDgvTqw"/>
+<span class="font-extrabold text-lg tracking-tight text-white">BETAS AS/HEZ</span>
+</a>
+<p class="text-xs text-slate-400 max-w-sm leading-relaxed mb-4">
+                    Bureau d'Études, Travaux &amp; Audits d'Ingénierie. Une expertise technique reconnue pour la conception, le dimensionnement et la supervision d'infrastructures d'envergure.
+                </p>
+<div class="text-xs text-slate-500">
+                    Génie Civil • Hydraulique • Voiries • Énergie Solaire • Télécoms
+                </div>
+</div>
+<!-- Liens Navigation 1 -->
+<div>
+<h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Navigation</h4>
+<ul class="space-y-2 text-xs">
+<li><a class="hover:text-white transition-colors" href="home.html">Accueil</a></li>
+<li><a class="hover:text-white transition-colors" href="administration.html">Notre équipe</a></li>
+<li><a class="hover:text-white transition-colors" href="actualité.html">Actualité</a></li>
+<li><a class="hover:text-white transition-colors" href="postuler.html">Postuler</a></li>
+</ul>
+</div>
+<!-- Liens Navigation 2 -->
+<div>
+<h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Expertises</h4>
+<ul class="space-y-2 text-xs">
+<li><a class="hover:text-white transition-colors" href="service.html">Services</a></li>
+<li><a class="text-construction-orange font-semibold hover:text-white transition-colors" href="projets.html">Projets</a></li>
+<li><a class="hover:text-white transition-colors" href="why.html">À propos</a></li>
+<li><a class="hover:text-white transition-colors" href="Contact.html">Contact</a></li>
+</ul>
+</div>
+<!-- Contact & Rendez-vous -->
+<div>
+<h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Engagement</h4>
+<p class="text-xs text-slate-400 mb-3">Besoin d'un audit ou d'une visite de conformité ?</p>
+<a class="inline-flex items-center gap-1.5 text-xs font-bold text-construction-orange hover:underline" href="bookappointment1.html">
+<span>Prendre rendez-vous</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+<div>
+                © 2024 BETA AS HEZ. Tous droits réservés.
+            </div>
+<div class="flex items-center gap-6">
+<a class="hover:text-slate-400 transition-colors" href="#">Mentions Légales</a>
+<a class="hover:text-slate-400 transition-colors" href="#">Politique de Confidentialité</a>
+<a class="hover:text-slate-400 transition-colors" href="Contact.html">Support &amp; Contact</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

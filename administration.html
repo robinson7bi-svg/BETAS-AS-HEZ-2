@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notre équipe - BETA AS/HEZ</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL@0..1&wght@100..700&display=swap" rel="stylesheet"/>
+
+<script id="tailwind-config">
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "on-background": "#191c1e",
+                "tertiary-container": "#0b1c30",
+                "on-tertiary": "#ffffff",
+                "inverse-on-surface": "#eff1f3",
+                "surface-variant": "#e0e3e5",
+                "surface-container-lowest": "#ffffff",
+                "on-tertiary-fixed-variant": "#38485d",
+                "on-secondary-fixed": "#341100",
+                "on-tertiary-fixed": "#0b1c30",
+                "error": "#ba1a1a",
+                "surface-container-low": "#f2f4f6",
+                "on-secondary-container": "#5c2400",
+                "surface-dim": "#d8dadc",
+                "tertiary-fixed-dim": "#b7c8e1",
+                "on-primary-container": "#7c839b",
+                "on-tertiary-container": "#75859d",
+                "on-secondary-fixed-variant": "#783200",
+                "tertiary": "#000000",
+                "surface-container-highest": "#e0e3e5",
+                "primary-container": "#131b2e",
+                "inverse-surface": "#2d3133",
+                "background": "#f7f9fb",
+                "on-surface": "#191c1e",
+                "error-container": "#ffdad6",
+                "outline-variant": "#c6c6cd",
+                "on-secondary": "#ffffff",
+                "on-primary-fixed-variant": "#3f465c",
+                "outline": "#76777d",
+                "secondary-fixed-dim": "#ffb690",
+                "on-primary": "#ffffff",
+                "inverse-primary": "#bec6e0",
+                "on-primary-fixed": "#131b2e",
+                "on-surface-variant": "#45464d",
+                "primary-fixed": "#dae2fd",
+                "surface-container": "#eceef0",
+                "secondary": "#9d4300",
+                "primary": "#000000",
+                "secondary-container": "#fd761a",
+                "secondary-fixed": "#ffdbca",
+                "surface-container-high": "#e6e8ea",
+                "surface": "#f7f9fb",
+                "primary-fixed-dim": "#bec6e0",
+                "on-error": "#ffffff",
+                "surface-bright": "#f7f9fb",
+                "on-error-container": "#93000a",
+                "surface-tint": "#565e74",
+                "tertiary-fixed": "#d3e4fe"
+            },
+            borderRadius: {
+                DEFAULT: "0.25rem",
+                lg: "0.5rem",
+                xl: "0.75rem",
+                full: "9999px"
+            },
+            spacing: {
+                base: "8px",
+                "margin-mobile": "16px",
+                "margin-desktop": "48px",
+                "container-max": "1280px",
+                "section-padding": "80px",
+                gutter: "24px"
+            },
+            fontFamily: {
+                "display-lg": ["Inter"],
+                "label-caps": ["Inter"],
+                "mono-label": ["Inter"],
+                "display-lg-mobile": ["Inter"],
+                "body-lg": ["Inter"],
+                "body-md": ["Inter"],
+                "headline-md": ["Inter"],
+                "headline-sm": ["Inter"]
+            },
+            fontSize: {
+                "display-lg": ["48px", {lineHeight:"1.1", letterSpacing:"-0.02em", fontWeight:"700"}],
+                "label-caps": ["12px", {lineHeight:"1", letterSpacing:"0.05em", fontWeight:"700"}],
+                "mono-label": ["14px", {lineHeight:"1", letterSpacing:"0", fontWeight:"500"}],
+                "display-lg-mobile": ["32px", {lineHeight:"1.2", letterSpacing:"-0.01em", fontWeight:"700"}],
+                "body-lg": ["18px", {lineHeight:"1.6", fontWeight:"400"}],
+                "body-md": ["16px", {lineHeight:"1.6", fontWeight:"400"}],
+                "headline-md": ["30px", {lineHeight:"1.3", fontWeight:"600"}],
+                "headline-sm": ["24px", {lineHeight:"1.4", fontWeight:"600"}]
+            }
+        }
+    }
+};
+</script>
+
+<style>
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    min-height: max(884px, 100dvh);
+}
+.team-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* HERO Notre équipe */
+.team-hero{position:relative;overflow:hidden;isolation:isolate;background:#f2f4f6;}
+.team-hero-image{position:absolute;top:0;right:0;width:52%;height:100%;object-fit:cover;opacity:.20;z-index:-2;}
+.team-hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#f2f4f6 0%,rgba(242,244,246,.98) 38%,rgba(242,244,246,.82) 58%,rgba(242,244,246,.45) 100%);pointer-events:none;}
+@media(max-width:767px){.team-hero-image{width:100%;opacity:.13}.team-hero::after{background:linear-gradient(90deg,rgba(242,244,246,.98) 0%,rgba(242,244,246,.88) 100%);}}
+</style>
+</head>
+
+<body class="bg-background text-on-surface antialiased flex flex-col min-h-screen">
+
+<!-- HEADER -->
+<header class="bg-white sticky top-0 z-50 border-b border-slate-200/80 shadow-sm">
+    <div class="flex items-center w-full max-w-[1440px] mx-auto px-3 sm:px-5 lg:px-6 h-20">
+        <a href="home.html" class="flex items-center shrink-0 gap-2.5 mr-auto">
+            <img src="./img/IMG-20260818-WA0112.jpg" alt="Logo TAS" class="h-11 w-11 md:h-12 md:w-12 object-contain rounded-full border border-slate-200 shadow-sm"/>
+            <div class="flex flex-col leading-tight">
+                <span class="text-base md:text-xl font-extrabold tracking-tight text-midnight whitespace-nowrap">BETAS AS/HEZ</span>
+                <span class="hidden sm:block text-[10px] md:text-xs font-semibold text-steel uppercase tracking-wider whitespace-nowrap">Bureau d'Études &amp; Contrôles</span>
+            </div>
+            <img src="./img/Capture d'écran 2026-09-02 113340.png" alt="Logo HEZ" class="h-11 w-11 md:h-12 md:w-12 object-contain rounded-full border border-slate-200 shadow-sm"/>
+        </a>
+        <nav class="hidden lg:flex items-center gap-4 xl:gap-5 text-xs xl:text-sm whitespace-nowrap">
+            <a class="text-on-surface-variant font-medium hover:text-construction-orange transition-colors" href="home.html">Accueil</a>
+            <a class="text-on-surface-variant font-medium hover:text-construction-orange transition-colors" href="service.html">Services</a>
+            <a class="text-on-surface-variant font-medium hover:text-construction-orange transition-colors" href="administration.html">Équipe</a>
+            <a class="text-on-surface-variant font-medium hover:text-construction-orange transition-colors" href="actualité.html">Actualités</a>
+            <a class="text-on-surface-variant font-medium hover:text-construction-orange transition-colors" href="projets.html">Projets</a>
+            <a class="text-on-surface-variant font-medium hover:text-construction-orange transition-colors" href="postuler.html">Postuler</a>
+            <a class="text-on-surface-variant font-medium hover:text-construction-orange transition-colors" href="Contact.html">Contact</a>
+            <a class="text-on-surface-variant font-medium hover:text-construction-orange transition-colors" href="why.html">À propos</a>
+        </nav>
+        <a href="bookappointment1.html" class="hidden lg:inline-flex items-center justify-center ml-5 px-4 xl:px-5 py-2.5 border-2 border-construction-orange text-construction-orange bg-white rounded-none font-semibold text-xs xl:text-sm hover:bg-construction-orange hover:text-white transition-all duration-200 whitespace-nowrap">Prendre rendez-vous</a>
+        <button class="lg:hidden text-primary p-2 ml-2" id="mobile-menu-btn" aria-label="Ouvrir le menu"><span class="material-symbols-outlined">menu</span></button>
+    </div>
+</header>
+
+<!-- MENU MOBILE -->
+<div class="fixed inset-0 z-[60] bg-black/50 hidden" id="mobile-drawer">
+    <div class="bg-surface h-full w-80 max-w-[85vw] fixed left-0 top-0 shadow-lg transition-transform duration-300 -translate-x-full flex flex-col" id="drawer-content">
+        <div class="p-4 flex justify-between items-center bg-surface-container-low border-b border-outline-variant">
+            <a href="home.html" class="flex items-center gap-2">
+                <img src="./img/IMG-20260818-WA0112.jpg" alt="Logo TAS" class="h-9 w-9 object-contain rounded-full"/>
+                <span class="font-bold text-sm text-primary">BETAS AS/HEZ</span>
+                <img src="./img/Capture d'écran 2026-09-02 113340.png" alt="Logo HEZ" class="h-9 w-9 object-contain rounded-full"/>
+            </a>
+            <button class="text-primary p-2" id="close-drawer" aria-label="Fermer le menu"><span class="material-symbols-outlined">close</span></button>
+        </div>
+        <nav class="flex flex-col gap-1 p-4 overflow-y-auto">
+            <a class="px-4 py-3 hover:bg-surface-container-high flex items-center gap-3 rounded-lg" href="home.html"><span class="material-symbols-outlined">home</span> Accueil</a>
+            <a class="px-4 py-3 hover:bg-surface-container-high flex items-center gap-3 rounded-lg" href="service.html"><span class="material-symbols-outlined">settings_suggest</span> Services</a>
+            <a class="bg-secondary-container text-on-secondary-container rounded-lg mx-2 px-4 py-3 flex items-center gap-3" href="administration.html"><span class="material-symbols-outlined">groups</span> Équipe</a>
+            <a class="px-4 py-3 hover:bg-surface-container-high flex items-center gap-3 rounded-lg" href="actualité.html"><span class="material-symbols-outlined">newspaper</span> Actualités</a>
+            <a class="px-4 py-3 hover:bg-surface-container-high flex items-center gap-3 rounded-lg" href="projets.html"><span class="material-symbols-outlined">domain</span> Projets</a>
+            <a class="px-4 py-3 hover:bg-surface-container-high flex items-center gap-3 rounded-lg" href="postuler.html"><span class="material-symbols-outlined">work</span> Postuler</a>
+            <a class="px-4 py-3 hover:bg-surface-container-high flex items-center gap-3 rounded-lg" href="Contact.html"><span class="material-symbols-outlined">contact_support</span> Contact</a>
+            <a class="px-4 py-3 hover:bg-surface-container-high flex items-center gap-3 rounded-lg" href="why.html"><span class="material-symbols-outlined">info</span> À propos</a>
+            <a class="mt-3 border-2 border-construction-orange text-construction-orange rounded-none px-4 py-3 flex items-center justify-center gap-3 font-semibold" href="bookappointment1.html"><span class="material-symbols-outlined">calendar_month</span> Prendre rendez-vous</a>
+        </nav>
+    </div>
+</div>
+
+<main class="flex-grow">
+
+<!-- HERO -->
+<section class="team-hero py-16 md:py-24 px-margin-mobile md:px-margin-desktop border-b border-outline-variant">
+    <img src="./img/IMG-20260825-WA0035.jpg" alt="" aria-hidden="true" class="team-hero-image"/>
+    <div class="max-w-container-max mx-auto relative z-10">
+        <div class="max-w-2xl">
+            <span class="inline-flex items-center border-l-4 border-construction-orange pl-3 text-xs md:text-sm font-bold uppercase tracking-[0.16em] text-construction-orange mb-4">BETAS AS/HEZ</span>
+            <h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary">Notre équipe</h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mt-5">Des compétences complémentaires au service de vos projets.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PRÉSENTATION -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+    <div class="grid md:grid-cols-2 gap-gutter items-center">
+        <div class="space-y-6">
+            <h2 class="font-headline-md text-headline-md text-primary">Une équipe, une expertise</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+                Chez le groupe BETAS AS/HEZ, notre force réside dans la synergie de nos talents. Nos ingénieurs,
+                techniciens et chefs de projets travaillent de concert pour apporter des solutions
+                techniques innovantes et rigoureuses.
+            </p>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+                L'expérience terrain alliée à une maîtrise approfondie des études techniques nous permet
+                de garantir l'excellence dans l'exécution civile et structurelle de chaque mission confiée.
+            </p>
+            <ul class="space-y-3 font-mono-label text-mono-label text-primary">
+                <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-secondary">check_circle</span>
+                    Expertise Technique Validée
+                </li>
+                <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-secondary">check_circle</span>
+                    Expérience Terrain Éprouvée
+                </li>
+                <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-secondary">check_circle</span>
+                    Innovation Continue
+                </li>
+            </ul>
+        </div>
+
+        <div class="relative h-[400px] rounded-lg overflow-hidden border border-outline-variant shadow-sm">
+            <img class="team-photo"
+                 src="./img/IMG-20260819-WA0003.jpg"
+                 alt="Équipe BETAS AS/HEZ au travail"/>
+        </div>
+    </div>
+</section>
+
+<!-- DIRECTION -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop bg-surface-container-highest max-w-container-max mx-auto rounded-xl shadow-sm mb-section-padding">
+    <h2 class="font-headline-md text-headline-md text-primary mb-12 text-center">Direction</h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+
+        <!-- RESPONSABLE 1 : remplacer assets/images/equipe/directeur.jpg -->
+        <div class="bg-surface rounded-lg border border-outline-variant p-6 hover:shadow-md transition-shadow">
+            <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-secondary bg-surface-container-high">
+                <img class="team-photo"
+                     src="./img/IMG-20260819-WA0004.jpg"
+                     alt="Photo du Directeur Général"/>
+            </div>
+            <div class="text-center">
+                <h3 class="font-headline-sm text-headline-sm text-primary">Mr Nguena Jean Désiré</h3>
+                <p class="font-mono-label text-mono-label text-secondary mb-4 uppercase tracking-wider">Président Directeur Général</p>
+                <p class="font-mono-label text-mono-label text-secondary mb-4 uppercase tracking-wider">Numéro:699984673</p>
+                <p class="font-body-md text-body-md text-on-surface-variant text-sm">
+                    Plus de 20 ans d'expérience dans la direction de grands projets civils. Visionnaire stratégique.
+                </p>
+            </div>
+        </div>
+
+        <!-- RESPONSABLE 2 : remplacer assets/images/equipe/directrice-technique.jpg -->
+        <div class="bg-surface rounded-lg border border-outline-variant p-6 hover:shadow-md transition-shadow">
+            <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-secondary bg-surface-container-high">
+                <img class="team-photo"
+                     src="./img/IMG-20260819-WA0007.jpg"
+                     alt="Photo de la Directrice Technique"/>
+            </div>
+            <div class="text-center">
+                <h3 class="font-headline-sm text-headline-sm text-primary">Tandzon Foning Elvis</h3>
+                <p class="font-mono-label text-mono-label text-secondary mb-4 uppercase tracking-wider">Directrice Technique</p>
+                                <p class="font-mono-label text-mono-label text-secondary mb-4 uppercase tracking-wider">Numéro:677737681</p>
+                <p class="font-body-md text-body-md text-on-surface-variant text-sm">
+                    Experte en ingénierie structurelle, elle supervise la qualité technique de toutes nos études.
+                </p>
+            </div>
+        </div>
+
+        <!-- RESPONSABLE 3 : remplacer assets/images/equipe/directeur-operations.jpg -->
+        <div class="bg-surface rounded-lg border border-outline-variant p-6 hover:shadow-md transition-shadow">
+            <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-secondary bg-surface-container-high">
+                <img class="team-photo"
+                     src="./img/IMG-20260902-WA0013(1).jpg"
+                     alt="Photo du Directeur des Opérations"/>
+            </div>
+            <div class="text-center">
+                <h3 class="font-headline-sm text-headline-sm text-primary">Mr Nguena vianney Bernoulli</h3>
+                <p class="font-mono-label text-mono-label text-secondary mb-4 uppercase tracking-wider">Directeur Technique adjoint</p>
+                                <p class="font-mono-label text-mono-label text-secondary mb-4 uppercase tracking-wider">Numéro:691678539</p>
+                <p class="font-body-md text-body-md text-on-surface-variant text-sm">
+                    Garant de l'exécution sur le terrain, il optimise les processus de réalisation de chaque chantier.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- DIRECTION -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop bg-surface-container-highest max-w-container-max mx-auto rounded-xl shadow-sm mb-section-padding">
+    <h2 class="font-headline-md text-headline-md text-primary mb-12 text-center">Nos Experts</h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+
+        <!-- RESPONSABLE 1 : remplacer assets/images/equipe/directeur.jpg -->
+        <div class="bg-surface rounded-lg border border-outline-variant p-6 hover:shadow-md transition-shadow">
+            <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-secondary bg-surface-container-high">
+                <img class="team-photo"
+                     src=".jpg"
+                     alt="Photo de l'inspecteur Général"/>
+            </div>
+            <div class="text-center">
+                <h3 class="font-headline-sm text-headline-sm text-primary">Mr Don Nguena Gillering</h3>
+                <p class="font-mono-label text-mono-label text-secondary mb-4 uppercase tracking-wider">inspecteur Général</p>
+                <p class="font-mono-label text-mono-label text-secondary mb-4 uppercase tracking-wider">Numéro:6991954774</p>
+                <p class="font-body-md text-body-md text-on-surface-variant text-sm">
+                    Plus de 20 ans d'expérience dans la direction de grands projets civils. Visionnaire stratégique.
+                </p>
+            </div>
+        </div>
+
+        <!-- RESPONSABLE 2 : remplacer assets/images/equipe/Responsable logistique.jpg -->
+        <div class="bg-surface rounded-lg border border-outline-variant p-6 hover:shadow-md transition-shadow">
+            <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-secondary bg-surface-container-high">
+                <img class="team-photo"
+                     src=".jpg"
+                     alt="Photo de la Responsable logistique"/>
+            </div>
+            <div class="text-center">
+                <h3 class="font-headline-sm text-headline-sm text-primary"></h3>
+                <p class="font-mono-label text-mono-label text-secondary mb-4 uppercase tracking-wider">Responsable logistique</p>
+                                <p class="font-mono-label text-mono-label text-secondary mb-4 uppercase tracking-wider">Numéro:692183309</p>
+                <p class="font-body-md text-body-md text-on-surface-variant text-sm">
+                    Experte en ingénierie structurelle, elle supervise la qualité technique de toutes nos études.
+                </p>
+            </div>
+        </div>
+
+        <!-- RESPONSABLE 3 : remplacer assets/images/equipe/céllule informatique.jpg -->
+        <div class="bg-surface rounded-lg border border-outline-variant p-6 hover:shadow-md transition-shadow">
+            <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-secondary bg-surface-container-high">
+                <img class="team-photo"
+                     src=""
+                     alt="Photo du membre de la céllule informatique"/>
+            </div>
+            <div class="text-center">
+                <h3 class="font-headline-sm text-headline-sm text-primary">Ray Robinson</h3>
+                <p class="font-mono-label text-mono-label text-secondary mb-4 uppercase tracking-wider">cellule informatique</p>
+                                <p class="font-mono-label text-mono-label text-secondary mb-4 uppercase tracking-wider">Numéro:6200101182</p>
+                <p class="font-body-md text-body-md text-on-surface-variant text-sm">
+                    Garant de la construction et entretien du site web.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- ORGANISATION -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop bg-primary-container max-w-container-max mx-auto rounded-xl shadow-sm text-center my-section-padding text-on-primary-container">
+    <h2 class="font-headline-md text-headline-md text-on-primary mb-8">Organisation</h2>
+
+    <div class="flex flex-col md:flex-row justify-center items-center gap-4 font-mono-label text-mono-label">
+        <div class="bg-surface text-primary px-6 py-3 rounded border border-outline-variant shadow-sm w-48">
+            Direction
+        </div>
+        <span class="material-symbols-outlined text-secondary md:rotate-[-90deg]">arrow_drop_down</span>
+
+        <div class="bg-surface text-primary px-6 py-3 rounded border border-outline-variant shadow-sm w-48">
+            Bureau d'études
+        </div>
+        <span class="material-symbols-outlined text-secondary md:rotate-[-90deg]">arrow_drop_down</span>
+
+        <div class="bg-surface text-primary px-6 py-3 rounded border border-outline-variant shadow-sm w-48">
+            Chefs de projets
+        </div>
+        <span class="material-symbols-outlined text-secondary md:rotate-[-90deg]">arrow_drop_down</span>
+
+        <div class="bg-surface text-primary px-6 py-3 rounded border border-outline-variant shadow-sm w-48">
+            Ingénieurs / Techniciens
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop text-center max-w-container-max mx-auto border-t border-outline-variant">
+    <h2 class="font-headline-md text-headline-md text-primary mb-6">
+        Vous souhaitez collaborer avec notre équipe ?
+    </h2>
+
+    <div class="flex justify-center">
+        <a href="Contact.html"
+           class="bg-secondary text-on-secondary px-8 py-3 rounded-lg font-mono-label text-mono-label hover:bg-secondary-container transition-colors w-full sm:w-auto">
+            Nous contacter
+        </a>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-primary-container text-on-primary-container w-full border-t border-primary mt-auto">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-section-padding max-w-container-max mx-auto">
+
+        <div class="space-y-4">
+            <img src="./img/IMG-20260818-WA0112.jpg" alt="Logo BETAS AS/HEZ" class="h-12 w-auto object-contain brightness-0 invert"/>
+            <p class="font-body-md text-body-md text-surface-variant text-sm">
+                Précision en ingénierie &amp; Excellence civile.
+            </p>
+        </div>
+
+        <div class="space-y-4">
+            <h4 class="font-label-caps text-label-caps uppercase tracking-widest text-secondary-fixed">Liens utiles</h4>
+            <ul class="space-y-2 flex flex-col">
+                <a class="text-surface-variant hover:text-white transition-colors underline opacity-80 hover:opacity-100" href="service.html">Services</a>
+                <a class="text-surface-variant hover:text-white transition-colors underline opacity-80 hover:opacity-100" href="projets.html">Réalisations</a>
+            </ul>
+        </div>
+
+        <div class="space-y-4">
+            <h4 class="font-label-caps text-label-caps uppercase tracking-widest text-secondary-fixed">Plus d'infos</h4>
+            <ul class="space-y-2 flex flex-col">
+                <a class="text-surface-variant hover:text-white transition-colors underline opacity-80 hover:opacity-100" href="actualité.html">Actualités</a>
+                <a class="text-surface-variant hover:text-white transition-colors underline opacity-80 hover:opacity-100" href="postuler.html">Postulez</a>
+                <a class="text-surface-variant hover:text-white transition-colors underline opacity-80 hover:opacity-100" href="why.html">Pourquoi nous</a>
+            </ul>
+        </div>
+
+        <div class="space-y-4">
+            <h4 class="font-label-caps text-label-caps uppercase tracking-widest text-secondary-fixed">Action</h4>
+            <ul class="space-y-2 flex flex-col">
+                <a class="text-surface-variant hover:text-white transition-colors underline opacity-80 hover:opacity-100" href="administration.html">Notre équipe</a>
+                <a class="text-surface-variant hover:text-white transition-colors underline opacity-80 hover:opacity-100" href="Contact.html">Contact</a>
+            </ul>
+        </div>
+
+        <div class="md:col-span-4 mt-8 pt-8 border-t border-on-primary-fixed-variant text-center text-surface-variant text-xs">
+            © 2026 BETA AS/HEZ. Précision en ingénierie &amp; Excellence civile.
+        </div>
+    </div>
+</footer>
+
+<script>
+const menuBtn = document.getElementById('mobile-menu-btn');
+const closeBtn = document.getElementById('close-drawer');
+const drawer = document.getElementById('mobile-drawer');
+const drawerContent = document.getElementById('drawer-content');
+
+menuBtn.addEventListener('click', () => {
+    drawer.classList.remove('hidden');
+    setTimeout(() => drawerContent.classList.remove('-translate-x-full'), 10);
+});
+
+closeBtn.addEventListener('click', () => {
+    drawerContent.classList.add('-translate-x-full');
+    setTimeout(() => drawer.classList.add('hidden'), 300);
+});
+
+drawer.addEventListener('click', (e) => {
+    if (e.target === drawer) {
+        drawerContent.classList.add('-translate-x-full');
+        setTimeout(() => drawer.classList.add('hidden'), 300);
+    }
+});
+
+document.querySelectorAll('#mobile-drawer a').forEach(link => {
+    link.addEventListener('click', () => {
+        drawerContent.classList.add('-translate-x-full');
+        setTimeout(() => drawer.classList.add('hidden'), 300);
+    });
+});
+</script>
+
+</body>
+</html>

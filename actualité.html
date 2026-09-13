@@ -1,0 +1,1378 @@
+```html
+<!DOCTYPE html>
+<html class="light" lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+<title>Actualités - BETA AS HEZ</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+<script id="tailwind-config">
+tailwind.config = {
+    darkMode: "class",
+
+    theme: {
+        extend: {
+
+            colors: {
+                "on-background": "#191c1e",
+                "tertiary-container": "#0b1c30",
+                "on-tertiary": "#ffffff",
+                "inverse-on-surface": "#eff1f3",
+                "surface-variant": "#e0e3e5",
+                "surface-container-lowest": "#ffffff",
+                "on-tertiary-fixed-variant": "#38485d",
+                "on-secondary-fixed": "#341100",
+                "on-tertiary-fixed": "#0b1c30",
+                "error": "#ba1a1a",
+                "surface-container-low": "#f2f4f6",
+                "on-secondary-container": "#5c2400",
+                "surface-dim": "#d8dadc",
+                "tertiary-fixed-dim": "#b7c8e1",
+                "on-primary-container": "#7c839b",
+                "on-tertiary-container": "#75859d",
+                "on-secondary-fixed-variant": "#783200",
+                "tertiary": "#000000",
+                "surface-container-highest": "#e0e3e5",
+                "primary-container": "#131b2e",
+                "inverse-surface": "#2d3133",
+                "background": "#f7f9fb",
+                "on-surface": "#191c1e",
+                "error-container": "#ffdad6",
+                "outline-variant": "#c6c6cd",
+                "on-secondary": "#ffffff",
+                "on-primary-fixed-variant": "#3f465c",
+                "outline": "#76777d",
+                "secondary-fixed-dim": "#ffb690",
+                "on-primary": "#ffffff",
+                "inverse-primary": "#bec6e0",
+                "on-primary-fixed": "#131b2e",
+                "on-surface-variant": "#45464d",
+                "primary-fixed": "#dae2fd",
+                "surface-container": "#eceef0",
+                "secondary": "#9d4300",
+                "primary": "#000000",
+                "secondary-container": "#fd761a",
+                "secondary-fixed": "#ffdbca",
+                "surface-container-high": "#e6e8ea",
+                "surface": "#f7f9fb",
+                "primary-fixed-dim": "#bec6e0",
+                "on-error": "#ffffff",
+                "surface-bright": "#f7f9fb",
+                "on-error-container": "#93000a",
+                "surface-tint": "#565e74",
+                "tertiary-fixed": "#d3e4fe"
+            },
+
+            borderRadius: {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+
+            spacing: {
+                "base": "8px",
+                "margin-mobile": "16px",
+                "margin-desktop": "40px",
+                "container-max": "1400px",
+                "section-padding": "80px",
+                "gutter": "24px"
+            },
+
+            fontFamily: {
+                "display-lg": ["Inter"],
+                "label-caps": ["Inter"],
+                "mono-label": ["Inter"],
+                "display-lg-mobile": ["Inter"],
+                "body-lg": ["Inter"],
+                "body-md": ["Inter"],
+                "headline-md": ["Inter"],
+                "headline-sm": ["Inter"]
+            },
+
+            fontSize: {
+                "display-lg": [
+                    "48px",
+                    {
+                        lineHeight: "1.1",
+                        letterSpacing: "-0.02em",
+                        fontWeight: "700"
+                    }
+                ],
+
+                "label-caps": [
+                    "12px",
+                    {
+                        lineHeight: "1",
+                        letterSpacing: "0.05em",
+                        fontWeight: "700"
+                    }
+                ],
+
+                "mono-label": [
+                    "14px",
+                    {
+                        lineHeight: "1",
+                        letterSpacing: "0",
+                        fontWeight: "500"
+                    }
+                ],
+
+                "display-lg-mobile": [
+                    "32px",
+                    {
+                        lineHeight: "1.2",
+                        letterSpacing: "-0.01em",
+                        fontWeight: "700"
+                    }
+                ],
+
+                "body-lg": [
+                    "18px",
+                    {
+                        lineHeight: "1.6",
+                        fontWeight: "400"
+                    }
+                ],
+
+                "body-md": [
+                    "16px",
+                    {
+                        lineHeight: "1.6",
+                        fontWeight: "400"
+                    }
+                ],
+
+                "headline-md": [
+                    "30px",
+                    {
+                        lineHeight: "1.3",
+                        fontWeight: "600"
+                    }
+                ],
+
+                "headline-sm": [
+                    "24px",
+                    {
+                        lineHeight: "1.4",
+                        fontWeight: "600"
+                    }
+                ]
+            }
+        }
+    }
+}
+</script>
+
+<style>
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
+.text-truncate-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ================================
+   HEADER DESKTOP
+================================ */
+
+.site-header {
+    height: 86px;
+    background: rgba(247, 249, 251, 0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #c6c6cd;
+}
+
+.header-inner {
+    height: 100%;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 40px;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 28px;
+}
+
+/* Identité */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.brand-logo {
+    height: 46px;
+    width: 46px;
+    object-fit: contain;
+}
+
+.brand-logo-second {
+    height: 46px;
+    width: auto;
+    object-fit: contain;
+}
+
+.brand-name {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #000;
+    white-space: nowrap;
+}
+
+/* Navigation */
+
+.desktop-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.desktop-navigation a {
+    position: relative;
+
+    color: #45464d;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    padding: 30px 0;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.desktop-navigation a:hover {
+    color: #000;
+    transform: translateY(-1px);
+}
+
+/* Onglet actif */
+
+.desktop-navigation a.active {
+    color: #000;
+}
+
+.desktop-navigation a.active::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+
+    height: 2px;
+
+    background: #000;
+    border-radius: 999px;
+}
+
+/* Bouton rendez-vous */
+
+.header-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    background: #000;
+    color: #fff;
+
+    padding: 12px 18px;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.header-cta:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+}
+
+/* ================================
+   MOBILE HEADER
+================================ */
+
+.mobile-header {
+    height: 72px;
+
+    background: rgba(247, 249, 251, 0.98);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #c6c6cd;
+
+    padding: 0 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile-brand {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    text-decoration: none;
+}
+
+.mobile-brand img:first-child {
+    width: 38px;
+    height: 38px;
+}
+
+.mobile-brand img:last-child {
+    height: 38px;
+    width: auto;
+}
+
+.mobile-brand span {
+    font-size: 13px;
+    font-weight: 700;
+    color: #000;
+    white-space: nowrap;
+}
+
+.mobile-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mobile-menu-button {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #c6c6cd;
+    border-radius: 6px;
+
+    background: #fff;
+    color: #000;
+
+    cursor: pointer;
+}
+
+.mobile-appointment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    background: #000;
+    color: #fff;
+
+    border-radius: 6px;
+}
+
+/* ================================
+   MENU MOBILE
+================================ */
+
+.mobile-drawer {
+    position: fixed;
+    inset: 0;
+
+    z-index: 100;
+
+    background: #f7f9fb;
+
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+
+    overflow-y: auto;
+}
+
+.mobile-drawer.open {
+    transform: translateX(0);
+}
+
+.mobile-drawer-header {
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 16px;
+
+    border-bottom: 1px solid #c6c6cd;
+
+    background: #fff;
+}
+
+.drawer-brand {
+    font-size: 17px;
+    font-weight: 700;
+    color: #000;
+}
+
+.close-menu {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #c6c6cd;
+    border-radius: 6px;
+
+    background: #fff;
+    cursor: pointer;
+}
+
+.mobile-navigation {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px 16px;
+    gap: 6px;
+}
+
+.mobile-navigation a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 15px 14px;
+
+    border-radius: 7px;
+
+    color: #45464d;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: background 0.2s ease;
+}
+
+.mobile-navigation a:hover {
+    background: #eceef0;
+}
+
+.mobile-navigation a.active {
+    background: #fd761a;
+    color: #fff;
+}
+
+.mobile-navigation .appointment-link {
+    margin-top: 12px;
+
+    background: #000;
+    color: #fff;
+
+    justify-content: center;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1250px) {
+
+    .header-inner {
+        gap: 18px;
+        padding: 0 25px;
+    }
+
+    .desktop-navigation {
+        gap: 13px;
+    }
+
+    .desktop-navigation a {
+        font-size: 12px;
+    }
+
+    .brand-name {
+        font-size: 15px;
+    }
+
+    .brand-logo {
+        width: 42px;
+        height: 42px;
+    }
+
+    .brand-logo-second {
+        height: 42px;
+    }
+
+    .header-cta {
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1023px) {
+
+    .desktop-header {
+        display: none;
+    }
+
+    .mobile-header {
+        display: flex;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .mobile-header,
+    .mobile-drawer {
+        display: none;
+    }
+}
+
+</style>
+</head>
+
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
+
+<!-- =========================================================
+     HEADER DESKTOP
+========================================================= -->
+
+<header class="desktop-header site-header sticky top-0 z-50">
+
+    <div class="header-inner">
+
+        <!-- IDENTITÉ -->
+        <a href="home.html" class="brand">
+
+            <img
+                src="./img/IMG-20260818-WA0112.jpg"
+                alt="Logo TAS"
+                class="brand-logo"
+            />
+
+            <span class="brand-name">
+                BETAS AS/HEZ
+            </span>
+
+            <img
+                src="./img/Capture d'écran 2026-09-02 113340.png"
+                alt="Logo HEZ"
+                class="brand-logo-second"
+            />
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+        <nav class="desktop-navigation">
+
+            <a href="home.html">
+                Accueil
+            </a>
+
+            <a href="service.html">
+                Services
+            </a>
+
+            <a href="administration.html">
+                Notre équipe
+            </a>
+
+            <a href="actualité.html" class="active">
+                Actualités
+            </a>
+
+            <a href="projets.html">
+                Projets
+            </a>
+
+            <a href="postuler.html">
+                Postuler
+            </a>
+
+            <a href="Contact.html">
+                Contact
+            </a>
+
+            <a href="why.html">
+                À propos
+            </a>
+
+        </nav>
+
+
+        <!-- CTA -->
+        <a
+            href="rendez-vous.html"
+            class="header-cta"
+        >
+            <span class="material-symbols-outlined text-[18px]">
+                calendar_month
+            </span>
+
+            Rendez-vous
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     HEADER MOBILE
+========================================================= -->
+
+<header class="mobile-header sticky top-0 z-50">
+
+    <!-- Logo -->
+    <a href="home.html" class="mobile-brand">
+
+        <img
+            src="./img/IMG-20260818-WA0112.jpg"
+            alt="Logo TAS"
+        />
+
+        <span>
+            BETAS AS/HEZ
+        </span>
+
+        <img
+            src="./img/Capture d'écran 2026-09-02 113340.png"
+            alt="Logo HEZ"
+        />
+
+    </a>
+
+
+    <!-- Actions -->
+    <div class="mobile-actions">
+
+        <!-- Rendez-vous -->
+        <a
+            href="rendez-vous.html"
+            class="mobile-appointment"
+            aria-label="Prendre rendez-vous"
+        >
+            <span class="material-symbols-outlined">
+                calendar_month
+            </span>
+        </a>
+
+
+        <!-- Menu -->
+        <button
+            id="mobile-menu-btn"
+            class="mobile-menu-button"
+            aria-label="Ouvrir le menu"
+        >
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     MENU MOBILE
+========================================================= -->
+
+<div
+    id="mobile-drawer"
+    class="mobile-drawer"
+>
+
+    <div class="mobile-drawer-header">
+
+        <span class="drawer-brand">
+            BETAS AS/HEZ
+        </span>
+
+        <button
+            id="close-menu-btn"
+            class="close-menu"
+            aria-label="Fermer le menu"
+        >
+            <span class="material-symbols-outlined">
+                close
+            </span>
+        </button>
+
+    </div>
+
+
+    <nav class="mobile-navigation">
+
+        <a href="home.html">
+            <span class="material-symbols-outlined">
+                home
+            </span>
+            Accueil
+        </a>
+
+        <a href="service.html">
+            <span class="material-symbols-outlined">
+                engineering
+            </span>
+            Services
+        </a>
+
+        <a href="projets.html">
+            <span class="material-symbols-outlined">
+                domain
+            </span>
+            Projets
+        </a>
+
+        <a href="why.html">
+            <span class="material-symbols-outlined">
+                verified
+            </span>
+            À propos
+        </a>
+
+        <a href="administration.html">
+            <span class="material-symbols-outlined">
+                groups
+            </span>
+            Notre équipe
+        </a>
+
+        <a href="actualité.html" class="active">
+            <span class="material-symbols-outlined">
+                newspaper
+            </span>
+            Actualités
+        </a>
+
+        <a href="Contact.html">
+            <span class="material-symbols-outlined">
+                contact_support
+            </span>
+            Contact
+        </a>
+
+        <a href="postuler.html">
+            <span class="material-symbols-outlined">
+                work
+            </span>
+            Postuler
+        </a>
+
+        <a
+            href="rendez-vous.html"
+            class="appointment-link"
+        >
+            <span class="material-symbols-outlined">
+                calendar_month
+            </span>
+            Prendre rendez-vous
+        </a>
+
+    </nav>
+
+</div>
+
+
+<!-- =========================================================
+     CONTENU PRINCIPAL
+========================================================= -->
+
+<main class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-padding">
+
+
+    <!-- HERO -->
+
+    <section class="mb-section-padding text-left max-w-3xl">
+
+        <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">
+            Actualités
+        </h1>
+
+        <p class="font-body-lg text-body-lg text-on-surface-variant">
+            Découvrez les projets, réalisations et actualités de BETAS AS/HEZ.
+            Restez informé de nos avancées en ingénierie et de notre impact sur l'industrie.
+        </p>
+
+    </section>
+
+
+    <!-- FILTRES -->
+
+    <section class="mb-12 overflow-x-auto pb-4">
+
+        <div class="flex gap-4 whitespace-nowrap min-w-max">
+
+            <button class="px-4 py-2 bg-primary text-white font-mono-label text-mono-label rounded border border-primary">
+                Tout
+            </button>
+
+            <button class="px-4 py-2 bg-surface hover:bg-surface-container-low text-on-surface-variant font-mono-label text-mono-label rounded border border-outline-variant transition-colors">
+                Projets
+            </button>
+
+            <button class="px-4 py-2 bg-surface hover:bg-surface-container-low text-on-surface-variant font-mono-label text-mono-label rounded border border-outline-variant transition-colors">
+                Génie Civil
+            </button>
+
+            <button class="px-4 py-2 bg-surface hover:bg-surface-container-low text-on-surface-variant font-mono-label text-mono-label rounded border border-outline-variant transition-colors">
+                Télécommunications
+            </button>
+
+            <button class="px-4 py-2 bg-surface hover:bg-surface-container-low text-on-surface-variant font-mono-label text-mono-label rounded border border-outline-variant transition-colors">
+                Entreprise
+            </button>
+
+            <button class="px-4 py-2 bg-surface hover:bg-surface-container-low text-on-surface-variant font-mono-label text-mono-label rounded border border-outline-variant transition-colors">
+                Astuces
+            </button>
+
+            <button class="px-4 py-2 bg-surface hover:bg-surface-container-low text-on-surface-variant font-mono-label text-mono-label rounded border border-outline-variant transition-colors">
+                Recrutement
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ARTICLE PRINCIPAL -->
+
+    <section class="mb-section-padding">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-surface border border-outline-variant rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 group">
+
+            <div class="lg:col-span-7 h-64 lg:h-full relative overflow-hidden">
+
+                <img
+                    alt="Projet de génie civil"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPpVUJq2pfkmAaUGndG8f7NoGQpyILgcHe6YpZ0M9EkOp-tnwUSDjQ86LioYpWS_J90BLoLDpQCuEhWri1Z-Fr0It8VnlakQzwgNcG7c7FrTxAj_oa2w_8Bx0QNLqi6yMtssZ0xx0mkwDLNwUqMqAiZ2P2coZ4Qh5iUFRtmRJkJlT3gab5a2uupp03hHQNbqeAb9M2Sdcdmb9rLy2SAXQwplLsTxHAc6FiiJZSsQWizYrlTlBH3uMYaw"
+                />
+
+            </div>
+
+
+            <div class="lg:col-span-5 p-8 lg:p-12 flex flex-col justify-center">
+
+                <div class="flex items-center gap-4 mb-4">
+
+                    <span class="font-mono-label text-mono-label bg-secondary-fixed text-on-secondary-fixed px-2 py-1 rounded">
+                        Génie Civil
+                    </span>
+
+                    <span class="font-mono-label text-mono-label text-on-surface-variant flex items-center gap-1">
+
+                        <span class="material-symbols-outlined text-[16px]">
+                            calendar_today
+                        </span>
+
+                        24 Oct, 2024
+
+                    </span>
+
+                </div>
+
+
+                <h2 class="font-headline-md text-headline-md text-primary mb-4 leading-tight">
+                    Inauguration du Nouveau Viaduc Ferroviaire à Grande Vitesse
+                </h2>
+
+
+                <p class="font-body-md text-body-md text-on-surface-variant mb-8 line-clamp-3">
+                    Notre équipe a achevé avec succès l'analyse structurelle et la supervision de la mise en œuvre du nouveau viaduc régional, réduisant les temps de trajet de 30 % tout en respectant les normes de sécurité sismique les plus strictes.
+                </p>
+
+
+                <a
+                    class="inline-flex items-center gap-2 font-mono-label text-mono-label text-primary hover:text-secondary transition-colors uppercase tracking-wider group/link"
+                    href="#"
+                >
+                    Lire la Suite
+
+                    <span class="material-symbols-outlined text-[18px] transition-transform group-hover/link:translate-x-1">
+                        arrow_forward
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DERNIÈRES ACTUALITÉS -->
+
+    <section class="mb-section-padding">
+
+        <h3 class="font-headline-sm text-headline-sm text-primary mb-8 border-b border-outline-variant pb-2 inline-block">
+            Dernières Mises à Jour
+        </h3>
+
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+
+            <!-- CARD 1 -->
+
+            <article class="bg-surface border border-outline-variant rounded-lg overflow-hidden flex flex-col hover:-translate-y-1 transition-transform duration-300">
+
+                <div class="h-48 relative overflow-hidden bg-surface-container-low">
+
+                    <img
+                        alt="Projet télécom"
+                        class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnhSxRfeqpEzmsjhfXG6JdyzuZ0C8xZex6IlTwXUDaBa3afjhsweZgdvbSdED-mPdRttpmpNCGZdCj5Vx9bv9SrzMMcXz--M3OmCTMre09y6nO36GVB4U1moSAk4jDzNPoHfG8BNE5hdZhfimcWFQ_J-Sx1HtuIxVAiEOocxJhpgVdDZx3sLicEYZvMHPPb4c8WPjglP3SCiHNXGICNfGMsPL3em4K8l2nhb5lB3wsjSNfw55Zcbyv4Q"
+                    />
+
+                </div>
+
+
+                <div class="p-6 flex flex-col flex-grow">
+
+                    <div class="flex justify-between items-center mb-3">
+
+                        <span class="font-mono-label text-mono-label text-secondary font-bold">
+                            Télécommunications
+                        </span>
+
+                        <span class="font-mono-label text-mono-label text-outline text-xs">
+                            18 Oct, 2024
+                        </span>
+
+                    </div>
+
+
+                    <h4 class="font-body-lg text-body-lg font-bold text-primary mb-3">
+                        Déploiement Télécom 5G Phase 2
+                    </h4>
+
+
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow text-truncate-2">
+                        Expansion de l'infrastructure du réseau 5G urbain à travers la zone métropolitaine, assurant une couverture à haute densité.
+                    </p>
+
+
+                    <a
+                        class="text-primary hover:text-secondary font-mono-label text-mono-label inline-flex items-center gap-1 transition-colors mt-auto"
+                        href="#"
+                    >
+                        Détails
+
+                        <span class="material-symbols-outlined text-[16px]">
+                            chevron_right
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 2 -->
+
+            <article class="bg-surface border border-outline-variant rounded-lg overflow-hidden flex flex-col hover:-translate-y-1 transition-transform duration-300">
+
+                <div class="h-48 relative overflow-hidden bg-surface-container-low">
+
+                    <img
+                        alt="Actualité entreprise"
+                        class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC-fwZa7FtQ4iJgXEUcz7wEzIbpZ6ke6alBLm5OSXglgAQ8Sa5hgRaa8z6bFucZwgDlNuY9BdV1oZsfAXzTqDa_Gv5mHqWRVmWIQNPpV78dH4GpUdqS0zjFljQfvBVltl3ApVSpgrg0XcW65PqZyBc4-yfuBW-2D-yATbJRZh7gJiBAAYAgpFNk8jctn25-gKOv2gggS_tKu5ALl96GH8YCa2JXx382DZMlVsJWvlwqe1fFmmTRyLLkQ"
+                    />
+
+                </div>
+
+
+                <div class="p-6 flex flex-col flex-grow">
+
+                    <div class="flex justify-between items-center mb-3">
+
+                        <span class="font-mono-label text-mono-label text-secondary font-bold">
+                            Entreprise
+                        </span>
+
+                        <span class="font-mono-label text-mono-label text-outline text-xs">
+                            12 Oct, 2024
+                        </span>
+
+                    </div>
+
+
+                    <h4 class="font-body-lg text-body-lg font-bold text-primary mb-3">
+                        Prix d'Excellence en Ingénierie T3
+                    </h4>
+
+
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow text-truncate-2">
+                        Célébration de nos équipes internes pour leur précision exceptionnelle et leur innovation dans les méthodologies de conception structurelle.
+                    </p>
+
+
+                    <a
+                        class="text-primary hover:text-secondary font-mono-label text-mono-label inline-flex items-center gap-1 transition-colors mt-auto"
+                        href="#"
+                    >
+                        Détails
+
+                        <span class="material-symbols-outlined text-[16px]">
+                            chevron_right
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 3 -->
+
+            <article class="bg-surface border border-outline-variant rounded-lg overflow-hidden flex flex-col hover:-translate-y-1 transition-transform duration-300">
+
+                <div class="h-48 relative overflow-hidden bg-surface-container-low">
+
+                    <img
+                        alt="Recrutement ingénieurs"
+                        class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV2BN28qPlmDFcI9MCcVdgwQfo4k49GHIjTgzjnsxLxBlXi_uEvPvhAWu0RF-CLe8UAa0s22c0Wybvenwy8TPw70N9oy_134fMe7ZtIfOuS2IbiRvdczDOW3slXX0V60wf5X4FFZo3ArxWqErZtPJJ4fX6cJ0-4RwZB51Y-l1vYLoHcVn3Nuqjh8x1xFXGtcr29u3iSGVqU9wuiCveSLp1m-7Ow8KwcCU2qiU2TJbZ6vdrzbTdyJl7_A"
+                    />
+
+                </div>
+
+
+                <div class="p-6 flex flex-col flex-grow">
+
+                    <div class="flex justify-between items-center mb-3">
+
+                        <span class="font-mono-label text-mono-label text-secondary font-bold">
+                            Recrutement
+                        </span>
+
+                        <span class="font-mono-label text-mono-label text-outline text-xs">
+                            05 Oct, 2024
+                        </span>
+
+                    </div>
+
+
+                    <h4 class="font-body-lg text-body-lg font-bold text-primary mb-3">
+                        Expansion de Notre Équipe Structurelle
+                    </h4>
+
+
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow text-truncate-2">
+                        Nous recherchons actuellement des ingénieurs structurels seniors pour rejoindre notre division en pleine croissance pour les projets internationaux à venir.
+                    </p>
+
+
+                    <a
+                        class="text-primary hover:text-secondary font-mono-label text-mono-label inline-flex items-center gap-1 transition-colors mt-auto"
+                        href="#"
+                    >
+                        Détails
+
+                        <span class="material-symbols-outlined text-[16px]">
+                            chevron_right
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- NEWSLETTER -->
+
+    <section class="mb-section-padding bg-surface-container-low border border-outline-variant rounded-xl p-8 md:p-12 text-center max-w-4xl mx-auto flex flex-col items-center">
+
+        <span class="material-symbols-outlined text-4xl text-primary mb-4">
+            mark_email_unread
+        </span>
+
+        <h3 class="font-headline-sm text-headline-sm text-primary mb-2">
+            Restez Informé
+        </h3>
+
+        <p class="font-body-md text-body-md text-on-surface-variant mb-6 max-w-md">
+            Abonnez-vous à notre newsletter pour les dernières informations en génie civil et télécommunications.
+        </p>
+
+        <form
+            class="w-full max-w-md flex flex-col sm:flex-row gap-4"
+            onsubmit="event.preventDefault();"
+        >
+
+            <input
+                class="flex-grow px-4 py-3 border border-outline-variant rounded bg-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary font-body-md text-primary"
+                placeholder="Entrez votre email"
+                required
+                type="email"
+            />
+
+            <button
+                class="bg-primary text-white font-mono-label text-mono-label px-6 py-3 rounded hover:bg-tertiary-container transition-colors whitespace-nowrap"
+                type="submit"
+            >
+                S'abonner
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- CTA FINAL -->
+
+    <section class="mb-section-padding border-t border-outline-variant pt-12 text-center">
+
+        <h3 class="font-headline-md text-headline-md text-primary mb-4">
+            Prêt à démarrer votre prochain projet ?
+        </h3>
+
+        <p class="font-body-md text-body-md text-on-surface-variant mb-8 max-w-2xl mx-auto">
+            Découvrez comment notre expertise en ingénierie peut transformer votre vision en réalité avec précision et efficacité.
+        </p>
+
+        <div class="flex justify-center gap-4 flex-wrap">
+
+            <a
+                class="bg-primary text-white font-mono-label text-mono-label px-6 py-3 rounded border border-primary hover:bg-transparent hover:text-primary transition-colors inline-flex items-center gap-2"
+                href="service.html"
+            >
+                Nos Services
+
+                <span class="material-symbols-outlined text-[18px]">
+                    engineering
+                </span>
+
+            </a>
+
+
+            <a
+                class="bg-surface text-primary font-mono-label text-mono-label px-6 py-3 rounded border border-outline-variant hover:border-primary transition-colors inline-flex items-center gap-2"
+                href="Contact.html"
+            >
+                Contactez-Nous
+
+                <span class="material-symbols-outlined text-[18px]">
+                    support_agent
+                </span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="bg-primary-container w-full border-t border-primary px-margin-mobile md:px-margin-desktop py-section-padding text-on-primary-container">
+
+    <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
+
+        <div class="col-span-1 md:col-span-4 mb-8">
+
+            <span class="font-display-lg text-headline-sm text-on-primary-container">
+                BETAS AS/HEZ
+            </span>
+
+        </div>
+
+
+        <div class="flex flex-col gap-4">
+
+            <h4 class="font-label-caps text-label-caps uppercase tracking-widest text-on-primary-container mb-2 opacity-70">
+                Entreprise
+            </h4>
+
+            <a
+                class="font-label-caps text-label-caps uppercase tracking-widest text-surface-variant hover:text-white transition-colors underline opacity-80 hover:opacity-100"
+                href="administration.html"
+            >
+                Notre équipe
+            </a>
+
+            <a
+                class="font-label-caps text-label-caps uppercase tracking-widest text-secondary-container hover:text-white transition-colors underline opacity-80 hover:opacity-100"
+                href="actualité.html"
+            >
+                Actualités
+            </a>
+
+            <a
+                class="font-label-caps text-label-caps uppercase tracking-widest text-surface-variant hover:text-white transition-colors underline opacity-80 hover:opacity-100"
+                href="postuler.html"
+            >
+                Postuler
+            </a>
+
+        </div>
+
+
+        <div class="flex flex-col gap-4">
+
+            <h4 class="font-label-caps text-label-caps uppercase tracking-widest text-on-primary-container mb-2 opacity-70">
+                Expertise
+            </h4>
+
+            <a
+                class="font-label-caps text-label-caps uppercase tracking-widest text-surface-variant hover:text-white transition-colors underline opacity-80 hover:opacity-100"
+                href="service.html"
+            >
+                Services
+            </a>
+
+            <a
+                class="font-label-caps text-label-caps uppercase tracking-widest text-surface-variant hover:text-white transition-colors underline opacity-80 hover:opacity-100"
+                href="projets.html"
+            >
+                Projets
+            </a>
+
+        </div>
+
+
+        <div class="flex flex-col gap-4">
+
+            <h4 class="font-label-caps text-label-caps uppercase tracking-widest text-on-primary-container mb-2 opacity-70">
+                Action
+            </h4>
+
+            <a
+                class="font-label-caps text-label-caps uppercase tracking-widest text-surface-variant hover:text-white transition-colors underline opacity-80 hover:opacity-100"
+                href="Contact.html"
+            >
+                Contact
+            </a>
+
+            <a
+                class="font-label-caps text-label-caps uppercase tracking-widest text-surface-variant hover:text-white transition-colors underline opacity-80 hover:opacity-100"
+                href="rendez-vous.html"
+            >
+                Prendre Rendez-vous
+            </a>
+
+        </div>
+
+
+        <div class="col-span-1 md:col-span-4 mt-12 pt-8 border-t border-on-tertiary-fixed-variant opacity-60">
+
+            <p class="font-label-caps text-label-caps uppercase tracking-widest">
+                © 2024 BETAS AS/HEZ. Précision en Ingénierie & Excellence Civile.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT MENU MOBILE
+========================================================= -->
+
+<script>
+
+const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+const closeMenuBtn = document.getElementById("close-menu-btn");
+const mobileDrawer = document.getElementById("mobile-drawer");
+
+
+function openMenu() {
+
+    mobileDrawer.classList.add("open");
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+function closeMenu() {
+
+    mobileDrawer.classList.remove("open");
+
+    document.body.style.overflow = "";
+
+}
+
+
+mobileMenuBtn.addEventListener("click", openMenu);
+
+closeMenuBtn.addEventListener("click", closeMenu);
+
+
+// Fermer le menu lorsqu'un lien est sélectionné
+
+document.querySelectorAll(".mobile-navigation a").forEach(link => {
+
+    link.addEventListener("click", closeMenu);
+
+});
+
+
+</script>
+
+</body>
+</html>
+```

@@ -1,0 +1,1789 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="fr">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <title>À propos de BETA AS HEZ | Expertise technique</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Material Symbols -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet"
+  />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            midnight: "#0f172a",
+            orange: "#f97316",
+            "orange-dark": "#ea580c",
+            surface: "#f8fafc",
+            steel: "#64748b"
+          },
+
+          fontFamily: {
+            inter: ["Inter", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 500,
+        'GRAD' 0,
+        'opsz' 24;
+    }
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero-pattern {
+      background-image:
+        linear-gradient(
+          rgba(15, 23, 42, 0.88),
+          rgba(15, 23, 42, 0.94)
+        ),
+        url("./img/IMG-20260818-WA0112.jpg");
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* =========================================================
+       SECTION HISTORY BACKGROUND
+    ========================================================= */
+
+    .history-section {
+      background-color: #f8fafc;
+
+      background-image:
+        linear-gradient(
+          rgba(248, 250, 252, 0.92),
+          rgba(248, 250, 252, 0.92)
+        ),
+        url("./img/Capture d'écran 2026-09-02 113340.png");
+
+      background-repeat: no-repeat;
+      background-position: 92% center;
+      background-size: 420px auto;
+      background-attachment: scroll;
+    }
+
+    @media (max-width: 768px) {
+      .history-section {
+        background-position: center bottom;
+        background-size: 280px auto;
+      }
+    }
+
+    /* =========================================================
+       SECTION LINE
+    ========================================================= */
+
+    .section-line {
+      width: 60px;
+      height: 4px;
+      background: #f97316;
+      border-radius: 999px;
+    }
+
+    /* =========================================================
+       CARDS
+    ========================================================= */
+
+    .value-card,
+    .approach-card,
+    .why-card {
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+    }
+
+    .value-card:hover,
+    .approach-card:hover,
+    .why-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 35px rgba(15, 23, 42, 0.10);
+      border-color: rgba(249, 115, 22, 0.45);
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header
+  class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200"
+>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="h-20 flex items-center justify-between gap-4">
+
+      <!-- =====================================================
+           LOGO + NOM ENTREPRISE + LOGO HEZ
+      ====================================================== -->
+
+      <a
+        href="home.html"
+        class="flex items-center gap-2 shrink-0"
+      >
+
+        <!-- Logo TAS -->
+        <img
+          src="./img/IMG-20260818-WA0112.jpg"
+          alt="Logo TAS"
+          class="h-10 w-10 sm:h-11 sm:w-11 object-contain rounded"
+        />
+
+        <!-- Nom de l'entreprise -->
+        <div class="flex flex-col ml-1">
+
+          <div
+            class="font-extrabold text-midnight text-sm sm:text-base leading-tight whitespace-nowrap"
+          >
+            BETAS AS/HEZ
+          </div>
+
+          <div
+            class="hidden sm:block text-[9px] text-slate-500 uppercase tracking-wider"
+          >
+            Bureau d'études
+          </div>
+
+        </div>
+
+        <!-- =================================================
+             LOGO HEZ
+             Placé APRÈS le nom BETAS AS/HEZ
+        ================================================== -->
+
+        <img
+          src="./img/Capture d'écran 2026-09-02 113340.png"
+          alt="Logo HEZ - Horizon of Enterprise for Zenith"
+          class="h-10 sm:h-11 w-auto max-w-[70px] object-contain rounded"
+        />
+
+      </a>
+
+
+      <!-- =====================================================
+           DESKTOP NAVIGATION
+      ====================================================== -->
+
+      <nav
+        class="hidden lg:flex items-center gap-5 xl:gap-6 text-sm font-medium ml-auto"
+      >
+
+        <a
+          href="home.html"
+          class="text-slate-600 hover:text-orange transition-colors"
+        >
+          Accueil
+        </a>
+
+        <a
+          href="administration.html"
+          class="text-slate-600 hover:text-orange transition-colors"
+        >
+          Notre équipe
+        </a>
+
+        <a
+          href="actualité.html"
+          class="text-slate-600 hover:text-orange transition-colors"
+        >
+          Actualité
+        </a>
+
+        <a
+          href="postuler.html"
+          class="text-slate-600 hover:text-orange transition-colors"
+        >
+          Postuler
+        </a>
+
+        <a
+          href="service.html"
+          class="text-slate-600 hover:text-orange transition-colors"
+        >
+          Services
+        </a>
+
+        <a
+          href="projets.html"
+          class="text-slate-600 hover:text-orange transition-colors"
+        >
+          Projets
+        </a>
+
+        <a
+          href="why.html"
+          class="text-orange font-semibold"
+        >
+          À propos
+        </a>
+
+        <a
+          href="Contact.html"
+          class="text-slate-600 hover:text-orange transition-colors"
+        >
+          Contact
+        </a>
+
+      </nav>
+
+
+      <!-- =====================================================
+           DESKTOP CTA
+      ====================================================== -->
+
+      <a
+        href="bookappointment1.html"
+        class="hidden lg:inline-flex items-center gap-2 bg-orange hover:bg-orange-dark text-white px-5 py-3 rounded-lg font-semibold text-sm transition-colors shrink-0"
+      >
+
+        <span class="material-symbols-outlined text-[20px]">
+          calendar_month
+        </span>
+
+        Prendre rendez-vous
+
+      </a>
+
+
+      <!-- =====================================================
+           MOBILE BUTTON
+      ====================================================== -->
+
+      <button
+        id="menuButton"
+        type="button"
+        class="lg:hidden p-2 rounded-lg text-midnight hover:bg-slate-100"
+        aria-label="Ouvrir le menu"
+      >
+
+        <span class="material-symbols-outlined text-3xl">
+          menu
+        </span>
+
+      </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         MOBILE MENU
+    ====================================================== -->
+
+    <div
+      id="mobileMenu"
+      class="hidden lg:hidden pb-5 border-t border-slate-100"
+    >
+
+      <nav class="flex flex-col pt-4 gap-1">
+
+        <a
+          href="home.html"
+          class="px-4 py-3 rounded-lg hover:bg-slate-100"
+        >
+          Accueil
+        </a>
+
+        <a
+          href="administration.html"
+          class="px-4 py-3 rounded-lg hover:bg-slate-100"
+        >
+          Notre équipe
+        </a>
+
+        <a
+          href="actualité.html"
+          class="px-4 py-3 rounded-lg hover:bg-slate-100"
+        >
+          Actualité
+        </a>
+
+        <a
+          href="postuler.html"
+          class="px-4 py-3 rounded-lg hover:bg-slate-100"
+        >
+          Postuler
+        </a>
+
+        <a
+          href="service.html"
+          class="px-4 py-3 rounded-lg hover:bg-slate-100"
+        >
+          Services
+        </a>
+
+        <a
+          href="projets.html"
+          class="px-4 py-3 rounded-lg hover:bg-slate-100"
+        >
+          Projets
+        </a>
+
+        <!-- À PROPOS ACTIF -->
+        <a
+          href="why.html"
+          class="px-4 py-3 rounded-lg bg-orange/10 text-orange font-semibold"
+        >
+          À propos
+        </a>
+
+        <a
+          href="Contact.html"
+          class="px-4 py-3 rounded-lg hover:bg-slate-100"
+        >
+          Contact
+        </a>
+
+        <!-- RENDEZ-VOUS -->
+        <a
+          href="bookappointment1.html"
+          class="mt-2 mx-4 inline-flex items-center justify-center gap-2 bg-orange text-white px-5 py-3 rounded-lg font-semibold"
+        >
+
+          <span class="material-symbols-outlined">
+            calendar_month
+          </span>
+
+          Prendre rendez-vous
+
+        </a>
+
+      </nav>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section
+  class="hero-pattern min-h-[620px] pt-20 flex items-center"
+>
+
+  <div
+    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full"
+  >
+
+    <div class="max-w-3xl py-24">
+
+      <div
+        class="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-orange/10 border border-orange/30 text-orange"
+      >
+
+        <span class="material-symbols-outlined text-[18px]">
+          business
+        </span>
+
+        <span class="text-sm font-semibold">
+          À propos de BETA AS HEZ
+        </span>
+
+      </div>
+
+
+      <h1
+        class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight"
+      >
+
+        Fondée sur la précision.
+
+        <span class="text-orange">
+          Guidée par l'intégrité.
+        </span>
+
+      </h1>
+
+
+      <p
+        class="mt-6 text-lg sm:text-xl text-slate-200 leading-relaxed max-w-2xl"
+      >
+
+        Une expertise technique au service de projets durables,
+        fiables et adaptés aux réalités du terrain.
+
+      </p>
+
+
+      <div class="mt-9 flex flex-col sm:flex-row gap-4">
+
+        <a
+          href="service.html"
+          class="inline-flex items-center justify-center gap-2 bg-orange hover:bg-orange-dark text-white px-6 py-3.5 rounded-lg font-semibold transition-colors"
+        >
+
+          Découvrir nos services
+
+          <span class="material-symbols-outlined">
+            arrow_forward
+          </span>
+
+        </a>
+
+
+        <a
+          href="Contact.html"
+          class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white px-6 py-3.5 rounded-lg font-semibold transition-colors"
+        >
+
+          Nous contacter
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     QUI SOMMES-NOUS ?
+========================================================= -->
+
+<section class="py-20 lg:py-28 bg-white">
+
+  <div
+    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+  >
+
+    <div
+      class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center"
+    >
+
+      <!-- IMAGE -->
+
+      <div class="relative">
+
+        <div
+          class="rounded-2xl overflow-hidden shadow-xl"
+        >
+
+          <img
+            src="./img/IMG-20260818-WA0112.jpg"
+            alt="BETA AS HEZ - Expertise technique"
+            class="w-full h-[420px] object-cover"
+          />
+
+        </div>
+
+
+        <div
+          class="absolute -bottom-6 -right-4 sm:right-6 bg-midnight text-white rounded-xl p-6 shadow-xl max-w-[250px]"
+        >
+
+          <div class="flex items-center gap-3 mb-2">
+
+            <span
+              class="material-symbols-outlined text-orange text-3xl"
+            >
+              engineering
+            </span>
+
+            <span class="font-bold">
+              Expertise technique
+            </span>
+
+          </div>
+
+          <p class="text-sm text-slate-300">
+
+            Une approche fondée sur la précision,
+            la rigueur et la qualité.
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- TEXTE -->
+
+      <div>
+
+        <p
+          class="text-orange font-bold text-sm tracking-[0.2em] uppercase"
+        >
+          Qui sommes-nous ?
+        </p>
+
+        <div class="section-line mt-4 mb-7"></div>
+
+
+        <h2
+          class="text-3xl sm:text-4xl font-extrabold text-midnight leading-tight"
+        >
+          Une expertise technique au service de vos projets
+        </h2>
+
+
+        <div
+          class="mt-6 space-y-5 text-slate-600 leading-relaxed"
+        >
+
+          <p>
+            BETA AS HEZ est un bureau d'études techniques spécialisé
+            dans l'ingénierie, les infrastructures et le contrôle
+            des projets.
+          </p>
+
+          <p>
+            Nous mettons notre savoir-faire au service de projets
+            nécessitant une approche rigoureuse, des études précises
+            et une compréhension concrète des contraintes du terrain.
+          </p>
+
+          <p>
+            Notre objectif est d'accompagner nos clients dans leurs
+            projets en apportant des solutions techniques adaptées,
+            fiables et durables.
+          </p>
+
+        </div>
+
+
+        <div class="mt-8 grid sm:grid-cols-2 gap-4">
+
+          <div class="flex items-start gap-3">
+
+            <span class="material-symbols-outlined text-orange">
+              verified
+            </span>
+
+            <div>
+
+              <h3 class="font-bold text-midnight">
+                Rigueur technique
+              </h3>
+
+              <p class="text-sm text-slate-500 mt-1">
+                Des études menées avec précision.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="flex items-start gap-3">
+
+            <span class="material-symbols-outlined text-orange">
+              handshake
+            </span>
+
+            <div>
+
+              <h3 class="font-bold text-midnight">
+                Engagement
+              </h3>
+
+              <p class="text-sm text-slate-500 mt-1">
+                Une relation basée sur la confiance.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     HISTOIRE DE L'ENTREPRISE
+     L'image HEZ est utilisée comme arrière-plan
+========================================================= -->
+
+<section
+  class="history-section py-20 lg:py-28 relative overflow-hidden"
+>
+
+  <div
+    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
+  >
+
+    <div class="max-w-4xl">
+
+      <p
+        class="text-orange font-bold text-sm tracking-[0.2em] uppercase"
+      >
+        Notre histoire
+      </p>
+
+      <div class="section-line mt-4 mb-7"></div>
+
+
+      <h2
+        class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-midnight leading-tight"
+      >
+        Une histoire construite autour de l'expertise et de l'ambition
+      </h2>
+
+
+      <div
+        class="mt-8 space-y-6 text-slate-600 leading-relaxed max-w-3xl"
+      >
+
+        <p>
+          BETA AS HEZ est née de la volonté de mettre les compétences
+          techniques et l'expertise de ses équipes au service de
+          projets répondant aux besoins réels du terrain.
+        </p>
+
+        <p>
+          Au fil de son développement, l'entreprise a construit son
+          approche autour de la rigueur, de la qualité des études et
+          de la compréhension des contraintes propres à chaque projet.
+        </p>
+
+        <p>
+          Notre parcours repose sur une conviction simple :
+          la réussite d'un projet commence par une bonne compréhension
+          de ses enjeux et par des choix techniques pertinents.
+        </p>
+
+        <p>
+          Aujourd'hui, BETA AS HEZ poursuit son développement avec
+          l'ambition de renforcer son expertise, d'élargir ses domaines
+          d'intervention et de contribuer à la réalisation de projets
+          fiables, durables et adaptés aux réalités africaines.
+        </p>
+
+      </div>
+
+
+      <!-- Ligne chronologique -->
+
+      <div
+        class="mt-10 grid sm:grid-cols-3 gap-5 max-w-3xl"
+      >
+
+        <div
+          class="bg-white/90 backdrop-blur-sm border border-slate-200 rounded-xl p-5 shadow-sm"
+        >
+
+          <span
+            class="material-symbols-outlined text-orange text-3xl"
+          >
+            lightbulb
+          </span>
+
+          <h3
+            class="mt-3 font-bold text-midnight"
+          >
+            Une ambition
+          </h3>
+
+          <p
+            class="mt-2 text-sm text-slate-500 leading-relaxed"
+          >
+            Développer une expertise technique répondant aux
+            besoins concrets des entreprises et des projets.
+          </p>
+
+        </div>
+
+
+        <div
+          class="bg-white/90 backdrop-blur-sm border border-slate-200 rounded-xl p-5 shadow-sm"
+        >
+
+          <span
+            class="material-symbols-outlined text-orange text-3xl"
+          >
+            trending_up
+          </span>
+
+          <h3
+            class="mt-3 font-bold text-midnight"
+          >
+            Une évolution
+          </h3>
+
+          <p
+            class="mt-2 text-sm text-slate-500 leading-relaxed"
+          >
+            Renforcer continuellement nos compétences et nos
+            capacités d'intervention.
+          </p>
+
+        </div>
+
+
+        <div
+          class="bg-white/90 backdrop-blur-sm border border-slate-200 rounded-xl p-5 shadow-sm"
+        >
+
+          <span
+            class="material-symbols-outlined text-orange text-3xl"
+          >
+            public
+          </span>
+
+          <h3
+            class="mt-3 font-bold text-midnight"
+          >
+            Une vision
+          </h3>
+
+          <p
+            class="mt-2 text-sm text-slate-500 leading-relaxed"
+          >
+            Participer durablement au développement des
+            infrastructures en Afrique.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     MISSION & VISION
+========================================================= -->
+
+<section class="py-20 lg:py-28 bg-surface">
+
+  <div
+    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+  >
+
+    <div class="max-w-2xl mb-12">
+
+      <p
+        class="text-orange font-bold text-sm tracking-[0.2em] uppercase"
+      >
+        Notre direction
+      </p>
+
+      <div class="section-line mt-4 mb-6"></div>
+
+      <h2
+        class="text-3xl sm:text-4xl font-extrabold text-midnight"
+      >
+        Notre mission & notre vision
+      </h2>
+
+      <p class="mt-5 text-slate-600 leading-relaxed">
+        Deux principes qui orientent notre manière de concevoir,
+        d'étudier et d'accompagner les projets qui nous sont confiés.
+      </p>
+
+    </div>
+
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- MISSION -->
+
+      <article
+        class="bg-midnight rounded-2xl p-8 lg:p-10 text-white"
+      >
+
+        <div
+          class="w-14 h-14 rounded-xl bg-orange flex items-center justify-center mb-7"
+        >
+
+          <span class="material-symbols-outlined text-3xl">
+            flag
+          </span>
+
+        </div>
+
+        <h3 class="text-2xl font-bold">
+          Notre mission
+        </h3>
+
+        <p class="mt-5 text-slate-300 leading-relaxed">
+          Fournir une expertise technique fiable et rigoureuse
+          afin de contribuer à la réussite des projets de nos clients.
+          Nous cherchons à proposer des solutions adaptées aux besoins
+          réels du projet tout en accordant une attention particulière
+          à la qualité et à la précision.
+        </p>
+
+      </article>
+
+
+      <!-- VISION -->
+
+      <article
+        class="bg-white border border-slate-200 rounded-2xl p-8 lg:p-10 shadow-sm"
+      >
+
+        <div
+          class="w-14 h-14 rounded-xl bg-orange/10 flex items-center justify-center mb-7"
+        >
+
+          <span class="material-symbols-outlined text-orange text-3xl">
+            visibility
+          </span>
+
+        </div>
+
+        <h3 class="text-2xl font-bold text-midnight">
+          Notre vision
+        </h3>
+
+        <p class="mt-5 text-slate-600 leading-relaxed">
+          Construire une référence dans le domaine des études techniques
+          en Afrique grâce à une expertise solide, une culture de la qualité
+          et une capacité à accompagner durablement nos clients.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     NOS VALEURS
+========================================================= -->
+
+<section class="py-20 lg:py-28 bg-white">
+
+  <div
+    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+  >
+
+    <div class="text-center max-w-2xl mx-auto">
+
+      <p
+        class="text-orange font-bold text-sm tracking-[0.2em] uppercase"
+      >
+        Ce qui nous définit
+      </p>
+
+      <div class="section-line mx-auto mt-4 mb-6"></div>
+
+      <h2
+        class="text-3xl sm:text-4xl font-extrabold text-midnight"
+      >
+        Nos valeurs fondamentales
+      </h2>
+
+      <p class="mt-5 text-slate-600 leading-relaxed">
+        Nos valeurs constituent le socle de notre manière de travailler
+        et de construire une relation durable avec nos clients.
+      </p>
+
+    </div>
+
+
+    <div
+      class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
+    >
+
+      <!-- EXPERTISE -->
+
+      <article
+        class="value-card border border-slate-200 rounded-2xl p-7 bg-white"
+      >
+
+        <div
+          class="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center"
+        >
+
+          <span class="material-symbols-outlined text-orange text-2xl">
+            engineering
+          </span>
+
+        </div>
+
+        <h3 class="mt-6 text-xl font-bold text-midnight">
+          Expertise
+        </h3>
+
+        <p class="mt-3 text-slate-500 leading-relaxed text-sm">
+          Nous nous appuyons sur nos compétences techniques et notre
+          savoir-faire pour répondre aux exigences de chaque projet.
+        </p>
+
+      </article>
+
+
+      <!-- INTEGRITE -->
+
+      <article
+        class="value-card border border-slate-200 rounded-2xl p-7 bg-white"
+      >
+
+        <div
+          class="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center"
+        >
+
+          <span class="material-symbols-outlined text-orange text-2xl">
+            shield
+          </span>
+
+        </div>
+
+        <h3 class="mt-6 text-xl font-bold text-midnight">
+          Intégrité
+        </h3>
+
+        <p class="mt-3 text-slate-500 leading-relaxed text-sm">
+          Nous privilégions la transparence, le respect des engagements
+          et une relation professionnelle fondée sur la confiance.
+        </p>
+
+      </article>
+
+
+      <!-- FIABILITE -->
+
+      <article
+        class="value-card border border-slate-200 rounded-2xl p-7 bg-white"
+      >
+
+        <div
+          class="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center"
+        >
+
+          <span class="material-symbols-outlined text-orange text-2xl">
+            verified
+          </span>
+
+        </div>
+
+        <h3 class="mt-6 text-xl font-bold text-midnight">
+          Fiabilité
+        </h3>
+
+        <p class="mt-3 text-slate-500 leading-relaxed text-sm">
+          Nous accordons une importance particulière à la précision,
+          à la rigueur et à la constance dans nos prestations.
+        </p>
+
+      </article>
+
+
+      <!-- QUALITE -->
+
+      <article
+        class="value-card border border-slate-200 rounded-2xl p-7 bg-white"
+      >
+
+        <div
+          class="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center"
+        >
+
+          <span class="material-symbols-outlined text-orange text-2xl">
+            workspace_premium
+          </span>
+
+        </div>
+
+        <h3 class="mt-6 text-xl font-bold text-midnight">
+          Qualité
+        </h3>
+
+        <p class="mt-3 text-slate-500 leading-relaxed text-sm">
+          Chaque projet bénéficie d'une attention particulière afin
+          de rechercher un résultat conforme aux attentes du client.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     POURQUOI NOUS CHOISIR
+========================================================= -->
+
+<section class="py-20 lg:py-28 bg-midnight text-white">
+
+  <div
+    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+  >
+
+    <div
+      class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center"
+    >
+
+      <div>
+
+        <p
+          class="text-orange font-bold text-sm tracking-[0.2em] uppercase"
+        >
+          Pourquoi BETAS AS/HEZ ?
+        </p>
+
+        <div class="section-line mt-4 mb-7"></div>
+
+        <h2
+          class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight"
+        >
+
+          Plus qu'une expertise,
+
+          <span class="text-orange">
+            un engagement
+          </span>
+
+          envers votre projet.
+
+        </h2>
+
+        <p class="mt-6 text-slate-300 leading-relaxed">
+          Nous cherchons à comprendre les réalités de chaque projet
+          avant de proposer une réponse technique. Cette approche nous
+          permet de travailler avec méthode et de rester concentrés
+          sur les objectifs du client.
+        </p>
+
+        <a
+          href="projets.html"
+          class="mt-8 inline-flex items-center gap-2 text-orange font-bold hover:text-white transition-colors"
+        >
+
+          Découvrir nos réalisations
+
+          <span class="material-symbols-outlined">
+            arrow_forward
+          </span>
+
+        </a>
+
+      </div>
+
+
+      <div class="grid sm:grid-cols-2 gap-5">
+
+        <!-- CARD 1 -->
+
+        <article
+          class="why-card bg-white/5 border border-white/10 rounded-2xl p-6"
+        >
+
+          <span class="material-symbols-outlined text-orange text-3xl">
+            architecture
+          </span>
+
+          <h3 class="mt-5 text-lg font-bold">
+            Expertise technique
+          </h3>
+
+          <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+            Une approche basée sur l'analyse, la précision et la maîtrise
+            des exigences techniques.
+          </p>
+
+        </article>
+
+
+        <!-- CARD 2 -->
+
+        <article
+          class="why-card bg-white/5 border border-white/10 rounded-2xl p-6"
+        >
+
+          <span class="material-symbols-outlined text-orange text-3xl">
+            rule
+          </span>
+
+          <h3 class="mt-5 text-lg font-bold">
+            Rigueur
+          </h3>
+
+          <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+            Une attention portée aux détails à chaque étape de l'étude
+            et du suivi du projet.
+          </p>
+
+        </article>
+
+
+        <!-- CARD 3 -->
+
+        <article
+          class="why-card bg-white/5 border border-white/10 rounded-2xl p-6"
+        >
+
+          <span class="material-symbols-outlined text-orange text-3xl">
+            tune
+          </span>
+
+          <h3 class="mt-5 text-lg font-bold">
+            Solutions adaptées
+          </h3>
+
+          <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+            Des solutions pensées en fonction des besoins spécifiques
+            et des contraintes réelles du terrain.
+          </p>
+
+        </article>
+
+
+        <!-- CARD 4 -->
+
+        <article
+          class="why-card bg-white/5 border border-white/10 rounded-2xl p-6"
+        >
+
+          <span class="material-symbols-outlined text-orange text-3xl">
+            handshake
+          </span>
+
+          <h3 class="mt-5 text-lg font-bold">
+            Engagement
+          </h3>
+
+          <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+            Une volonté de construire une relation de confiance
+            et d'accompagner nos clients dans leurs projets.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     NOTRE APPROCHE
+========================================================= -->
+
+<section class="py-20 lg:py-28 bg-surface">
+
+  <div
+    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+  >
+
+    <div class="text-center max-w-2xl mx-auto">
+
+      <p
+        class="text-orange font-bold text-sm tracking-[0.2em] uppercase"
+      >
+        Notre méthode
+      </p>
+
+      <div class="section-line mx-auto mt-4 mb-6"></div>
+
+      <h2
+        class="text-3xl sm:text-4xl font-extrabold text-midnight"
+      >
+        Une approche structurée
+      </h2>
+
+      <p class="mt-5 text-slate-600 leading-relaxed">
+        De la compréhension du besoin à l'accompagnement du projet,
+        nous avançons selon une démarche claire et progressive.
+      </p>
+
+    </div>
+
+
+    <div
+      class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
+    >
+
+      <!-- ETAPE 1 -->
+
+      <article
+        class="approach-card bg-white border border-slate-200 rounded-2xl p-7"
+      >
+
+        <div class="flex items-center justify-between">
+
+          <div
+            class="w-12 h-12 rounded-full bg-orange text-white flex items-center justify-center font-extrabold"
+          >
+            01
+          </div>
+
+          <span class="material-symbols-outlined text-slate-300 text-4xl">
+            forum
+          </span>
+
+        </div>
+
+        <h3 class="mt-7 text-xl font-bold text-midnight">
+          Comprendre
+        </h3>
+
+        <p class="mt-3 text-sm text-slate-500 leading-relaxed">
+          Identifier les besoins, les objectifs et les contraintes
+          propres au projet.
+        </p>
+
+      </article>
+
+
+      <!-- ETAPE 2 -->
+
+      <article
+        class="approach-card bg-white border border-slate-200 rounded-2xl p-7"
+      >
+
+        <div class="flex items-center justify-between">
+
+          <div
+            class="w-12 h-12 rounded-full bg-orange text-white flex items-center justify-center font-extrabold"
+          >
+            02
+          </div>
+
+          <span class="material-symbols-outlined text-slate-300 text-4xl">
+            search
+          </span>
+
+        </div>
+
+        <h3 class="mt-7 text-xl font-bold text-midnight">
+          Étudier
+        </h3>
+
+        <p class="mt-3 text-sm text-slate-500 leading-relaxed">
+          Analyser les données et élaborer une réponse technique
+          adaptée aux exigences du projet.
+        </p>
+
+      </article>
+
+
+      <!-- ETAPE 3 -->
+
+      <article
+        class="approach-card bg-white border border-slate-200 rounded-2xl p-7"
+      >
+
+        <div class="flex items-center justify-between">
+
+          <div
+            class="w-12 h-12 rounded-full bg-orange text-white flex items-center justify-center font-extrabold"
+          >
+            03
+          </div>
+
+          <span class="material-symbols-outlined text-slate-300 text-4xl">
+            construction
+          </span>
+
+        </div>
+
+        <h3 class="mt-7 text-xl font-bold text-midnight">
+          Réaliser
+        </h3>
+
+        <p class="mt-3 text-sm text-slate-500 leading-relaxed">
+          Mettre en œuvre les solutions retenues avec méthode,
+          précision et rigueur.
+        </p>
+
+      </article>
+
+
+      <!-- ETAPE 4 -->
+
+      <article
+        class="approach-card bg-white border border-slate-200 rounded-2xl p-7"
+      >
+
+        <div class="flex items-center justify-between">
+
+          <div
+            class="w-12 h-12 rounded-full bg-orange text-white flex items-center justify-center font-extrabold"
+          >
+            04
+          </div>
+
+          <span class="material-symbols-outlined text-slate-300 text-4xl">
+            support_agent
+          </span>
+
+        </div>
+
+        <h3 class="mt-7 text-xl font-bold text-midnight">
+          Accompagner
+        </h3>
+
+        <p class="mt-3 text-sm text-slate-500 leading-relaxed">
+          Rester aux côtés du client afin de contribuer au bon
+          déroulement du projet.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA FINAL
+========================================================= -->
+
+<section class="py-20 lg:py-24 bg-orange">
+
+  <div
+    class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+  >
+
+    <span class="material-symbols-outlined text-white text-5xl">
+      engineering
+    </span>
+
+    <h2
+      class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white"
+    >
+      Construisons ensemble votre prochain projet.
+    </h2>
+
+    <p
+      class="mt-5 text-white/90 text-lg max-w-2xl mx-auto leading-relaxed"
+    >
+      Vous avez un projet ou un besoin d'expertise technique ?
+      Échangeons sur vos objectifs et les solutions adaptées.
+    </p>
+
+
+    <div
+      class="mt-9 flex flex-col sm:flex-row justify-center gap-4"
+    >
+
+      <a
+        href="bookappointment1.html"
+        class="inline-flex items-center justify-center gap-2 bg-midnight hover:bg-slate-900 text-white px-7 py-4 rounded-lg font-bold transition-colors"
+      >
+
+        <span class="material-symbols-outlined">
+          calendar_month
+        </span>
+
+        Prendre rendez-vous
+
+      </a>
+
+
+      <a
+        href="Contact.html"
+        class="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-midnight px-7 py-4 rounded-lg font-bold transition-colors"
+      >
+
+        <span class="material-symbols-outlined">
+          mail
+        </span>
+
+        Nous contacter
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="bg-midnight text-white">
+
+  <div
+    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14"
+  >
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+
+      <!-- BRAND -->
+
+      <div>
+
+        <div class="flex items-center gap-2">
+
+          <!-- Logo TAS -->
+
+          <img
+            src="./img/IMG-20260818-WA0112.jpg"
+            alt="Logo TAS"
+            class="h-10 w-10 object-contain rounded"
+          />
+
+          <!-- Logo HEZ -->
+
+          <img
+            src="./img/Capture d'écran 2026-09-02 113340.png"
+            alt="Logo HEZ"
+            class="h-10 w-auto max-w-[65px] object-contain rounded"
+          />
+
+        </div>
+
+
+        <h3 class="mt-4 font-extrabold text-lg">
+          BETAS AS/HEZ
+        </h3>
+
+        <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+          Bureau d'études et d'expertise technique au service
+          de projets fiables et durables.
+        </p>
+
+      </div>
+
+
+      <!-- NAVIGATION -->
+
+      <div>
+
+        <h3 class="font-bold mb-5">
+          Navigation
+        </h3>
+
+        <ul class="space-y-3 text-sm text-slate-400">
+
+          <li>
+            <a
+              href="home.html"
+              class="hover:text-orange transition-colors"
+            >
+              Accueil
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="service.html"
+              class="hover:text-orange transition-colors"
+            >
+              Services
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="projets.html"
+              class="hover:text-orange transition-colors"
+            >
+              Projets
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="why.html"
+              class="text-orange"
+            >
+              À propos
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- ENTREPRISE -->
+
+      <div>
+
+        <h3 class="font-bold mb-5">
+          BETAS AS/HEZ
+        </h3>
+
+        <ul class="space-y-3 text-sm text-slate-400">
+
+          <li>
+            <a
+              href="administration.html"
+              class="hover:text-orange transition-colors"
+            >
+              Notre équipe
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="actualité.html"
+              class="hover:text-orange transition-colors"
+            >
+              Actualité
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="postuler.html"
+              class="hover:text-orange transition-colors"
+            >
+              Postuler
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="Contact.html"
+              class="hover:text-orange transition-colors"
+            >
+              Contact
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- CONTACT -->
+
+      <div>
+
+        <h3 class="font-bold mb-5">
+          Contact
+        </h3>
+
+        <ul class="space-y-4 text-sm text-slate-400">
+
+          <li class="flex items-start gap-3">
+
+            <span class="material-symbols-outlined text-orange">
+              location_on
+            </span>
+
+            <span>
+              Siège social
+            </span>
+
+          </li>
+
+
+          <li class="flex items-start gap-3">
+
+            <span class="material-symbols-outlined text-orange">
+              phone
+            </span>
+
+            <a
+              href="tel:+237000000000"
+              class="hover:text-white transition-colors"
+            >
+              Nous appeler
+            </a>
+
+          </li>
+
+
+          <li class="flex items-start gap-3">
+
+            <span class="material-symbols-outlined text-orange">
+              mail
+            </span>
+
+            <a
+              href="Contact.html"
+              class="hover:text-white transition-colors"
+            >
+              Nous écrire
+            </a>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <!-- COPYRIGHT -->
+
+    <div
+      class="mt-12 pt-7 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-4 text-sm text-slate-500"
+    >
+
+      <p>
+        © 2024 BETAS AS HEZ. Tous droits réservés.
+      </p>
+
+      <div class="flex gap-5">
+
+        <a
+          href="#"
+          class="hover:text-white transition-colors"
+        >
+          Politique de confidentialité
+        </a>
+
+        <a
+          href="#"
+          class="hover:text-white transition-colors"
+        >
+          Mentions légales
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- =========================================================
+     MOBILE MENU SCRIPT
+========================================================= -->
+
+<script>
+
+  const menuButton =
+    document.getElementById("menuButton");
+
+  const mobileMenu =
+    document.getElementById("mobileMenu");
+
+
+  menuButton.addEventListener("click", () => {
+
+    mobileMenu.classList.toggle("hidden");
+
+    const icon =
+      menuButton.querySelector(
+        ".material-symbols-outlined"
+      );
+
+
+    if (mobileMenu.classList.contains("hidden")) {
+
+      icon.textContent = "menu";
+
+      menuButton.setAttribute(
+        "aria-label",
+        "Ouvrir le menu"
+      );
+
+    } else {
+
+      icon.textContent = "close";
+
+      menuButton.setAttribute(
+        "aria-label",
+        "Fermer le menu"
+      );
+
+    }
+
+  });
+
+
+  /* Fermer le menu lorsqu'un lien est sélectionné */
+
+  mobileMenu
+    .querySelectorAll("a")
+    .forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        mobileMenu.classList.add("hidden");
+
+        const icon =
+          menuButton.querySelector(
+            ".material-symbols-outlined"
+          );
+
+        icon.textContent = "menu";
+
+        menuButton.setAttribute(
+          "aria-label",
+          "Ouvrir le menu"
+        );
+
+      });
+
+    });
+
+</script>
+
+
+</body>
+</html>

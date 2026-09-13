@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BETA AS HEZ - Finaliser le rendez-vous</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "on-error": "#ffffff",
+                    "off-white": "#f8fafc",
+                    "secondary-fixed-dim": "#b9c7df",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#f7f9fb",
+                    "on-primary-fixed": "#131b2e",
+                    "on-tertiary-container": "#d95f00",
+                    "on-background": "#191c1e",
+                    "primary-fixed-dim": "#bec6e0",
+                    "on-tertiary-fixed-variant": "#783200",
+                    "surface-container": "#eceef0",
+                    "surface-container-high": "#e6e8ea",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed": "#0d1c2e",
+                    "surface": "#f7f9fb",
+                    "tertiary-fixed-dim": "#ffb690",
+                    "on-error-container": "#93000a",
+                    "steel": "#475569",
+                    "inverse-primary": "#bec6e0",
+                    "midnight": "#0f172a",
+                    "inverse-surface": "#2d3133",
+                    "outline": "#76777d",
+                    "on-secondary-fixed-variant": "#3a485b",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-tertiary-fixed": "#341100",
+                    "primary-fixed": "#dae2fd",
+                    "tertiary-fixed": "#ffdbca",
+                    "on-secondary-container": "#57657a",
+                    "secondary": "#515f74",
+                    "surface-dim": "#d8dadc",
+                    "surface-container-highest": "#e0e3e5",
+                    "tertiary": "#000000",
+                    "on-surface-variant": "#45464d",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#341100",
+                    "surface-variant": "#e0e3e5",
+                    "construction-orange": "#f97316",
+                    "on-primary-container": "#7c839b",
+                    "surface-tint": "#565e74",
+                    "background": "#f7f9fb",
+                    "primary": "#000000",
+                    "on-surface": "#191c1e",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "primary-container": "#131b2e",
+                    "on-primary": "#ffffff",
+                    "surface-container-low": "#f2f4f6",
+                    "outline-variant": "#c6c6cd",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed": "#d5e3fc",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#d5e3fc"
+                },
+
+                "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+                },
+
+                "spacing": {
+                    "lg": "48px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "16px",
+                    "xl": "80px",
+                    "sm": "12px",
+                    "unit": "8px",
+                    "md": "24px",
+                    "gutter": "24px",
+                    "xs": "4px"
+                },
+
+                "fontFamily": {
+                    "label-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "display-lg-mobile": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-sm": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "headline-md": ["Inter"]
+                },
+
+                "fontSize": {
+                    "label-sm": [
+                        "12px",
+                        {
+                            "lineHeight": "16px",
+                            "letterSpacing": "0.05em",
+                            "fontWeight": "700"
+                        }
+                    ],
+
+                    "body-md": [
+                        "16px",
+                        {
+                            "lineHeight": "24px",
+                            "letterSpacing": "0em",
+                            "fontWeight": "400"
+                        }
+                    ],
+
+                    "body-lg": [
+                        "18px",
+                        {
+                            "lineHeight": "28px",
+                            "letterSpacing": "0em",
+                            "fontWeight": "400"
+                        }
+                    ],
+
+                    "display-lg-mobile": [
+                        "32px",
+                        {
+                            "lineHeight": "40px",
+                            "letterSpacing": "-0.02em",
+                            "fontWeight": "700"
+                        }
+                    ],
+
+                    "label-md": [
+                        "14px",
+                        {
+                            "lineHeight": "20px",
+                            "letterSpacing": "0.02em",
+                            "fontWeight": "600"
+                        }
+                    ],
+
+                    "headline-sm": [
+                        "24px",
+                        {
+                            "lineHeight": "32px",
+                            "letterSpacing": "-0.01em",
+                            "fontWeight": "600"
+                        }
+                    ],
+
+                    "display-lg": [
+                        "48px",
+                        {
+                            "lineHeight": "56px",
+                            "letterSpacing": "-0.02em",
+                            "fontWeight": "700"
+                        }
+                    ],
+
+                    "headline-md": [
+                        "30px",
+                        {
+                            "lineHeight": "38px",
+                            "letterSpacing": "-0.01em",
+                            "fontWeight": "600"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+</script>
+
+</head>
+
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col">
+
+<!-- Barre de navigation -->
+<header class="bg-surface-container-lowest dark:bg-midnight text-primary dark:text-on-primary font-label-md text-label-md w-full sticky top-0 z-50 border-b border-steel/10 transition-all duration-200 ease-in-out">
+
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+
+<div class="font-headline-sm text-headline-sm font-bold text-midnight dark:text-off-white">
+    BETA AS HEZ
+</div>
+
+<nav class="hidden md:flex gap-gutter items-center h-full">
+
+<a class="text-steel dark:text-secondary-fixed-dim hover:text-midnight dark:hover:text-off-white transition-colors h-full flex items-center" href="home.html">
+    Accueil
+</a>
+
+<a class="text-steel dark:text-secondary-fixed-dim hover:text-midnight dark:hover:text-off-white transition-colors h-full flex items-center" href="service.html">
+    Services
+</a>
+
+<a class="text-steel dark:text-secondary-fixed-dim hover:text-midnight dark:hover:text-off-white transition-colors h-full flex items-center" href="projets.html">
+    Projets
+</a>
+
+<a class="text-steel dark:text-secondary-fixed-dim hover:text-midnight dark:hover:text-off-white transition-colors h-full flex items-center" href="why.html">
+    Pourquoi BETA AS HEZ
+</a>
+
+<a class="text-construction-orange font-bold border-b-2 border-construction-orange h-full flex items-center pt-1" href="Contact.html">
+    Contact
+</a>
+
+</nav>
+
+<button class="hidden md:flex bg-midnight text-on-primary font-label-md text-label-md h-[48px] px-lg rounded items-center justify-center hover:opacity-90 transition-opacity">
+
+<a href="bookappointment1.html">
+    Prendre rendez-vous
+</a>
+
+</button>
+
+<button class="md:hidden flex items-center text-midnight">
+
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">
+    menu
+</span>
+
+</button>
+
+</div>
+</header>
+
+
+<!-- Contenu principal : étapes 3 et 4 -->
+<main class="flex-grow flex flex-col items-center py-xl px-margin-mobile md:px-margin-desktop w-full max-w-[1440px] mx-auto gap-xl">
+
+
+<!-- Indicateur de progression -->
+<div class="w-full max-w-3xl flex justify-between items-center relative before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:right-0 before:h-[2px] before:bg-surface-container-high before:z-0">
+
+
+<!-- Étape 1 -->
+<div class="relative z-10 flex flex-col items-center gap-sm bg-surface px-sm">
+
+<div class="w-8 h-8 rounded-full bg-midnight text-off-white flex items-center justify-center font-label-md text-label-md">
+
+<span class="material-symbols-outlined text-[16px]">
+    check
+</span>
+
+</div>
+
+<span class="font-label-sm text-label-sm text-steel">
+    Service
+</span>
+
+</div>
+
+
+<!-- Étape 2 -->
+<div class="relative z-10 flex flex-col items-center gap-sm bg-surface px-sm">
+
+<div class="w-8 h-8 rounded-full bg-midnight text-off-white flex items-center justify-center font-label-md text-label-md">
+
+<span class="material-symbols-outlined text-[16px]">
+    check
+</span>
+
+</div>
+
+<span class="font-label-sm text-label-sm text-steel">
+    Date et heure
+</span>
+
+</div>
+
+
+<!-- Étape 3 -->
+<div class="relative z-10 flex flex-col items-center gap-sm bg-surface px-sm">
+
+<div class="w-8 h-8 rounded-full border-2 border-midnight bg-off-white text-midnight flex items-center justify-center font-label-md text-label-md">
+    3
+</div>
+
+<span class="font-label-sm text-label-sm text-midnight">
+    Coordonnées
+</span>
+
+</div>
+
+
+<!-- Étape 4 -->
+<div class="relative z-10 flex flex-col items-center gap-sm bg-surface px-sm">
+
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-steel flex items-center justify-center font-label-md text-label-md">
+    4
+</div>
+
+<span class="font-label-sm text-label-sm text-steel">
+    Confirmation
+</span>
+
+</div>
+
+</div>
+
+
+<div class="w-full grid grid-cols-1 md:grid-cols-12 gap-gutter">
+
+
+<!-- Colonne gauche : formulaire -->
+<div class="md:col-span-7 flex flex-col gap-lg">
+
+<div class="flex flex-col gap-md">
+
+<h1 class="font-headline-md text-headline-md text-midnight">
+    Vos coordonnées
+</h1>
+
+<p class="font-body-md text-body-md text-steel">
+    Veuillez renseigner vos coordonnées afin que nous puissions finaliser votre consultation en ingénierie structurelle.
+</p>
+
+</div>
+
+
+<div class="bg-surface-container-lowest border border-steel/20 rounded-lg p-md flex flex-col gap-md">
+
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+
+
+<!-- Prénom -->
+<div class="flex flex-col gap-unit">
+
+<label class="font-label-md text-label-md text-midnight">
+    Prénom
+</label>
+
+<input
+    class="w-full bg-off-white border border-steel/50 rounded h-[48px] px-sm focus:border-midnight focus:border-2 focus:outline-none font-body-md text-body-md text-midnight"
+    placeholder="Jean"
+    type="text"
+/>
+
+</div>
+
+
+<!-- Nom -->
+<div class="flex flex-col gap-unit">
+
+<label class="font-label-md text-label-md text-midnight">
+    Nom
+</label>
+
+<input
+    class="w-full bg-off-white border border-steel/50 rounded h-[48px] px-sm focus:border-midnight focus:border-2 focus:outline-none font-body-md text-body-md text-midnight"
+    placeholder="Dupont"
+    type="text"
+/>
+
+</div>
+
+</div>
+
+
+<!-- Adresse e-mail -->
+<div class="flex flex-col gap-unit">
+
+<label class="font-label-md text-label-md text-midnight">
+    Adresse e-mail
+</label>
+
+<input
+    class="w-full bg-off-white border border-steel/50 rounded h-[48px] px-sm focus:border-midnight focus:border-2 focus:outline-none font-body-md text-body-md text-midnight"
+    placeholder="jean.dupont@example.com"
+    type="email"
+/>
+
+</div>
+
+
+<!-- Numéro de téléphone -->
+<div class="flex flex-col gap-unit">
+
+<label class="font-label-md text-label-md text-midnight">
+    Numéro de téléphone
+</label>
+
+<input
+    class="w-full bg-off-white border border-steel/50 rounded h-[48px] px-sm focus:border-midnight focus:border-2 focus:outline-none font-body-md text-body-md text-midnight"
+    placeholder="+237 6 00 00 00 00"
+    type="tel"
+/>
+
+</div>
+
+
+<!-- Description du projet -->
+<div class="flex flex-col gap-unit">
+
+<label class="font-label-md text-label-md text-midnight">
+    Description du projet (facultatif)
+</label>
+
+<textarea
+    class="w-full bg-off-white border border-steel/50 rounded min-h-[120px] p-sm focus:border-midnight focus:border-2 focus:outline-none font-body-md text-body-md text-midnight"
+    placeholder="Décrivez brièvement vos besoins en matière d'ingénierie structurelle..."
+></textarea>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- Colonne droite : résumé -->
+<div class="md:col-span-5 flex flex-col gap-lg">
+
+<div class="bg-surface-container-lowest border border-steel/20 rounded-lg p-md flex flex-col gap-md sticky top-[100px]">
+
+
+<h2 class="font-headline-sm text-headline-sm text-midnight border-b border-steel/10 pb-sm">
+    Récapitulatif du rendez-vous
+</h2>
+
+
+<div class="flex flex-col gap-sm">
+
+
+<!-- Service -->
+<div class="flex justify-between items-start">
+
+<div class="flex flex-col">
+
+<span class="font-label-sm text-label-sm text-steel">
+    Service
+</span>
+
+<span class="font-body-md text-body-md text-midnight font-semibold">
+    Évaluation initiale du site
+</span>
+
+</div>
+
+<button class="text-steel hover:text-midnight">
+
+<span class="material-symbols-outlined text-[20px]">
+    edit
+</span>
+
+</button>
+
+</div>
+
+
+<!-- Date et heure -->
+<div class="flex justify-between items-start mt-unit">
+
+<div class="flex flex-col">
+
+<span class="font-label-sm text-label-sm text-steel">
+    Date et heure
+</span>
+
+<span class="font-body-md text-body-md text-midnight font-semibold">
+    24 octobre 2024
+</span>
+
+<span class="font-body-md text-body-md text-midnight">
+    10:00 - 11:30 (EST)
+</span>
+
+</div>
+
+<button class="text-steel hover:text-midnight">
+
+<span class="material-symbols-outlined text-[20px]">
+    edit
+</span>
+
+</button>
+
+</div>
+
+
+<!-- Lieu -->
+<div class="flex justify-between items-start mt-unit">
+
+<div class="flex flex-col">
+
+<span class="font-label-sm text-label-sm text-steel">
+    Lieu
+</span>
+
+<span class="font-body-md text-body-md text-midnight font-semibold">
+    Sur site (à confirmer)
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="border-t border-steel/10 pt-md mt-sm flex flex-col gap-md">
+
+
+<div class="flex justify-between items-center">
+
+<span class="font-body-lg text-body-lg text-midnight">
+    Coût estimé
+</span>
+
+<span class="font-headline-sm text-headline-sm text-midnight">
+    450,00 $
+</span>
+
+</div>
+
+
+<p class="font-label-sm text-label-sm text-steel">
+    *Le coût final peut varier en fonction de l'emplacement exact et des constatations initiales.
+</p>
+
+
+<button class="w-full bg-construction-orange text-on-primary font-label-md text-label-md h-[48px] rounded flex items-center justify-center hover:bg-on-tertiary-container transition-colors shadow-[0px_2px_8px_rgba(15,23,42,0.12)]">
+
+<a href="bookappointment3.html">
+    Finaliser le rendez-vous
+</a>
+
+</button>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+</main>
+
+
+<!-- Pied de page -->
+<footer class="bg-midnight dark:bg-surface-container-lowest text-off-white dark:text-midnight font-body-md text-body-md w-full py-xl border-t border-steel/20">
+
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+
+
+<div class="md:col-span-4 flex flex-col gap-md">
+
+<div class="font-headline-sm text-headline-sm font-bold text-off-white dark:text-midnight">
+    BETAS AS/HEZ
+</div>
+
+<p class="text-secondary-fixed-dim dark:text-steel">
+    Concevoir l'intégrité structurelle pour relever les défis de demain.
+</p>
+
+<div class="mt-auto pt-lg">
+
+<span class="text-secondary-fixed-dim text-sm">
+    © 2024 BETAS AS/HEZ. Tous droits réservés.
+</span>
+
+</div>
+
+</div>
+
+
+<div class="md:col-span-8 flex flex-wrap gap-xl md:justify-end">
+
+
+<!-- Entreprise -->
+<div class="flex flex-col gap-sm">
+
+<span class="font-label-md text-label-md text-off-white">
+    Entreprise
+</span>
+
+<a class="text-secondary-fixed-dim hover:text-off-white transition-colors" href="#">
+    Politique de confidentialité
+</a>
+
+<a class="text-secondary-fixed-dim hover:text-off-white transition-colors" href="#">
+    Conditions d'utilisation
+</a>
+
+<a class="text-secondary-fixed-dim hover:text-off-white transition-colors" href="#">
+    Politique relative aux cookies
+</a>
+
+</div>
+
+
+<!-- Contact -->
+<div class="flex flex-col gap-sm">
+
+<span class="font-label-md text-label-md text-off-white">
+    Contact
+</span>
+
+<a class="text-secondary-fixed-dim hover:text-off-white transition-colors" href="#">
+    Nos bureaux
+</a>
+
+<a class="text-secondary-fixed-dim hover:text-off-white transition-colors" href="#">
+    Assistance internationale
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BETA AS HEZ - Prendre rendez-vous</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+
+<script id="tailwind-config">
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "on-error": "#ffffff",
+                "off-white": "#f8fafc",
+                "secondary-fixed-dim": "#b9c7df",
+                "error-container": "#ffdad6",
+                "surface-bright": "#f7f9fb",
+                "on-primary-fixed": "#131b2e",
+                "on-tertiary-container": "#d95f00",
+                "on-background": "#191c1e",
+                "primary-fixed-dim": "#bec6e0",
+                "on-tertiary-fixed-variant": "#783200",
+                "surface-container": "#eceef0",
+                "surface-container-high": "#e6e8ea",
+                "error": "#ba1a1a",
+                "on-secondary-fixed": "#0d1c2e",
+                "surface": "#f7f9fb",
+                "tertiary-fixed-dim": "#ffb690",
+                "on-error-container": "#93000a",
+                "steel": "#475569",
+                "inverse-primary": "#bec6e0",
+                "midnight": "#0f172a",
+                "inverse-surface": "#2d3133",
+                "outline": "#76777d",
+                "on-secondary-fixed-variant": "#3a485b",
+                "inverse-on-surface": "#eff1f3",
+                "on-tertiary-fixed": "#341100",
+                "primary-fixed": "#dae2fd",
+                "tertiary-fixed": "#ffdbca",
+                "on-secondary-container": "#57657a",
+                "secondary": "#515f74",
+                "surface-dim": "#d8dadc",
+                "surface-container-highest": "#e0e3e5",
+                "tertiary": "#000000",
+                "on-surface-variant": "#45464d",
+                "on-tertiary": "#ffffff",
+                "tertiary-container": "#341100",
+                "surface-variant": "#e0e3e5",
+                "construction-orange": "#f97316",
+                "on-primary-container": "#7c839b",
+                "surface-tint": "#565e74",
+                "background": "#f7f9fb",
+                "primary": "#000000",
+                "on-surface": "#191c1e",
+                "on-primary-fixed-variant": "#3f465c",
+                "primary-container": "#131b2e",
+                "on-primary": "#ffffff",
+                "surface-container-low": "#f2f4f6",
+                "outline-variant": "#c6c6cd",
+                "on-secondary": "#ffffff",
+                "secondary-fixed": "#d5e3fc",
+                "surface-container-lowest": "#ffffff",
+                "secondary-container": "#d5e3fc"
+            },
+
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+
+            "spacing": {
+                "lg": "48px",
+                "margin-desktop": "64px",
+                "margin-mobile": "16px",
+                "xl": "80px",
+                "sm": "12px",
+                "unit": "8px",
+                "md": "24px",
+                "gutter": "24px",
+                "xs": "4px"
+            },
+
+            "fontFamily": {
+                "label-sm": ["Inter"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "display-lg-mobile": ["Inter"],
+                "label-md": ["Inter"],
+                "headline-sm": ["Inter"],
+                "display-lg": ["Inter"],
+                "headline-md": ["Inter"]
+            },
+
+            "fontSize": {
+                "label-sm": [
+                    "12px",
+                    {
+                        "lineHeight": "16px",
+                        "letterSpacing": "0.05em",
+                        "fontWeight": "700"
+                    }
+                ],
+                "body-md": [
+                    "16px",
+                    {
+                        "lineHeight": "24px",
+                        "letterSpacing": "0em",
+                        "fontWeight": "400"
+                    }
+                ],
+                "body-lg": [
+                    "18px",
+                    {
+                        "lineHeight": "28px",
+                        "letterSpacing": "0em",
+                        "fontWeight": "400"
+                    }
+                ],
+                "display-lg-mobile": [
+                    "32px",
+                    {
+                        "lineHeight": "40px",
+                        "letterSpacing": "-0.02em",
+                        "fontWeight": "700"
+                    }
+                ],
+                "label-md": [
+                    "14px",
+                    {
+                        "lineHeight": "20px",
+                        "letterSpacing": "0.02em",
+                        "fontWeight": "600"
+                    }
+                ],
+                "headline-sm": [
+                    "24px",
+                    {
+                        "lineHeight": "32px",
+                        "letterSpacing": "-0.01em",
+                        "fontWeight": "600"
+                    }
+                ],
+                "display-lg": [
+                    "48px",
+                    {
+                        "lineHeight": "56px",
+                        "letterSpacing": "-0.02em",
+                        "fontWeight": "700"
+                    }
+                ],
+                "headline-md": [
+                    "30px",
+                    {
+                        "lineHeight": "38px",
+                        "letterSpacing": "-0.01em",
+                        "fontWeight": "600"
+                    }
+                ]
+            }
+        }
+    }
+}
+</script>
+
+<style>
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: theme('colors.surface-bright');
+    color: theme('colors.on-background');
+}
+
+input[type="radio"]:checked + div {
+    border-color: theme('colors.midnight');
+    background-color: theme('colors.surface-bright');
+}
+
+input[type="radio"]:checked + div .radio-indicator {
+    background-color: theme('colors.midnight');
+    border-color: theme('colors.midnight');
+}
+
+input[type="radio"]:checked + div .radio-indicator::after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.time-slot:checked + label {
+    background-color: theme('colors.midnight');
+    color: theme('colors.on-primary');
+    border-color: theme('colors.midnight');
+}
+
+.step-active .step-icon {
+    background-color: theme('colors.construction-orange');
+    color: theme('colors.on-primary');
+    border-color: theme('colors.construction-orange');
+}
+
+.step-active .step-text {
+    color: theme('colors.midnight');
+    font-weight: 700;
+}
+
+.step-completed .step-icon {
+    background-color: theme('colors.midnight');
+    color: theme('colors.on-primary');
+    border-color: theme('colors.midnight');
+}
+
+.step-completed .step-text {
+    color: theme('colors.midnight');
+    font-weight: 600;
+}
+
+.step-pending .step-icon {
+    background-color: theme('colors.surface-container-highest');
+    color: theme('colors.steel');
+    border-color: theme('colors.outline-variant');
+}
+
+.step-pending .step-text {
+    color: theme('colors.steel');
+}
+
+.progress-line-completed {
+    background-color: theme('colors.midnight');
+}
+
+.progress-line-pending {
+    background-color: theme('colors.surface-container-highest');
+}
+</style>
+
+</head>
+
+<body class="min-h-screen flex flex-col antialiased">
+
+<!-- En-tête -->
+<header class="bg-surface-container-lowest w-full sticky top-0 z-50 border-b border-steel/10 transition-all duration-200 ease-in-out">
+
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+
+<a class="font-headline-sm text-headline-sm font-bold text-midnight tracking-tight" href="#">
+    BETA AS HEZ
+</a>
+
+<div class="hidden md:flex items-center gap-6">
+
+<a class="text-steel font-label-md text-label-md hover:text-midnight transition-colors flex items-center gap-2" href="#">
+
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">
+    close
+</span>
+
+    Annuler le rendez-vous
+
+</a>
+
+</div>
+
+<!-- Annulation mobile -->
+<a class="md:hidden text-steel font-label-md text-label-md flex items-center justify-center" href="#">
+
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">
+    close
+</span>
+
+</a>
+
+</div>
+</header>
+
+
+<!-- Contenu principal -->
+<main class="flex-grow flex flex-col items-center py-xl px-margin-mobile md:px-margin-desktop w-full max-w-[1440px] mx-auto">
+
+<div class="w-full max-w-4xl text-center mb-12">
+
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-midnight mb-4">
+    Prendre rendez-vous
+</h1>
+
+<p class="font-body-lg text-body-lg text-steel max-w-2xl mx-auto">
+    Sélectionnez le service souhaité et l'horaire qui vous convient afin de planifier une consultation avec notre équipe d'ingénieurs.
+</p>
+
+</div>
+
+
+<!-- Indicateur de progression -->
+<div class="w-full max-w-3xl mb-xl">
+
+<div class="flex items-center justify-between relative">
+
+<div class="absolute top-1/2 left-0 w-full h-[2px] -z-10 -translate-y-1/2 flex">
+
+<div class="h-full w-1/2 progress-line-completed"></div>
+
+<div class="h-full w-1/2 progress-line-pending"></div>
+
+</div>
+
+
+<!-- Étape 1 -->
+<div class="flex flex-col items-center gap-sm bg-surface-bright px-2 step-completed z-10">
+
+<div class="w-10 h-10 rounded-full border-2 flex items-center justify-center step-icon transition-colors">
+
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">
+    check
+</span>
+
+</div>
+
+<span class="font-label-sm text-label-sm step-text uppercase">
+    1. Service
+</span>
+
+</div>
+
+
+<!-- Étape 2 -->
+<div class="flex flex-col items-center gap-sm bg-surface-bright px-2 step-active z-10">
+
+<div class="w-10 h-10 rounded-full border-2 flex items-center justify-center step-icon transition-colors">
+
+<span class="font-label-md text-label-md">
+    2
+</span>
+
+</div>
+
+<span class="font-label-sm text-label-sm step-text uppercase">
+    2. Date et heure
+</span>
+
+</div>
+
+
+<!-- Étape 3 -->
+<div class="flex flex-col items-center gap-sm bg-surface-bright px-2 step-pending z-10">
+
+<div class="w-10 h-10 rounded-full border-2 flex items-center justify-center step-icon transition-colors">
+
+<span class="font-label-md text-label-md">
+    3
+</span>
+
+</div>
+
+<span class="font-label-sm text-label-sm step-text uppercase">
+    3. Coordonnées
+</span>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- Étape 1 : Service sélectionné -->
+<section class="w-full max-w-5xl bg-surface-container-lowest border border-steel/10 rounded-lg p-md md:p-xl mb-lg">
+
+<div class="flex justify-between items-center mb-md border-b border-steel/10 pb-sm">
+
+<h2 class="font-headline-sm text-headline-sm text-midnight">
+    1. Service sélectionné
+</h2>
+
+<button class="font-label-md text-label-md text-steel hover:text-midnight flex items-center gap-2 transition-colors">
+
+<span class="material-symbols-outlined text-[18px]">
+    edit
+</span>
+
+    Modifier
+
+</button>
+
+</div>
+
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+
+
+<!-- Service sélectionné -->
+<label class="cursor-pointer relative">
+
+<input checked="" class="sr-only" name="service" type="radio" value="structural"/>
+
+<div class="border border-steel/20 rounded bg-off-white p-md h-full transition-all flex flex-col justify-between hover:border-steel relative overflow-hidden">
+
+<div class="flex items-start justify-between mb-4">
+
+<div class="flex items-center gap-3">
+
+<span class="material-symbols-outlined text-midnight text-[32px]" style="font-variation-settings: 'FILL' 0;">
+    architecture
+</span>
+
+<h3 class="font-headline-sm text-headline-sm text-midnight">
+    Évaluation structurelle
+</h3>
+
+</div>
+
+<div class="w-6 h-6 rounded-full border-2 border-steel/30 relative radio-indicator transition-colors"></div>
+
+</div>
+
+<p class="font-body-md text-body-md text-secondary-fixed-dim">
+    Analyse complète de l'intégrité structurelle existante et des capacités portantes.
+</p>
+
+<div class="mt-4 flex items-center gap-2">
+
+<span class="px-2 py-1 bg-surface-container-high rounded text-midnight font-label-sm text-label-sm uppercase">
+    2 heures
+</span>
+
+</div>
+
+</div>
+
+</label>
+
+
+<!-- Autre service -->
+<label class="cursor-pointer relative opacity-60 hover:opacity-100 transition-opacity">
+
+<input class="sr-only" name="service" type="radio" value="civil"/>
+
+<div class="border border-steel/20 rounded bg-off-white p-md h-full transition-all flex flex-col justify-between hover:border-steel relative">
+
+<div class="flex items-start justify-between mb-4">
+
+<div class="flex items-center gap-3">
+
+<span class="material-symbols-outlined text-steel text-[32px]" style="font-variation-settings: 'FILL' 0;">
+    engineering
+</span>
+
+<h3 class="font-headline-sm text-headline-sm text-midnight">
+    Planification des travaux publics
+</h3>
+
+</div>
+
+<div class="w-6 h-6 rounded-full border-2 border-steel/30 relative radio-indicator transition-colors"></div>
+
+</div>
+
+<p class="font-body-md text-body-md text-secondary-fixed-dim">
+    Évaluation initiale du site et consultation pour la planification des infrastructures.
+</p>
+
+<div class="mt-4 flex items-center gap-2">
+
+<span class="px-2 py-1 bg-surface-container-high rounded text-midnight font-label-sm text-label-sm uppercase">
+    1 heure
+</span>
+
+</div>
+
+</div>
+
+</label>
+
+</div>
+</section>
+
+
+<!-- Étape 2 : Date et heure -->
+<section class="w-full max-w-5xl bg-surface-container-lowest border border-steel/10 rounded-lg p-md md:p-xl mb-lg shadow-[0px_2px_8px_rgba(15,23,42,0.04)] relative">
+
+<div class="absolute top-0 left-0 w-1 h-full bg-construction-orange rounded-l-lg"></div>
+
+<div class="mb-lg">
+
+<h2 class="font-headline-sm text-headline-sm text-midnight mb-2">
+    2. Sélectionnez la date et l'heure
+</h2>
+
+<p class="font-body-md text-body-md text-steel">
+    Choisissez un créneau disponible correspondant à la durée du service sélectionné.
+</p>
+
+</div>
+
+
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-xl">
+
+
+<!-- Calendrier -->
+<div class="lg:col-span-7 flex flex-col">
+
+<div class="flex items-center justify-between mb-md">
+
+<h3 id="calendar-month"
+    class="font-label-md text-label-md text-midnight font-bold">
+    Octobre 2026
+</h3>
+
+<div class="flex gap-2">
+
+<button id="prev-month"
+    class="w-10 h-10 border border-steel/20 rounded flex items-center justify-center text-steel">
+
+<span class="material-symbols-outlined">
+    chevron_left
+</span>
+
+</button>
+
+
+<button id="next-month"
+    class="w-10 h-10 border border-steel/20 rounded flex items-center justify-center text-midnight">
+
+<span class="material-symbols-outlined">
+    chevron_right
+</span>
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- Jours de la semaine -->
+<div class="grid grid-cols-7 gap-1 text-center mb-2">
+
+<div class="font-label-sm text-label-sm text-steel py-2">
+    LUN
+</div>
+
+<div class="font-label-sm text-label-sm text-steel py-2">
+    MAR
+</div>
+
+<div class="font-label-sm text-label-sm text-steel py-2">
+    MER
+</div>
+
+<div class="font-label-sm text-label-sm text-steel py-2">
+    JEU
+</div>
+
+<div class="font-label-sm text-label-sm text-steel py-2">
+    VEN
+</div>
+
+<div class="font-label-sm text-label-sm text-steel py-2 opacity-50">
+    SAM
+</div>
+
+<div class="font-label-sm text-label-sm text-steel py-2 opacity-50">
+    DIM
+</div>
+
+</div>
+
+
+<div id="calendar-grid" class="grid grid-cols-7 gap-2">
+    <!-- Calendrier généré par calendrier.js -->
+</div>
+
+</div>
+
+
+<!-- Créneaux horaires -->
+<div class="lg:col-span-5 flex flex-col border-t lg:border-t-0 lg:border-l border-steel/10 pt-lg lg:pt-0 lg:pl-xl">
+
+<h3 class="font-label-md text-label-md text-midnight font-bold mb-md">
+    Horaires disponibles pour le 10 octobre
+</h3>
+
+
+<div class="flex flex-col gap-sm">
+
+
+<!-- Matin -->
+<span class="font-label-sm text-label-sm text-steel uppercase mt-2 mb-1">
+    Matin
+</span>
+
+<div class="grid grid-cols-2 gap-sm">
+
+
+<div class="relative">
+
+<input class="time-slot sr-only" disabled="" id="t-0900" name="time" type="radio"/>
+
+<label class="flex items-center justify-center w-full py-3 border border-steel/10 rounded font-body-md text-body-md text-steel bg-surface-container-highest opacity-50 cursor-not-allowed" for="t-0900">
+    09:00
+</label>
+
+</div>
+
+
+<div class="relative">
+
+<input class="time-slot sr-only" id="t-0930" name="time" type="radio"/>
+
+<label class="flex items-center justify-center w-full py-3 border border-steel/30 rounded font-body-md text-body-md text-midnight bg-off-white hover:border-midnight cursor-pointer transition-colors" for="t-0930">
+    09:30
+</label>
+
+</div>
+
+
+<div class="relative">
+
+<input checked="" class="time-slot sr-only" id="t-1000" name="time" type="radio"/>
+
+<label class="flex items-center justify-center w-full py-3 border border-steel/30 rounded font-body-md text-body-md text-midnight bg-off-white hover:border-midnight cursor-pointer transition-colors" for="t-1000">
+    10:00
+</label>
+
+</div>
+
+
+<div class="relative">
+
+<input class="time-slot sr-only" id="t-1030" name="time" type="radio"/>
+
+<label class="flex items-center justify-center w-full py-3 border border-steel/30 rounded font-body-md text-body-md text-midnight bg-off-white hover:border-midnight cursor-pointer transition-colors" for="t-1030">
+    10:30
+</label>
+
+</div>
+
+</div>
+
+
+<!-- Après-midi -->
+<span class="font-label-sm text-label-sm text-steel uppercase mt-4 mb-1">
+    Après-midi
+</span>
+
+<div class="grid grid-cols-2 gap-sm">
+
+
+<div class="relative">
+
+<input class="time-slot sr-only" id="t-1300" name="time" type="radio"/>
+
+<label class="flex items-center justify-center w-full py-3 border border-steel/30 rounded font-body-md text-body-md text-midnight bg-off-white hover:border-midnight cursor-pointer transition-colors" for="t-1300">
+    13:00
+</label>
+
+</div>
+
+
+<div class="relative">
+
+<input class="time-slot sr-only" id="t-1400" name="time" type="radio"/>
+
+<label class="flex items-center justify-center w-full py-3 border border-steel/30 rounded font-body-md text-body-md text-midnight bg-off-white hover:border-midnight cursor-pointer transition-colors" for="t-1400">
+    14:00
+</label>
+
+</div>
+
+
+<div class="relative">
+
+<input class="time-slot sr-only" id="t-1530" name="time" type="radio"/>
+
+<label class="flex items-center justify-center w-full py-3 border border-steel/30 rounded font-body-md text-body-md text-midnight bg-off-white hover:border-midnight cursor-pointer transition-colors" for="t-1530">
+    15:30
+</label>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- Barre d'action -->
+<div class="w-full max-w-5xl flex justify-between items-center mt-md pb-xl">
+
+<button class="h-lg px-lg border border-steel rounded text-steel font-label-md text-label-md hover:bg-surface-container transition-colors flex items-center gap-2">
+
+<span class="material-symbols-outlined">
+    arrow_back
+</span>
+
+    Retour
+
+</button>
+
+
+<button class="h-lg px-xl bg-construction-orange rounded text-on-primary font-label-md text-label-md hover:bg-[#e06612] transition-colors shadow-[0px_2px_8px_rgba(15,23,42,0.12)] flex items-center gap-2">
+
+<a href="bookappointment2.html">
+    Continuer vers mes coordonnées
+</a>
+
+<span class="material-symbols-outlined">
+    arrow_forward
+</span>
+
+</button>
+
+</div>
+
+</main>
+
+
+<!-- Pied de page -->
+<footer class="bg-midnight py-xl border-t border-steel/20 grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto w-full mt-auto">
+
+<div class="col-span-1 md:col-span-12 flex flex-col md:flex-row justify-between items-center gap-4">
+
+<div class="font-headline-sm text-headline-sm font-bold text-off-white">
+    BETAS AS/HEZ
+</div>
+
+<div class="font-body-md text-body-md text-secondary-fixed-dim">
+    © 2024 BETAS AS/HEZ. Tous droits réservés.
+</div>
+
+</div>
+
+</footer>
+
+
+<script src="calendrier.js"></script>
+
+</body>
+</html>
