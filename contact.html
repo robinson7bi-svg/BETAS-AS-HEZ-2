@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact - BETAS AS HEZ</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "off-white": "#f8fafc",
+                        "secondary-fixed-dim": "#b9c7df",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f7f9fb",
+                        "on-primary-fixed": "#131b2e",
+                        "on-tertiary-container": "#d95f00",
+                        "on-background": "#191c1e",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-tertiary-fixed-variant": "#783200",
+                        "surface-container": "#eceef0",
+                        "surface-container-high": "#e6e8ea",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#0d1c2e",
+                        "surface": "#f7f9fb",
+                        "tertiary-fixed-dim": "#ffb690",
+                        "on-error-container": "#93000a",
+                        "steel": "#475569",
+                        "inverse-primary": "#bec6e0",
+                        "midnight": "#0f172a",
+                        "inverse-surface": "#2d3133",
+                        "outline": "#76777d",
+                        "on-secondary-fixed-variant": "#3a485b",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-tertiary-fixed": "#341100",
+                        "primary-fixed": "#dae2fd",
+                        "tertiary-fixed": "#ffdbca",
+                        "on-secondary-container": "#57657a",
+                        "secondary": "#515f74",
+                        "surface-dim": "#d8dadc",
+                        "surface-container-highest": "#e0e3e5",
+                        "tertiary": "#000000",
+                        "on-surface-variant": "#45464d",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#341100",
+                        "surface-variant": "#e0e3e5",
+                        "construction-orange": "#f97316",
+                        "on-primary-container": "#7c839b",
+                        "surface-tint": "#565e74",
+                        "background": "#f7f9fb",
+                        "primary": "#000000",
+                        "on-surface": "#191c1e",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "primary-container": "#131b2e",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f2f4f6",
+                        "outline-variant": "#c6c6cd",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#d5e3fc",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#d5e3fc"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "48px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px",
+                        "xl": "80px",
+                        "sm": "12px",
+                        "unit": "8px",
+                        "md": "24px",
+                        "gutter": "24px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface-container-lowest dark:bg-midnight w-full sticky top-0 z-50 border-b border-steel/10 transition-all duration-200 ease-in-out">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+     <!-- IDENTITÉ : LOGO + NOM + DEUXIÈME LOGO -->
+        <a href="home.html" class="flex items-center shrink-0 gap-3">
+
+            <!-- Premier logo : TAS -->
+            <img src="./img/IMG-20260818-WA0112.jpg"
+                 alt="Logo TAS"
+                 class="h-12 w-12 md:h-14 md:w-14 object-contain"/>
+
+            <!-- Nom de l'entreprise -->
+            <span class="text-lg md:text-xl font-bold tracking-tight text-primary whitespace-nowrap">
+                BETAS AS/HEZ
+            </span>
+
+            <!-- Deuxième logo : HEZ -->
+            <img src="./img/Capture d'écran 2026-09-02 113340.png"
+                 alt="Logo HEZ"
+                 class="h-12 w-auto md:h-14 object-contain"/>
+        </a>
+<!-- Desktop Nav -->
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-label-md text-label-md text-steel dark:text-secondary-fixed-dim hover:text-midnight dark:hover:text-off-white transition-colors" href="home.html">Accueil</a>
+<a class="font-label-md text-label-md text-steel dark:text-secondary-fixed-dim hover:text-midnight dark:hover:text-off-white transition-colors" href="actualité.html">Actualités</a>
+<a class="font-label-md text-label-md text-steel dark:text-secondary-fixed-dim hover:text-midnight dark:hover:text-off-white transition-colors" href="administration.html">Notre équipe</a>
+<a class="font-label-md text-label-md text-steel dark:text-secondary-fixed-dim hover:text-midnight dark:hover:text-off-white transition-colors" href="postuler.html">Postuler</a>
+<a class="font-label-md text-label-md text-steel dark:text-secondary-fixed-dim hover:text-midnight dark:hover:text-off-white transition-colors" href="service.html">Services</a>
+<a class="font-label-md text-label-md text-steel dark:text-secondary-fixed-dim hover:text-midnight dark:hover:text-off-white transition-colors" href="projets.html">Projets</a>
+<a class="font-label-md text-label-md text-steel dark:text-secondary-fixed-dim hover:text-midnight dark:hover:text-off-white transition-colors" href="why.html">À propos</a>
+<a class="font-label-md text-label-md text-construction-orange font-bold border-b-2 border-construction-orange pb-1 hover:text-midnight dark:hover:text-off-white transition-colors" href="Contact.html">Contact</a>
+</div>
+<!-- Mobile Menu Toggle -->
+<div class="md:hidden">
+<button class="text-midnight p-unit">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<div class="hidden md:block">
+<button class="bg-construction-orange text-white font-label-md text-label-md px-md py-sm rounded h-lg flex items-center justify-center hover:bg-on-tertiary-container transition-colors">
+                   <a href="bookappointment1.html"> Prendre rendez-vous</a>
+                </button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-xl">
+<!-- Header Section -->
+<div class="mb-xl max-w-2xl">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-midnight mb-sm">
+                Contactez-nous
+            </h1>
+<p class="font-body-lg text-body-lg text-steel">
+                Que vous ayez une question sur nos services, nos projets ou tout autre sujet, notre équipe est à votre disposition pour répondre à toutes vos questions.
+            </p>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Contact Form (Spans 8 columns on desktop) -->
+<div class="md:col-span-8 bg-surface-container-lowest border border-steel/20 rounded p-md md:p-lg">
+<h2 class="font-headline-md text-headline-md text-midnight mb-md border-b border-steel/10 pb-sm">Envoyez-nous un message</h2>
+<form class="space-y-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- First Name -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-midnight" for="firstName">Prénom</label>
+<input class="bg-off-white border border-steel/50 rounded p-sm h-lg focus:border-midnight focus:border-2 focus:ring-0 outline-none transition-all font-body-md text-body-md text-midnight" id="firstName" name="firstName" type="text"/>
+</div>
+<!-- Last Name -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-midnight" for="lastName">Nom</label>
+<input class="bg-off-white border border-steel/50 rounded p-sm h-lg focus:border-midnight focus:border-2 focus:ring-0 outline-none transition-all font-body-md text-body-md text-midnight" id="lastName" name="lastName" type="text"/>
+</div>
+</div>
+<!-- Email -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-midnight" for="email">Adresse e-mail</label>
+<input class="bg-off-white border border-steel/50 rounded p-sm h-lg focus:border-midnight focus:border-2 focus:ring-0 outline-none transition-all font-body-md text-body-md text-midnight" id="email" name="email" type="email"/>
+</div>
+<!-- Subject -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-midnight" for="subject">Objet</label>
+<select class="bg-off-white border border-steel/50 rounded p-sm h-lg focus:border-midnight focus:border-2 focus:ring-0 outline-none transition-all font-body-md text-body-md text-midnight appearance-none" id="subject" name="subject">
+<option value="">Sélectionnez un sujet...</option>
+<option value="general">Demande générale</option>
+<option value="project">Proposition de projet</option>
+<option value="support">Assistance technique</option>
+</select>
+</div>
+<!-- Message -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-midnight" for="message">Message</label>
+<textarea class="bg-off-white border border-steel/50 rounded p-sm focus:border-midnight focus:border-2 focus:ring-0 outline-none transition-all font-body-md text-body-md text-midnight resize-y min-h-[120px]" id="message" name="message" rows="5"></textarea>
+</div>
+<!-- Submit Button -->
+<div class="pt-sm">
+<button class="w-full md:w-auto bg-construction-orange text-white font-label-md text-label-md px-lg py-sm rounded h-lg flex items-center justify-center hover:bg-on-tertiary-container transition-colors shadow-[0px_2px_8px_rgba(15,23,42,0.12)]" type="submit">
+                            Envoyez
+                        </button>
+</div>
+</form>
+</div>
+<!-- Direct Contact Info & Links (Spans 4 columns on desktop) -->
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<!-- Direct Connect Card -->
+<div class="bg-midnight border border-steel/20 rounded p-md flex flex-col gap-md">
+<h3 class="font-headline-sm text-headline-sm text-off-white">Contact direct BETAS AS</h3>
+<!-- Email Link -->
+<a class="group flex items-center gap-sm p-sm rounded hover:bg-surface-tint/20 transition-colors" href="mailto:contact@betaashez.com">
+<div class="w-10 h-10 rounded bg-surface-tint/30 flex items-center justify-center text-construction-orange group-hover:text-off-white transition-colors">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">mail</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-secondary-fixed-dim uppercase">Nous écrire</p>
+<p class="font-body-md text-body-md text-off-white group-hover:underline">betas.as93@gmail.com</p>
+</div>
+</a>
+<!-- WhatsApp Link -->
+<a class="group flex items-center gap-sm p-sm rounded hover:bg-surface-tint/20 transition-colors" href="#">
+<div class="w-10 h-10 rounded bg-surface-tint/30 flex items-center justify-center text-construction-orange group-hover:text-off-white transition-colors">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">chat</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-secondary-fixed-dim uppercase">WhatsApp</p>
+<p class="font-body-md text-body-md text-off-white group-hover:underline">+237 6977848/699195474</p>
+</div>
+</a>
+</div>
+<!-- Direct Contact Info & Links (Spans 4 columns on desktop) -->
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<!-- Direct Connect Card -->
+<div class="bg-midnight border border-steel/20 rounded p-md flex flex-col gap-md">
+<h3 class="font-headline-sm text-headline-sm text-off-white">Contact direct HEZ</h3>
+<!-- Email Link -->
+<a class="group flex items-center gap-sm p-sm rounded hover:bg-surface-tint/20 transition-colors" href="mailto:contact@betaashez.com">
+<div class="w-10 h-10 rounded bg-surface-tint/30 flex items-center justify-center text-construction-orange group-hover:text-off-white transition-colors">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">mail</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-secondary-fixed-dim uppercase">Nous écrire</p>
+<p class="font-body-md text-body-md text-off-white group-hover:underline">zenith.hez93@gmail.com</p>
+</div>
+</a>
+<!-- WhatsApp Link -->
+<a class="group flex items-center gap-sm p-sm rounded hover:bg-surface-tint/20 transition-colors" href="#">
+<div class="w-10 h-10 rounded bg-surface-tint/30 flex items-center justify-center text-construction-orange group-hover:text-off-white transition-colors">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">chat</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-secondary-fixed-dim uppercase">WhatsApp</p>
+<p class="font-body-md text-body-md text-off-white group-hover:underline">+237 699984673/654490048</p>
+</div>
+</a>
+</div>
+<!-- Office Location Card -->
+<div class="bg-surface-container-lowest border border-steel/20 rounded p-md flex flex-col gap-sm">
+<div class="flex items-center gap-unit text-midnight">
+<span class="material-symbols-outlined">location_on</span>
+<h3 class="font-headline-sm text-headline-sm text-midnight">Siège social</h3>
+</div>
+<address class="font-body-md text-body-md text-steel not-italic border-l-2 border-construction-orange pl-sm ml-sm">
+                        100 Parc Industriel<br/>
+                        Bureau 400<br/>
+                        Yaoundé, Cameroun
+                    </address>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-midnight dark:bg-surface-container-lowest w-full py-xl border-t border-steel/20 mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+<!-- Brand & Copyright -->
+<div class="md:col-span-4 flex flex-col gap-sm">
+<div class="font-headline-sm text-headline-sm font-bold text-off-white dark:text-midnight">
+                    BETAS AS/HEZ
+                </div>
+<p class="font-body-md text-body-md text-secondary-fixed-dim dark:text-steel">
+                    © 2024 BETAS AS/ HEZ. Tous droits réservés.
+                </p>
+</div>
+<!-- Footer Links -->
+<div class="md:col-span-8 flex flex-wrap gap-x-md gap-y-sm justify-start md:justify-end items-center">
+<a class="font-body-md text-body-md text-secondary-fixed-dim dark:text-steel hover:text-off-white dark:hover:text-midnight underline opacity-80 hover:opacity-100 transition-opacity" href="#">Politique de confidentialité</a>
+<a class="font-body-md text-body-md text-secondary-fixed-dim dark:text-steel hover:text-off-white dark:hover:text-midnight underline opacity-80 hover:opacity-100 transition-opacity" href="#">Conditions d’utilisation</a>
+<a class="font-body-md text-body-md text-secondary-fixed-dim dark:text-steel hover:text-off-white dark:hover:text-midnight underline opacity-80 hover:opacity-100 transition-opacity" href="#">Politique relative aux cookies</a>
+<a class="font-body-md text-body-md text-secondary-fixed-dim dark:text-steel hover:text-off-white dark:hover:text-midnight underline opacity-80 hover:opacity-100 transition-opacity" href="#">Nos bureaux</a>
+<a class="font-body-md text-body-md text-secondary-fixed-dim dark:text-steel hover:text-off-white dark:hover:text-midnight underline opacity-80 hover:opacity-100 transition-opacity" href="#">Assistance internationale</a>
+</div>
+</div>
+</footer>
+</body></html>
